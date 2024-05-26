@@ -1,12 +1,16 @@
+@import url('/node_modules/@fontsource-variable/inter/wght.css');
+
+@import url('/node_modules/@fontsource-variable/inter/wght.css');
+
+
+
 :root {
-  font-family: 'Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Inter Variable', 'sans-serif','system-ui', 'Avenir', 'Helvetica', 'Arial';
   /* line-height: 1.5; */
-  /* font-weight: 40000; */
   background-color: #ffffff;
   --green: #65B47B;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  /* font-weight: bold; */
   /* color-scheme: light dark; */
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
@@ -42,7 +46,7 @@ padding: 0px 0px 16px 0px; */
 }
 
 #dia .green-text{
-  transition: color 0.1s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 #dia:hover{
   color: #a9e6b9;
@@ -55,18 +59,25 @@ padding: 0px 0px 16px 0px; */
   font-weight: bolder;
 
 }
-
 .contact-us-button{
-  /* width: 20px; */
+  width: 179px;
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
   color: #FFFFFF;
   background: var(--green);
-  height: 45px;
-  padding: 16px 24px 16px 24px;
+  height: 50px;
+  padding: 0;
   border: none;
   border-radius: 8px;
   transition: background-color 0.1s ease-in-out;
-
+  /* line-height: 29.05px; */
+  /* vertical-align: middle; */
+  
+}
+.landing-page-nav-container .contact-us-button{
+  width: 150px;
+  height: 46px;
 }
 
 .contact-us-button:hover{
@@ -77,6 +88,8 @@ padding: 0px 0px 16px 0px; */
   /* width: 50%; */
   display: flex;
   padding: 0;
+  position: relative;
+  left: 10% ;
   /* justify-content: space-around; */
   /* gap: 45%; */
 
@@ -84,17 +97,25 @@ padding: 0px 0px 16px 0px; */
 
 
 .landing-page-header-content{
-  width:60em;
+  width:40em;
   text-align: justify;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
   /* height: 336px; */
   /* width: Hug (700px)px;
-  top: 300px;
   left: 48px;
-  gap: 32px;
   opacity: 0px; */
+  position:relative;
+  top: 150px;
+  left: 50px;
+  gap: 25px;
   
+}
+.landing-page-header-content .contact-us-button{
+  width: 150px;
+  height: 45px;
+  /* margin-top: 25px; */
 }
 .landing-page-header{
   font-size: 50px;
@@ -105,12 +126,19 @@ padding: 0px 0px 16px 0px; */
 .landing-page-header-description{
   margin: 0px;
   height: 4em;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.landing-page-header-image-container-container{
+.landing-page-header-image-container{
+  position: relative;
   width: 50%;
+  /* top: 193px; */
+  left: 1vw;
 }
 
 .landing-page-header-image-container img{
-  width: 100%;
+  width: 581px;
+  height:549.79px;
+  
 }

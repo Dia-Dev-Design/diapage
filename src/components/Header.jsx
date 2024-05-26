@@ -1,4 +1,3 @@
-import React from 'react'
 import headerImg from "../assets/headerImage.svg";
 
 const Header = () => {
