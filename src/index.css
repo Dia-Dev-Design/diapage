@@ -45,7 +45,7 @@ padding: 0px 0px 16px 0px; */
   color: var(--green);
 }
 
-#dia .green-text{
+.green-text #dia {
   transition: color 0.3s ease-in-out;
 }
 #dia:hover{
@@ -98,7 +98,7 @@ padding: 0px 0px 16px 0px; */
 
 .landing-page-header-content{
   width:40em;
-  text-align: justify;
+  /* text-align: justify; */
   display: flex;
   /* flex-wrap: wrap; */
   flex-direction: column;
@@ -115,7 +115,6 @@ padding: 0px 0px 16px 0px; */
 .landing-page-header-content .contact-us-button{
   width: 150px;
   height: 45px;
-  /* margin-top: 25px; */
 }
 .landing-page-header{
   font-size: 50px;
@@ -125,9 +124,10 @@ padding: 0px 0px 16px 0px; */
 
 .landing-page-header-description{
   margin: 0px;
-  height: 4em;
+  width: 100%;
   font-size: 16px;
   font-weight: 400;
+  text-align: justify;
 }
 
 .landing-page-header-image-container{
