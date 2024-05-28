@@ -26,6 +26,11 @@
   flex-direction: column;
 }
 
+.header .about-us{
+  position: relative;
+  left: 20rem;
+} 
+
 .landing-page-nav-container{
   display: flex;
   justify-content: space-between;
@@ -56,7 +61,7 @@ padding: 0px 0px 16px 0px; */
   width: 298px;
   height: 44px;
   font-size: 2em;
-  font-weight: bolder;
+  font-weight: 700;
 
 }
 .contact-us-button{
@@ -89,9 +94,9 @@ padding: 0px 0px 16px 0px; */
   display: flex;
   padding: 0;
   position: relative;
-  left: 10% ;
-  /* justify-content: space-around; */
-  /* gap: 45%; */
+  left: 1% ;
+  justify-content: space-around;
+  gap: 6%;
 
 }
 
@@ -102,7 +107,7 @@ padding: 0px 0px 16px 0px; */
   display: flex;
   /* flex-wrap: wrap; */
   flex-direction: column;
-  /* height: 336px; */
+  height: 100%;
   /* width: Hug (700px)px;
   left: 48px;
   opacity: 0px; */
@@ -132,13 +137,71 @@ padding: 0px 0px 16px 0px; */
 
 .landing-page-header-image-container{
   position: relative;
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 500px;
+  max-width: 581px;
+  max-height: 600px;
+  min-height: 500px;
   /* top: 193px; */
-  left: 1vw;
+  /* left: 10px; */
 }
 
-.landing-page-header-image-container img{
-  width: 581px;
-  height:549.79px;
+.landing-page-header-image-container>img{
+  /* width: 581px;
+  height:549.79px; */
+  width: 100%;
+  /* width: clamp(500px,70%, 581px); */
+  /* clamp(550px,65%, 581px)*/
+  /* width: clamp(40rem, 80vw,50rem); */
+  /* height: clamp(30rem, 80vh, 50rem); */
   
+}
+
+.landing-page-about-us-container{
+  display: flex;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+  /* margin-top: clamp(4rem, 1%, 10rem); */
+  top: 10%;
+  width:100%;
+  gap: 3%;
+  position: relative;
+  left: 10%;
+}
+
+.section-title-thin{
+  font-weight: 100;
+  font-size: 128px;
+}
+.landing-page-about-us-description{
+  width: 50rem;
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 25px;
+}
+
+@media (max-width: 1200px) {
+  .landing-page-about-us-container {
+    top: 10vh;
+  }
+  .landing-page-header-image-container>img{
+    height: 649.79px;
+  }
+}
+@media (max-width: 1100px) {
+  .landing-page-about-us-container {
+    top: 15vh;
+  }
+  .landing-page-header-image-container>img{
+    height: 649.79px;
+  }
+}
+@media (max-width: 885px) {
+  .landing-page-about-us-container {
+    top: 20vh;
+  }
+  .landing-page-header-image-container>img{
+    height: 649.79px;
+  }
 }
