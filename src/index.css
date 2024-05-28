@@ -19,6 +19,7 @@
   /* text-rendering: optimizeLegibility; */
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
+  /* margin-bottom: 10%; */
 }
 
 .landing-page-container{
@@ -89,7 +90,7 @@ padding: 0px 0px 16px 0px; */
   background-color: #a9e6b9;
 }
 
-.landing-page-header-container{
+.landing-page-header-container {
   /* width: 50%; */
   display: flex;
   padding: 0;
@@ -127,7 +128,7 @@ padding: 0px 0px 16px 0px; */
   margin: 0px;
 }
 
-.landing-page-header-description{
+.landing-page-header-description {
   margin: 0px;
   width: 100%;
   font-size: 16px;
@@ -181,9 +182,97 @@ padding: 0px 0px 16px 0px; */
   margin-top: 25px;
 }
 
+.services-main-header {
+  display: flex;
+  justify-content: center;
+  font-size: 128px;
+  margin: 0px;
+  font-weight: 100;
+}
+
+.services-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.services-wrap-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.service-card1,
+.service-card2,
+.service-card3,
+.service-card4 {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card1 {
+  background-color: #EDF3FF;
+}
+
+.service-card2 {
+  background-color: #FFFAEC;
+}
+
+.service-card3 {
+  background-color: #F0FFF4;
+}
+
+.service-card4 {
+  background-color: #FFF5F3;
+}
+
+.services-image-container {
+  flex: 1;
+  text-align: left;
+}
+
+.services-image-container img {
+  width: 100px;
+  height: 100px;
+}
+
+.services-info {
+  flex: 2;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.services-description {
+  font-size: 1rem;
+  color: #666;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
 @media (max-width: 1200px) {
   .landing-page-about-us-container {
     top: 10vh;
+  }
+  .services-container{
+    margin-top: 10vh;
   }
   .landing-page-header-image-container>img{
     height: 649.79px;
@@ -193,6 +282,9 @@ padding: 0px 0px 16px 0px; */
   .landing-page-about-us-container {
     top: 15vh;
   }
+  .services-container{
+    margin-top: 15vh;
+  }
   .landing-page-header-image-container>img{
     height: 649.79px;
   }
@@ -200,6 +292,9 @@ padding: 0px 0px 16px 0px; */
 @media (max-width: 885px) {
   .landing-page-about-us-container {
     top: 20vh;
+  }
+  .services-container{
+    margin-top: 20vh;
   }
   .landing-page-header-image-container>img{
     height: 649.79px;
