@@ -16,7 +16,7 @@ const Header = () => {
           <span className="green-color" id="dia">
             Día
           </span>{". "}
-          We build. We create. You Succeed.
+          We build. We create. You succeed.
         </h1>
         <p className="landing-page-header-description">
           We partner with you to craft tailored applications that meet your
