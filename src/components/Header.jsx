@@ -12,11 +12,11 @@ const Header = () => {
     <div className="landing-page-header-container">
       <div className="landing-page-header-content">
         <h1 className="landing-page-header">
-          Every{" "}
+          Every-{" "}
           <span className="green-color" id="dia">
             Día
-          </span>{" "}
-          is Creative, Building & Successful
+          </span>{". "}
+          We build. We create. You Succeed.
         </h1>
         <p className="landing-page-header-description">
           We partner with you to craft tailored applications that meet your
