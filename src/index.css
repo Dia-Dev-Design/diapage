@@ -424,10 +424,15 @@ padding: 0px 0px 16px 0px; */
   display: flex;
   font-size: 20px;
   color: white;
+  border: none;
   justify-content: space-between;
   transform: translateY(13rem);
+  transition: background-color 0.5s ease-in-out;
 }
 
+.footer-send-message-button:hover{
+  background-color: #a9e6b9;
+}
 
 @media (max-width: 1200px) {
   .landing-page-about-us-container {
