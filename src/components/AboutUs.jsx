@@ -1,14 +1,25 @@
 const AboutUs = () => {
   return (
-      <section className="landing-page-about-us-container">
-        <span className="section-title-thin">We Are</span>
-        <p className="landing-page-about-us-description">
-          At eos omnis autem non ut. Ullam sed non. Aut in in voluptatem
-          asperiores praesentium iure quos dolores cumque. Quibusdam voluptates
-          omnis dicta omnis ad quis omnis minus et. Voluptatem corrupti ut totam
-          deleniti ut praesentium.
+    <section className="landing-page-about-us-container margin-divider-top">
+      <span className="section-title-thin">We Are</span>
+      <div className="landing-page-about-us-description">
+        <p>
+          We are committed to empowering your business with cutting-edge
+          solutions that align with your goals.
         </p>
-      </section>
+
+        <p>
+          Our primary focus is on delivering customized technology that caters
+          to your unique requirements.
+        </p>
+
+        <p className="margin-divider-top">
+          Simultaneously we support our community through continuous learning
+          and creative collaboration, turning our efforts into sustainable,
+          fulfilling careers and successful businesses.
+        </p>
+      </div>
+    </section>
   );
 };
 

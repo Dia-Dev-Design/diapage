@@ -2,8 +2,10 @@
 #root {
   /* max-width: 1280px; */
   margin: 0;
-  padding: 2rem;
-  padding-bottom: 3%;
+  /* padding: 2rem; */
+  padding: 0;
+  padding-top: 1%;
+  /* padding-bottom: 3%; */
   text-align: center;
 }
 /* 
