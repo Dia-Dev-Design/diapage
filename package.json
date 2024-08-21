@@ -13,7 +13,8 @@
     "@fontsource-variable/inter": "^5.0.18",
     "@fontsource/poppins": "^5.0.14",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
