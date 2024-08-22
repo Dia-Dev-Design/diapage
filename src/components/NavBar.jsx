@@ -15,13 +15,13 @@ const Title = styled.header`
 `
 
 const ContactButton = styled.button`
-  width: 179px;
+  width: 150px; /*used to be 179*/
   font-size: 20px;
   font-weight: 700;
   text-align: center;
   color: #FFFFFF;
   background-color: var(--green);
-  height: 50px;
+  height: 45px;
   padding: 0;
   border: none;
   border-radius: 8px;
