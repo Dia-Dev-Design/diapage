@@ -15,7 +15,7 @@ const Title = styled.header`
 `
 
 const ContactButton = styled.button`
-  width: 150px; /*used to be 179*/
+  width: 150px;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
