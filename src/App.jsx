@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
+import GlobalStyle from "./GlobalStyle";
 
 const LandingPageContainer = styled.div`
     display: flex;
@@ -13,13 +14,14 @@ const LandingPageContainer = styled.div`
 
 function App() {
   return (
-    <LandingPageContainer>
-      <NavBar />
-      <Header />
-      <AboutUs />
-      <Services />
-      <Footer />
-    </LandingPageContainer>
+    <><GlobalStyle />
+      <LandingPageContainer>
+        <NavBar />
+        <Header />
+        <AboutUs />
+        <Services />
+        <Footer />
+      </LandingPageContainer></>
   );
 }
 

@@ -5,18 +5,18 @@
 @import url("/node_modules/@fontsource/poppins/500.css");
 @import url("/node_modules/@fontsource/poppins/700.css");
 
-body {
+/* body {
   margin: 0;
-}
+} */
 
-:root {
-  font-family: 'Inter Variable', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
+/* :root { */
+  /* font-family: 'Inter Variable', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial'; */
   /* line-height: 1.5; */
-  background-color: #ffffff;
-  --green: #65B47B;
-  --gray: #b4a7bc;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  /* background-color: #ffffff; */
+  /* --green: #65B47B; */
+  /* --gray: #b4a7bc; */
+  /* -moz-osx-font-smoothing: grayscale; */
+  /* -webkit-font-smoothing: antialiased; */
   /* color-scheme: light dark; */
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #242424; */
@@ -26,8 +26,8 @@ body {
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
   /* margin-bottom: 10%; */
-  overflow-x: hidden;
-}
+  /* overflow-x: hidden; */
+/* } */
 
 /* .landing-page-container {
   display: flex;
