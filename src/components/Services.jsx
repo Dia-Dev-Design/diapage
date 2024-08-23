@@ -2,81 +2,165 @@ import WebDev from "../../src/assets/WebDev.svg";
 import CustomApplications from "../../src/assets/CustomApplications.svg";
 import ProblemSolutions from "../../src/assets/ProblemSolutions.svg";
 import TalentIncubator from "../../src/assets/TalenIncubator.svg";
+import styled from "styled-components";
+
+const ServicesContainer = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (max-width: 1200px) {
+    .services-container {
+      margin-top: 10vh;
+    }
+  }
+  @media (max-width: 1100px) {
+    .services-container {
+      margin-top: 15vh;
+    }
+  }
+
+  @media (max-width: 885px) {
+    .services-container {
+      margin-top: 20vh;
+    }
+  }
+`
+
+const ServicesMainHeader = styled.h1`
+  display: flex;
+  justify-content: center;
+  font-size: 128px;
+  margin: 0px;
+  font-weight: 100;
+`
+
+const ServiceCard = styled.div`
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+`
+
+const ServiceCard1 = styled(ServiceCard)`
+  background-color: #EDF3FF;
+`
+const ServiceCard2 = styled(ServiceCard)`
+  background-color: #FFFAEC;
+`
+const ServiceCard3 = styled(ServiceCard)`
+  background-color: #F0FFF4;
+`
+const ServiceCard4 = styled(ServiceCard)`
+  background-color: #FFF5F3;
+`
+
+const ServicesImageContainer = styled.div`
+  flex: 1;
+  text-align: left;
+
+  &img {
+    width: 100px;
+    height: 100px;
+  }
+`
+
+const ServicesHeader = styled.h1`
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-left: 5px;
+`
+
+const ServicesDescription = styled.p`
+  font-size: 1rem;
+  color: #666;
+  text-align: left;
+  margin-left: 5px;
+`
+
+const ServicesWrapContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+`
 
 const Services = () => {
   return (
-    <div className="services-container">
-      <h1 className="services-main-header">What We Do</h1>
+    <ServicesContainer>
+      <ServicesMainHeader>What We Do</ServicesMainHeader>
 
-      <div className="services-wrap-container">
-        <div className="service-card1">
-          <div className="services-image-container">
+      <ServicesWrapContainer>
+        <ServiceCard1>
+          <ServicesImageContainer>
             <img src={WebDev} alt="" />
-          </div>
+          </ServicesImageContainer>
 
           <div>
-            <h1 className="services-header">Web Dev</h1>
+            <ServicesHeader>Web Dev</ServicesHeader>
 
-            <p className="services-description">
+            <ServicesDescription>
               Save time and cut costs with automated, streamlined processes.
               Safeguard your data and observe compliance with advanced measures
               and best practices. Keep your software up-to-date and optimized
               with ongoing care.
-            </p>
+            </ServicesDescription>
           </div>
-        </div>
+        </ServiceCard1>
 
-        <div className="service-card2">
-          <div className="services-image-container">
+        <ServiceCard2>
+          <ServicesImageContainer>
             <img src={CustomApplications} alt="" />
-          </div>
+          </ServicesImageContainer>
 
           <div>
-            <h1 className="services-header">Custom Applications</h1>
+            <ServicesHeader>Custom Applications</ServicesHeader>
 
-            <p className="services-description">
+            <ServicesDescription>
               Solutions for your unique business needs and goals. Applications
               that evolve as your business grows. Seamlessly compatible with all
               devices and screen sizes. Intuitive design and engaging
               interfaces.
-            </p>
+            </ServicesDescription>
           </div>
-        </div>
+        </ServiceCard2>
 
-        <div className="service-card3">
-          <div className="services-image-container">
+        <ServiceCard3>
+          <ServicesImageContainer>
             <img src={ProblemSolutions} alt="" />
-          </div>
+          </ServicesImageContainer>
 
           <div>
-            <h1 className="services-header">Problem Solutions</h1>
+            <ServicesHeader>Problem Solutions</ServicesHeader>
 
-            <p className="services-description">
+            <ServicesDescription>
               Solutions that address your specific challenges. Fast and
               efficient responses that minimize downtime and disruption. Drive
               savings through swift and effective issue resolution.
-            </p>
+            </ServicesDescription>
           </div>
-        </div>
+        </ServiceCard3>
 
-        <div className="service-card4">
-          <div className="services-image-container">
+        <ServiceCard4>
+          <ServicesImageContainer>
             <img src={TalentIncubator} alt="" />
-          </div>
+          </ServicesImageContainer>
 
           <div>
-            <h1 className="services-header">Talent Incubator</h1>
+            <ServicesHeader>Talent Incubator</ServicesHeader>
 
-            <p className="services-description">
+            <ServicesDescription>
               Fosters the next generation of tech talent. Our program is
               designed to nurture recent graduates and emerging professionals.
               We aim to cultivate skilled professionals who can contribute to
               the technological advancement of Puerto Rico and the world.
-            </p>
+            </ServicesDescription>
           </div>
-        </div>
-      </div>
-    </div>
+        </ServiceCard4>
+      </ServicesWrapContainer>
+    </ServicesContainer>
   );
 };
 
