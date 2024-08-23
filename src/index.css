@@ -119,9 +119,9 @@ padding: 0px 0px 16px 0px; */
   height: 46px;
 } */
 
-.margin-divider-top {
-  margin-top: 2rem;
-}
+ /*.margin-divider-top {   used in the about us section */
+  /* margin-top: 2rem;
+} */
 
 .contact-us-button:hover {
   background-color: #a9e6b9;
@@ -198,17 +198,17 @@ padding: 0px 0px 16px 0px; */
 
 /* } */
 
-.landing-page-about-us-container {
-  display: flex;
+/* .landing-page-about-us-container { */
+  /* display: flex; */
   /* justify-content: space-around; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* margin-top: clamp(4rem, 1%, 10rem); */
-  top: 10%;
+  /* top: 10%;
   width: 100%;
   gap: 3%;
   position: relative;
   left: 10%;
-}
+} */
 
 .section-title-thin {
   font-weight: 100;
