@@ -50,7 +50,8 @@ const LandingPageHeader = styled.h1`
 const GreenColor = styled.span`
   color: var(--green);
 
-  &#dia {
+  &:hover {
+    color: #a9e6b9;
     transition: color 0.3s ease-in-out;
   }
 `
