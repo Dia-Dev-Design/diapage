@@ -31,11 +31,19 @@ const ContactButton = styled.button`
     background-color: #a9e6b9;
   }
 `
+const ContactLink = styled.a`
+  text-decoration: none
+`
 
 const NavBar = () => {
+
+  
+  
+  
   const scrollToBottom = () => {
+    console.log("This is document", )
     window.scrollTo({
-      top: document.body.scrollHeight,
+      top: document.getElementById('contact').getBoundingClientRect().top,
       behavior: 'smooth', // Add smooth scrolling behavior
     });
   };
@@ -43,7 +51,14 @@ const NavBar = () => {
   return (
     <NavContainer>
         <Title>Día Dev & Design</Title>
-        <ContactButton onClick={scrollToBottom}>Contact Us</ContactButton>
+          {/* <ContactLink href='#contact'> */}
+        <ContactButton 
+        onClick={scrollToBottom}
+        >
+            Contact Us
+        
+        </ContactButton>
+          {/* </ContactLink> */}
     </NavContainer>
   )
 }

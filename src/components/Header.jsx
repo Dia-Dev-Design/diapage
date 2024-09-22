@@ -117,7 +117,7 @@ const Header = () => {
         <ContactButton onClick={scrollToBottom}>Contact Us</ContactButton>
       </HeaderContent>
       <HeaderImageContainer>
-        <img src={headerImg} alt="" />
+        <img src={headerImg} alt="header-image" />
       </HeaderImageContainer>
     </HeaderContainer>
   );

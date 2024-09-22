@@ -149,7 +149,7 @@ const Services = () => {
           </ServicesImageContainer>
 
           <div>
-            <ServicesHeader>Talent Incubator</ServicesHeader>
+            <ServicesHeader>Tech & Talent Incubator</ServicesHeader>
 
             <ServicesDescription>
               Fosters the next generation of tech talent. Our program is
