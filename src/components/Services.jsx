@@ -5,9 +5,10 @@ import TalentIncubator from "../../src/assets/TalenIncubator.svg";
 import styled from "styled-components";
 
 const ServicesContainer = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
+  height: 93vh;
 
   @media (max-width: 1200px) {
     .services-container {
@@ -33,6 +34,8 @@ const ServicesMainHeader = styled.h1`
   font-size: 128px;
   margin: 0px;
   font-weight: 100;
+  ${'' /* margin-right: -6%; */}
+  margin-top: 4%;
 `
 
 const ServiceCard = styled.div`
@@ -41,6 +44,7 @@ const ServiceCard = styled.div`
   background: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
+  height: 65%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 `
 
@@ -60,8 +64,9 @@ const ServiceCard4 = styled(ServiceCard)`
 const ServicesImageContainer = styled.div`
   flex: 1;
   text-align: left;
+  ${'' /* height: 1%; */}
 
-  &img {
+  img {
     width: 100px;
     height: 100px;
   }
@@ -82,9 +87,11 @@ const ServicesDescription = styled.p`
 `
 
 const ServicesWrapContainer = styled.div`
+  ${'' /* margin-top: 5%; */}
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 2%;
+  width: 100%;
 `
 
 const Services = () => {

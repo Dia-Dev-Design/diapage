@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
 import SendMessageIcon from "../assets/Send_Message_Icon.svg";
-import dogImage from '../assets/Dog.svg';
+import dogImage from "../assets/Dog.svg";
 import styled from "styled-components";
-
 
 const FooterContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh
-  ${'' /* margin-top: 20px; */}
+  height: 100vh ${"" /* margin-top: 20px; */};
 `;
 
 const SectionTitleThin = styled.h1`
   font-weight: 100;
   font-size: 70px;
-  color: white
+  color: white;
 `;
 
 const ContactUsFormContainer = styled.div`
@@ -36,16 +34,15 @@ const ContactUsFormContentDescription = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   width: 40%;
-  height: 60%
-  ${'' /* transform: translate(10vw, -20rem); */}
+  height: 60% ${"" /* transform: translate(10vw, -20rem); */};
 `;
 const RightSide = styled.div`
   height: 95%;
-  width: 50%;
+  width: 60%;
   display: flex;
-  flex-direction: column;;
-  align-items: center
-`
+  flex-direction: column;
+  align-items: center;
+`;
 
 const ContactUsFormTitle = styled.div`
   margin-top: -10%;
@@ -65,7 +62,7 @@ const GreenColor = styled.span`
 `;
 
 const ContactUsFormContentContainer = styled.div`
-  width: 80%;
+  width: 90%;
   height: 75%;
   display: flex;
   flex-direction: column;
@@ -77,12 +74,11 @@ const ContactUsFormContentContainer = styled.div`
 `;
 
 const DogImage = styled.img`
-  width: 22%;
-  ${'' /* height: 10%; */}
+  width: 13%;
+  ${"" /* height: 10%; */}
   display: block;
   z-index: 12;
-  margin-bottom: -1%
-
+  margin-bottom: -0.7%;
 `;
 
 const ContactUsFormContent = styled.div`
@@ -98,7 +94,7 @@ const ContactUsFormContent = styled.div`
 `;
 
 const ContactUsFormSubjectButtonGroup = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -107,8 +103,9 @@ const ContactUsFormSubjectButtonGroup = styled.div`
 `;
 
 const ContactUsFormSubjectButton = styled.button`
-  width: 190.67px;
-  flex-basis: 10rem;
+  ${'' /* width: 100px; */}
+  flex-basis: 30%;
+  height: 47%;
   padding: 10px;
   border-radius: 8px;
   font-size: 20px;
@@ -123,7 +120,7 @@ const ContactUsFormSubjectButton = styled.button`
     color: black;
   }
 
-  &:active{
+  &:active {
     background-color: var(--green);
   }
 
@@ -132,21 +129,20 @@ const ContactUsFormSubjectButton = styled.button`
     `
     background-color: var(--green);
     color: black;
-    `
-  }
+    `}
 `;
 
 const ContactUsForm = styled.form`
   display: flex;
   flex-direction: column;
-  height: 70%
+  height: 70%;
 `;
 
 const ContactUsFormLabel = styled.label`
-  transform: translate(3px, ${(props) => (props.active ? '0.1rem' : '1.3rem')});
+  transform: translate(3px, ${(props) => (props.active ? "0.1rem" : "1.3rem")});
   color: var(--gray);
   margin-top: 2rem;
-  font-size: ${(props) => (props.active ? '15px' : '20px')};
+  font-size: ${(props) => (props.active ? "15px" : "20px")};
   transition: transform 0.5s ease-in-out, font-size 0.5s ease-in-out;
 `;
 
@@ -154,10 +150,12 @@ const ContactUsFormInput = styled.input`
   border: none;
   background-color: transparent;
   outline: none;
-  border-bottom: 3.5px solid ${(props) => (props.active ? 'var(--green)' : 'var(--gray)')};
+  border-bottom: 3.5px solid
+    ${(props) => (props.active ? "var(--green)" : "var(--gray)")};
   z-index: 9999;
   width: 80%;
   transition: border-color 0.5s ease-in-out;
+  field-sizing: content
 `;
 
 const FooterSendMessageButton = styled.button`
@@ -182,141 +180,160 @@ const FooterSendMessageButton = styled.button`
   }
 `;
 
-
 const Footer = () => {
-  const [subjectButtonIsActive, setSubjectButtonIsActive] = useState([]);
+  const [subjectsSelected, setSubjectsSelected] = useState([]);
   const [inputSelected, setInputSelected] = useState(null);
+  const [emailContent, setEmailContent] = useState({
+    name: "",
+    email: "",
+    message: ""
+  })
 
   const subjectSelect = (e, subject) => {
-    let thisArray = [...subjectButtonIsActive]
-    let index = thisArray.findIndex(element => element === subject)
-
-    console.log("This is subjects", thisArray, index)
+    let thisArray = [...subjectsSelected];
+    let index = thisArray.findIndex((element) => element === subject);
 
     if (index > -1) {
-      thisArray.splice(index, 1)
-      // e.currentTarget.active = 'false'
+      thisArray.splice(index, 1);
     } else {
-      thisArray.push(subject)
-      // e.currentTarget.active = true
+      thisArray.push(subject);
     }
-    setSubjectButtonIsActive(thisArray)
-  }
+    setSubjectsSelected(thisArray);
+  };
 
   useEffect(() => {
-    document.addEventListener("mousedown", () => setInputSelected(null));
+
+      document.addEventListener("mousedown", () => setInputSelected(null));
   }, []);
 
   return (
     <FooterContainer>
-      <ContactUsFormContainer id='contact'>
+      <ContactUsFormContainer id="contact">
         <ContactUsFormContentDescription>
-        <SectionTitleThin>Get In Touch</SectionTitleThin>
+          <SectionTitleThin>Get In Touch</SectionTitleThin>
           <ContactUsFormTitle>
-            Let’s discuss something <GreenColor>cool</GreenColor>{" "}
-            together!
+            Let’s discuss something <GreenColor>cool</GreenColor> together!
           </ContactUsFormTitle>
           <span></span>
           <span></span>
-          <span style={{color: "white", justifySelf: "flex-end", alignSelf: "flex-start"}}>info@diadevdesign.com</span>
+          <span
+            style={{
+              color: "white",
+              justifySelf: "flex-end",
+              alignSelf: "flex-start",
+            }}
+          >
+            info@diadevdesign.com
+          </span>
         </ContactUsFormContentDescription>
 
         <RightSide>
-        <DogImage src={dogImage} alt="Dog Image" />
-        <ContactUsFormContentContainer>
-          <ContactUsFormContent>
-            <span>I’m interested in...</span>
-            <ContactUsFormSubjectButtonGroup>
-
-              <ContactUsFormSubjectButton
-                key="button-1"
-                active={subjectButtonIsActive.includes("button-1")}
-                value="UI/UX design"
-                onClick={(e) => subjectSelect(e, "button-1")}
-              >
-                UI/UX design
-              </ContactUsFormSubjectButton>
-              <ContactUsFormSubjectButton
-                key="button-2"
-                active={subjectButtonIsActive.includes("button-2")}
-
-                value="Web design"
-                onClick={(e) => subjectSelect(e, "button-2")}
-
-              >
-                Web design
-              </ContactUsFormSubjectButton>
-              <ContactUsFormSubjectButton
-                key="button-3"
-                active={subjectButtonIsActive.includes("button-3")}
-                value="Graphic design"
-                onClick={(e) => subjectSelect(e, "button-3")}
-              >
-                Graphic design
-              </ContactUsFormSubjectButton>
-              <ContactUsFormSubjectButton
-                key="button-4"
-                active={subjectButtonIsActive.includes("button-4")}
-                value="Design system"
-                onClick={(e) => subjectSelect(e, "button-4")}
-              >
-                Design system
-              </ContactUsFormSubjectButton>
-              <ContactUsFormSubjectButton
-                key="button-5"
-                active={subjectButtonIsActive.includes("button-5")}
-                value="Other"
-                onClick={(e) => subjectSelect(e, "button-5")}
-              >
-                Other
-              </ContactUsFormSubjectButton>
-            </ContactUsFormSubjectButtonGroup>
-            <ContactUsForm
-              action="submit"
-            >
-              <ContactUsFormLabel
-                htmlFor="name"
-                active={inputSelected === "input-1"}
-              >
-                Your Name
-              </ContactUsFormLabel>
-              <ContactUsFormInput
-                type="text"
-                name="name"
-                active={inputSelected === "input-1"}
-                onClick={() => setInputSelected("input-1")}
-              />
-              <ContactUsFormLabel
-                htmlFor="email"
-                active={inputSelected === "input-2"}
-              >
-                Your Email
-              </ContactUsFormLabel>
-              <ContactUsFormInput
-                type="text"
-                name="email"
-                active={inputSelected === "input-2"}
-                onClick={() => setInputSelected("input-2")}
-              />
-              <ContactUsFormLabel
-                htmlFor="message"
-                active={inputSelected === "input-3"}
-              >
-                Your Message
-              </ContactUsFormLabel>
-              <ContactUsFormInput
-                type="text"
-                name="message"
-                active={inputSelected === "input-3"}
-                onClick={() => setInputSelected("input-3")}
-              />
-              <FooterSendMessageButton type="submit">
-                <img src={SendMessageIcon} alt="send message" />
-                Send Message
-              </FooterSendMessageButton>
-            </ContactUsForm>
-          </ContactUsFormContent>
-        </ContactUsFormContentContainer>
+          <DogImage src={dogImage} alt="Dog Image" />
+          <ContactUsFormContentContainer>
+            <ContactUsFormContent>
+              <span>I’m interested in...</span>
+              <ContactUsFormSubjectButtonGroup>
+                <ContactUsFormSubjectButton
+                  key="button-1"
+                  active={subjectsSelected.includes("Web Development")}
+                  value="Web Development"
+                  onClick={(e) => subjectSelect(e, "Web Development")}
+                >
+                  Web Development
+                </ContactUsFormSubjectButton>
+                <ContactUsFormSubjectButton
+                  key="button-2"
+                  active={subjectsSelected.includes("UX/UI Design")}
+                  value="UX/UI Design"
+                  onClick={(e) => subjectSelect(e, "UX/UI Design")}
+                >
+                  UX/UI Design
+                </ContactUsFormSubjectButton>
+                <ContactUsFormSubjectButton
+                  key="button-3"
+                  active={subjectsSelected.includes("Graphic Design")}
+                  value="Graphic Design"
+                  onClick={(e) => subjectSelect(e, "Graphic Design")}
+                >
+                  Graphic Design
+                </ContactUsFormSubjectButton>
+                {/* <ContactUsFormSubjectButton
+                  key="button-4"
+                  active={subjectsSelected.includes("Systems Design")}
+                  value="Systems Design"
+                  onClick={(e) => subjectSelect(e, "Systems Design")}
+                >
+                  Systems Design
+                </ContactUsFormSubjectButton> */}
+                <ContactUsFormSubjectButton
+                  key="button-5"
+                  active={subjectsSelected.includes("Custom APIs")}
+                  value="Custom APIs"
+                  onClick={(e) => subjectSelect(e, "Custom APIs")}
+                >
+                  Custom APIs
+                </ContactUsFormSubjectButton>
+                <ContactUsFormSubjectButton
+                  key="button-6"
+                  active={subjectsSelected.includes("Data Analysis")}
+                  value="Data Analysis"
+                  onClick={(e) => subjectSelect(e, "Data Analysis")}
+                >
+                  Data Analysis
+                </ContactUsFormSubjectButton>
+                <ContactUsFormSubjectButton
+                  key="button-7"
+                  active={subjectsSelected.includes("Other")}
+                  value="Other"
+                  onClick={(e) => subjectSelect(e, "Other")}
+                >
+                  Other
+                </ContactUsFormSubjectButton>
+              </ContactUsFormSubjectButtonGroup>
+              <ContactUsForm action="submit">
+                <ContactUsFormLabel
+                  htmlFor="name"
+                  active={inputSelected === "input-1"}
+                >
+                  Your Name
+                </ContactUsFormLabel>
+                <ContactUsFormInput
+                  type="text"
+                  name="name"
+                  active={inputSelected === "input-1"}
+                  onClick={() => setInputSelected("input-1")}
+                />
+                <ContactUsFormLabel
+                  htmlFor="email"
+                  active={inputSelected === "input-2"}
+                >
+                  Your Email
+                </ContactUsFormLabel>
+                <ContactUsFormInput
+                  type="text"
+                  name="email"
+                  active={inputSelected === "input-2"}
+                  onClick={() => setInputSelected("input-2")}
+                />
+                <ContactUsFormLabel
+                  htmlFor="message"
+                  active={inputSelected === "input-3"}
+                >
+                  Your Message
+                </ContactUsFormLabel>
+                <ContactUsFormInput
+                  type="text"
+                  name="message"
+                  active={inputSelected === "input-3"}
+                  onClick={() => setInputSelected("input-3")}
+                />
+                <FooterSendMessageButton type="submit">
+                  <img src={SendMessageIcon} alt="send message" />
+                  Send Message
+                </FooterSendMessageButton>
+              </ContactUsForm>
+            </ContactUsFormContent>
+          </ContactUsFormContentContainer>
         </RightSide>
       </ContactUsFormContainer>
     </FooterContainer>

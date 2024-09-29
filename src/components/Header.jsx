@@ -5,9 +5,11 @@ const HeaderContainer = styled.div`
     display: flex;
     padding: 0;
     position: relative;
-    left: 1%;
+    height: 90vh;
+    ${'' /* left: 1%; */}
     justify-content: space-around;
     gap: 6%;
+    background-color: #F2F2F2;
 `
 
 const HeaderContent = styled.div`
@@ -59,6 +61,8 @@ const GreenColor = styled.span`
 const HeaderDescription = styled.p`
   margin: 0px;
   width: 100%;
+  line-height: 22px;
+  letter-spacing: 1px;
   font-size: 16px;
   font-weight: 400;
   text-align: justify;
@@ -103,11 +107,22 @@ const Header = () => {
     <HeaderContainer>
       <HeaderContent>
         <LandingPageHeader>
-          Every-{" "}
+          Every -{" "}
           <GreenColor id="dia">
             Día
           </GreenColor>{". "}
-          We build. We create. You succeed.
+        </LandingPageHeader>
+        <LandingPageHeader>
+          We build.
+        </LandingPageHeader>
+        <LandingPageHeader>
+          We create.
+        </LandingPageHeader>
+        <LandingPageHeader>
+          You{" "}
+          <GreenColor id="dia">
+            succeed
+          </GreenColor>{"!"}
         </LandingPageHeader>
         <HeaderDescription>
           We partner with you to craft tailored applications that meet your

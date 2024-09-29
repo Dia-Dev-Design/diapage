@@ -3,9 +3,9 @@ import styled from "styled-components";
 const AboutUsContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
-  top: 10%;
   width: 100%;
-  gap: 3%;
+  height: 7vh;
+  gap: 5%;
   position: relative;
   left: 10%;
 
@@ -33,12 +33,15 @@ const AboutUsContainer = styled.section`
 const SectionTitleThin = styled.span`
   font-weight: 100;
   font-size: 128px;
+  margin-left: -8%;
+  margin-top: -2.2%;
 `
 const AboutUsDescription = styled.div`
   width: 50rem;
   font-weight: 400;
   text-align: justify;
   margin-top: 25px;
+  margin-top: -1.2%;
 `
 
 const AboutUs = () => {
@@ -47,19 +50,15 @@ const AboutUs = () => {
       <SectionTitleThin>We Are</SectionTitleThin>
       <AboutUsDescription>
         <p>
-          We are committed to empowering your business with cutting-edge
-          solutions that align with your goals.
+          We are committed to empowering your business with cutting-edge solutions that align with your goals.
         </p>
 
         <p>
-          Our primary focus is on delivering customized technology that caters
-          to your unique requirements.
+          Our primary focus is on delivering customized technology that caters to your unique requirements. 
         </p>
 
         <p>
-          Simultaneously we support our community through continuous learning
-          and creative collaboration, turning our efforts into sustainable,
-          fulfilling careers and successful businesses.
+          Simultaneously we support our community through continuous learning and creative collaboration, turning our efforts into sustainable, fulfilling careers and successful businesses.
         </p>
       </AboutUsDescription>
     </AboutUsContainer>

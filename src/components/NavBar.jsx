@@ -1,25 +1,33 @@
 import styled from "styled-components";
 
+import navLogo from '../assets/NavbarLogo.png'
+
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 98%;
-  height: 77px;
-`
+  align-items: center;
+  width: 94%;
+  height: 10vh;
+  margin-left: 3%;
+`;
 
-const Title = styled.header`
-  width: 298px;
-  height: 44px;
-  font-size: 2em;
-  font-weight: 700;
-`
+const NavBarLogo = styled.img`
+  height: 90%
+`;
+
+// const Title = styled.header`
+//   width: 298px;
+//   height: 44px;
+//   font-size: 2em;
+//   font-weight: 700;
+// `;
 
 const ContactButton = styled.button`
   width: 150px;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: var(--green);
   height: 45px;
   padding: 0;
@@ -30,37 +38,22 @@ const ContactButton = styled.button`
   &:hover {
     background-color: #a9e6b9;
   }
-`
-const ContactLink = styled.a`
-  text-decoration: none
-`
+`;
 
 const NavBar = () => {
-
-  
-  
-  
   const scrollToBottom = () => {
-    console.log("This is document", )
     window.scrollTo({
-      top: document.getElementById('contact').getBoundingClientRect().top,
-      behavior: 'smooth', // Add smooth scrolling behavior
+      top: document.getElementById("contact").getBoundingClientRect().top,
+      behavior: "smooth", // Add smooth scrolling behavior
     });
   };
 
   return (
     <NavContainer>
-        <Title>Día Dev & Design</Title>
-          {/* <ContactLink href='#contact'> */}
-        <ContactButton 
-        onClick={scrollToBottom}
-        >
-            Contact Us
-        
-        </ContactButton>
-          {/* </ContactLink> */}
+      <NavBarLogo src={navLogo} />
+      <ContactButton onClick={scrollToBottom}>Contact Us</ContactButton>
     </NavContainer>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

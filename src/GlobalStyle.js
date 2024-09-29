@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    font-family: 'Inter Variable', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
+    font-family: "Aileron-Regular", 'Inter Variable', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
     background-color: #ffffff;
     --green: #65B47B;
     --gray: #b4a7bc;
@@ -13,6 +13,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    padding: 0;
+    width: 99vw;
   }
 `;
 

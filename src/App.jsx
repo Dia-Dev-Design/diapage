@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import "./App.css";
+
+import { Routes, Route } from "react-router-dom";
+
 import NavBar from "./components/NavBar";
-import Header from "./components/Header";
-import AboutUs from "./components/AboutUs";
-import Services from "./components/Services";
-import Footer from "./components/Footer";
+import LandingPage from "./pages/LandingPage";
+
 import GlobalStyle from "./GlobalStyle";
 
 const LandingPageContainer = styled.div`
@@ -14,14 +15,17 @@ const LandingPageContainer = styled.div`
 
 function App() {
   return (
-    <><GlobalStyle />
-      <LandingPageContainer>
+    <>
+      <GlobalStyle />
+      
         <NavBar />
-        <Header />
-        <AboutUs />
-        <Services />
-        <Footer />
-      </LandingPageContainer></>
+
+        <Routes>
+
+            <Route path="/" element={<LandingPage />} />
+
+        </Routes>
+    </>
   );
 }
 
