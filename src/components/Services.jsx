@@ -8,7 +8,7 @@ const ServicesContainer = styled.div`
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  height: 93vh;
+  height: 100vh;
 
   @media (max-width: 1200px) {
     .services-container {
@@ -26,7 +26,49 @@ const ServicesContainer = styled.div`
       margin-top: 20vh;
     }
   }
-`
+`;
+const AboutUsContainer = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 7vh;
+  gap: 5%;
+  position: relative;
+  left: 10%;
+
+  margin-top: 2rem;
+
+  @media (max-width: 1200px) {
+    .landing-page-about-us-container {
+      top: 10vh;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .landing-page-about-us-container {
+      top: 15vh;
+    }
+  }
+
+  @media (max-width: 885px) {
+    .landing-page-about-us-container {
+      top: 20vh;
+    }
+  }
+`;
+const SectionTitleThin = styled.span`
+  font-weight: 100;
+  font-size: 128px;
+  margin-left: -8%;
+  margin-top: -2.2%;
+`;
+const AboutUsDescription = styled.div`
+  width: 50rem;
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 25px;
+  margin-top: -1.2%;
+`;
 
 const ServicesMainHeader = styled.h1`
   display: flex;
@@ -34,42 +76,72 @@ const ServicesMainHeader = styled.h1`
   font-size: 128px;
   margin: 0px;
   font-weight: 100;
-  ${'' /* margin-right: -6%; */}
+  ${"" /* margin-right: -6%; */}
   margin-top: 4%;
-`
+`;
+
+const ServicesFlexContainer = styled.div`
+  ${"" /* margin-top: 5%; */}
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 50%
+`;
 
 const ServiceCard = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-around;
   background: #f9f9f9;
+  font-size: 10px;
   padding: 20px;
   border-radius: 10px;
-  height: 65%;
+  width: 45%;
+  height: 40%;
+  margin-bottom: 2%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-`
+`;
 
 const ServiceCard1 = styled(ServiceCard)`
-  background-color: #EDF3FF;
-`
+  background-color: #edf3ff;
+`;
 const ServiceCard2 = styled(ServiceCard)`
-  background-color: #FFFAEC;
-`
+  background-color: #fffaec;
+`;
 const ServiceCard3 = styled(ServiceCard)`
-  background-color: #F0FFF4;
-`
+  background-color: #f0fff4;
+`;
 const ServiceCard4 = styled(ServiceCard)`
-  background-color: #FFF5F3;
-`
+  background-color: #fff5f3;
+`;
 
 const ServicesImageContainer = styled.div`
-  flex: 1;
-  text-align: left;
-  ${'' /* height: 1%; */}
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  ${'' /* flex: 1; */}
+  ${'' /* text-align: left; */}
+  ${'' /* height: 100%;
+  width: 100%; */}
+  width: 15%;
+  border: 1px solid black
+`;
 
-  img {
-    width: 100px;
-    height: 100px;
-  }
+const ServiceImage = styled.img`
+  height: 100%;
+  width: 100%;
+  border: 1px solid black
+`
+
+const ServicesDescriptionContainer = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%
+
 `
 
 const ServicesHeader = styled.h1`
@@ -77,35 +149,70 @@ const ServicesHeader = styled.h1`
   margin-bottom: 20px;
   text-align: left;
   margin-left: 5px;
-`
+`;
 
 const ServicesDescription = styled.p`
   font-size: 1rem;
   color: #666;
   text-align: left;
   margin-left: 5px;
-`
+`;
 
-const ServicesWrapContainer = styled.div`
-  ${'' /* margin-top: 5%; */}
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2%;
-  width: 100%;
-`
+
+
+// const AboutUs = () => {
+//   return (
+//     <AboutUsContainer>
+//       <SectionTitleThin>We Are</SectionTitleThin>
+//       <AboutUsDescription>
+//         <p>
+//           We are committed to empowering your business with cutting-edge solutions that align with your goals.
+//         </p>
+
+//         <p>
+//           Our primary focus is on delivering customized technology that caters to your unique requirements.
+//         </p>
+
+//         <p>
+//           Simultaneously we support our community through continuous learning and creative collaboration, turning our efforts into sustainable, fulfilling careers and successful businesses.
+//         </p>
+//       </AboutUsDescription>
+//     </AboutUsContainer>
+//   );
+// };
 
 const Services = () => {
   return (
     <ServicesContainer>
+      <AboutUsContainer>
+        <SectionTitleThin>We Are</SectionTitleThin>
+        <AboutUsDescription>
+          <p>
+            We are committed to empowering your business with cutting-edge
+            solutions that align with your goals.
+          </p>
+
+          <p>
+            Our primary focus is on delivering customized technology that caters
+            to your unique requirements.
+          </p>
+
+          <p>
+            Simultaneously we support our community through continuous learning
+            and creative collaboration, turning our efforts into sustainable,
+            fulfilling careers and successful businesses.
+          </p>
+        </AboutUsDescription>
+      </AboutUsContainer>
       <ServicesMainHeader>What We Do</ServicesMainHeader>
 
-      <ServicesWrapContainer>
+      <ServicesFlexContainer>
         <ServiceCard1>
           <ServicesImageContainer>
-            <img src={WebDev} alt="" />
+            <ServiceImage src={WebDev} alt="web-dev" />
           </ServicesImageContainer>
 
-          <div>
+          <ServicesDescriptionContainer>
             <ServicesHeader>Web Dev</ServicesHeader>
 
             <ServicesDescription>
@@ -114,15 +221,15 @@ const Services = () => {
               and best practices. Keep your software up-to-date and optimized
               with ongoing care.
             </ServicesDescription>
-          </div>
+          </ServicesDescriptionContainer>
         </ServiceCard1>
 
         <ServiceCard2>
           <ServicesImageContainer>
-            <img src={CustomApplications} alt="" />
+            <ServiceImage src={CustomApplications} alt="custom-applications" />
           </ServicesImageContainer>
 
-          <div>
+          <ServicesDescriptionContainer>
             <ServicesHeader>Custom Applications</ServicesHeader>
 
             <ServicesDescription>
@@ -131,15 +238,15 @@ const Services = () => {
               devices and screen sizes. Intuitive design and engaging
               interfaces.
             </ServicesDescription>
-          </div>
+          </ServicesDescriptionContainer>
         </ServiceCard2>
 
         <ServiceCard3>
           <ServicesImageContainer>
-            <img src={ProblemSolutions} alt="" />
+            <ServiceImage src={ProblemSolutions} alt="problem-solutions" />
           </ServicesImageContainer>
 
-          <div>
+          <ServicesDescriptionContainer>
             <ServicesHeader>Problem Solutions</ServicesHeader>
 
             <ServicesDescription>
@@ -147,15 +254,15 @@ const Services = () => {
               efficient responses that minimize downtime and disruption. Drive
               savings through swift and effective issue resolution.
             </ServicesDescription>
-          </div>
+          </ServicesDescriptionContainer>
         </ServiceCard3>
 
         <ServiceCard4>
           <ServicesImageContainer>
-            <img src={TalentIncubator} alt="" />
+            <ServiceImage src={TalentIncubator} alt="tech-talent-incubator" />
           </ServicesImageContainer>
 
-          <div>
+          <ServicesDescriptionContainer>
             <ServicesHeader>Tech & Talent Incubator</ServicesHeader>
 
             <ServicesDescription>
@@ -164,9 +271,9 @@ const Services = () => {
               We aim to cultivate skilled professionals who can contribute to
               the technological advancement of Puerto Rico and the world.
             </ServicesDescription>
-          </div>
+          </ServicesDescriptionContainer>
         </ServiceCard4>
-      </ServicesWrapContainer>
+      </ServicesFlexContainer>
     </ServicesContainer>
   );
 };

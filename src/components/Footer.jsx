@@ -255,7 +255,7 @@ const Footer = () => {
                   value="Graphic Design"
                   onClick={(e) => subjectSelect(e, "Graphic Design")}
                 >
-                  Graphic Design
+                  Marketing
                 </ContactUsFormSubjectButton>
                 {/* <ContactUsFormSubjectButton
                   key="button-4"
