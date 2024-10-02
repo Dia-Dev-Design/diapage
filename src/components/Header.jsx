@@ -5,7 +5,7 @@ const HeaderContainer = styled.div`
     display: flex;
     padding: 0;
     position: relative;
-    height: 90vh;
+    height: 85vh;
     ${'' /* left: 1%; */}
     justify-content: space-around;
     gap: 6%;

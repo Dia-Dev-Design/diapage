@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { post } from "../services/authService";
+import styled from "styled-components";
+
 import SendMessageIcon from "../assets/Send_Message_Icon.svg";
 import dogImage from "../assets/Dog.svg";
-import styled from "styled-components";
 
 const FooterContainer = styled.section`
   display: flex;
@@ -103,7 +105,7 @@ const ContactUsFormSubjectButtonGroup = styled.div`
 `;
 
 const ContactUsFormSubjectButton = styled.button`
-  ${'' /* width: 100px; */}
+  ${"" /* width: 100px; */}
   flex-basis: 30%;
   height: 47%;
   padding: 10px;
@@ -155,8 +157,11 @@ const ContactUsFormInput = styled.input`
   z-index: 9999;
   width: 80%;
   transition: border-color 0.5s ease-in-out;
-  field-sizing: content
+  field-sizing: content;
 `;
+
+const ContactUsFormTextArea = styled.textarea`
+`
 
 const FooterSendMessageButton = styled.button`
   margin-top: 3%;
@@ -186,8 +191,9 @@ const Footer = () => {
   const [emailContent, setEmailContent] = useState({
     name: "",
     email: "",
-    message: ""
-  })
+    message: "",
+  });
+  const [emailSuccessMessage, setEmailSuccessMessage] = useState('')
 
   const subjectSelect = (e, subject) => {
     let thisArray = [...subjectsSelected];
@@ -201,9 +207,33 @@ const Footer = () => {
     setSubjectsSelected(thisArray);
   };
 
-  useEffect(() => {
+  const handleTextInput = (e) => {
+    setEmailContent((prev) => ({...prev, [e.target.name]: e.target.value}))
+  }
 
-      document.addEventListener("mousedown", () => setInputSelected(null));
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    post("/send-email", { emailContent, subjectsSelected })
+      .then((res) => {
+        console.log(res.data.message)
+        setEmailSuccessMessage(res.data.message)
+        setSubjectsSelected([])
+        setEmailContent({
+          name: "",
+          email: "",
+          message: "",
+        })
+        setTimeout(() => {
+          setEmailSuccessMessage('')
+        }, 4500)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", () => setInputSelected(null));
   }, []);
 
   return (
@@ -227,114 +257,121 @@ const Footer = () => {
           </span>
         </ContactUsFormContentDescription>
 
-        <RightSide>
-          <DogImage src={dogImage} alt="Dog Image" />
-          <ContactUsFormContentContainer>
-            <ContactUsFormContent>
-              <span>I’m interested in...</span>
-              <ContactUsFormSubjectButtonGroup>
-                <ContactUsFormSubjectButton
-                  key="button-1"
-                  active={subjectsSelected.includes("Web Development")}
-                  value="Web Development"
-                  onClick={(e) => subjectSelect(e, "Web Development")}
-                >
-                  Web Development
-                </ContactUsFormSubjectButton>
-                <ContactUsFormSubjectButton
-                  key="button-2"
-                  active={subjectsSelected.includes("UX/UI Design")}
-                  value="UX/UI Design"
-                  onClick={(e) => subjectSelect(e, "UX/UI Design")}
-                >
-                  UX/UI Design
-                </ContactUsFormSubjectButton>
-                <ContactUsFormSubjectButton
-                  key="button-3"
-                  active={subjectsSelected.includes("Graphic Design")}
-                  value="Graphic Design"
-                  onClick={(e) => subjectSelect(e, "Graphic Design")}
-                >
-                  Marketing
-                </ContactUsFormSubjectButton>
-                {/* <ContactUsFormSubjectButton
-                  key="button-4"
-                  active={subjectsSelected.includes("Systems Design")}
-                  value="Systems Design"
-                  onClick={(e) => subjectSelect(e, "Systems Design")}
-                >
-                  Systems Design
-                </ContactUsFormSubjectButton> */}
-                <ContactUsFormSubjectButton
-                  key="button-5"
-                  active={subjectsSelected.includes("Custom APIs")}
-                  value="Custom APIs"
-                  onClick={(e) => subjectSelect(e, "Custom APIs")}
-                >
-                  Custom APIs
-                </ContactUsFormSubjectButton>
-                <ContactUsFormSubjectButton
-                  key="button-6"
-                  active={subjectsSelected.includes("Data Analysis")}
-                  value="Data Analysis"
-                  onClick={(e) => subjectSelect(e, "Data Analysis")}
-                >
-                  Data Analysis
-                </ContactUsFormSubjectButton>
-                <ContactUsFormSubjectButton
-                  key="button-7"
-                  active={subjectsSelected.includes("Other")}
-                  value="Other"
-                  onClick={(e) => subjectSelect(e, "Other")}
-                >
-                  Other
-                </ContactUsFormSubjectButton>
-              </ContactUsFormSubjectButtonGroup>
-              <ContactUsForm action="submit">
-                <ContactUsFormLabel
-                  htmlFor="name"
-                  active={inputSelected === "input-1"}
-                >
-                  Your Name
-                </ContactUsFormLabel>
-                <ContactUsFormInput
-                  type="text"
-                  name="name"
-                  active={inputSelected === "input-1"}
-                  onClick={() => setInputSelected("input-1")}
-                />
-                <ContactUsFormLabel
-                  htmlFor="email"
-                  active={inputSelected === "input-2"}
-                >
-                  Your Email
-                </ContactUsFormLabel>
-                <ContactUsFormInput
-                  type="text"
-                  name="email"
-                  active={inputSelected === "input-2"}
-                  onClick={() => setInputSelected("input-2")}
-                />
-                <ContactUsFormLabel
-                  htmlFor="message"
-                  active={inputSelected === "input-3"}
-                >
-                  Your Message
-                </ContactUsFormLabel>
-                <ContactUsFormInput
-                  type="text"
-                  name="message"
-                  active={inputSelected === "input-3"}
-                  onClick={() => setInputSelected("input-3")}
-                />
-                <FooterSendMessageButton type="submit">
-                  <img src={SendMessageIcon} alt="send message" />
-                  Send Message
-                </FooterSendMessageButton>
-              </ContactUsForm>
-            </ContactUsFormContent>
-          </ContactUsFormContentContainer>
-        </RightSide>
+
+        {
+          !emailSuccessMessage ? 
+
+            <RightSide>
+              <DogImage src={dogImage} alt="Dog Image" />
+              <ContactUsFormContentContainer>
+                <ContactUsFormContent>
+                  <span>I’m interested in...</span>
+                  <ContactUsFormSubjectButtonGroup>
+                    <ContactUsFormSubjectButton
+                      key="button-1"
+                      active={subjectsSelected.includes("Web Development")}
+                      value="Web Development"
+                      onClick={(e) => subjectSelect(e, "Web Development")}
+                    >
+                      Web Development
+                    </ContactUsFormSubjectButton>
+                    <ContactUsFormSubjectButton
+                      key="button-2"
+                      active={subjectsSelected.includes("UX/UI Design")}
+                      value="UX/UI Design"
+                      onClick={(e) => subjectSelect(e, "UX/UI Design")}
+                    >
+                      UX/UI Design
+                    </ContactUsFormSubjectButton>
+                    <ContactUsFormSubjectButton
+                      key="button-3"
+                      active={subjectsSelected.includes("Graphic Design")}
+                      value="Graphic Design"
+                      onClick={(e) => subjectSelect(e, "Graphic Design")}
+                    >
+                      Marketing
+                    </ContactUsFormSubjectButton>
+                    <ContactUsFormSubjectButton
+                      key="button-5"
+                      active={subjectsSelected.includes("Custom APIs")}
+                      value="Custom APIs"
+                      onClick={(e) => subjectSelect(e, "Custom APIs")}
+                    >
+                      Custom APIs
+                    </ContactUsFormSubjectButton>
+                    <ContactUsFormSubjectButton
+                      key="button-6"
+                      active={subjectsSelected.includes("Data Analysis")}
+                      value="Data Analysis"
+                      onClick={(e) => subjectSelect(e, "Data Analysis")}
+                    >
+                      Data Analysis
+                    </ContactUsFormSubjectButton>
+                    <ContactUsFormSubjectButton
+                      key="button-7"
+                      active={subjectsSelected.includes("Other")}
+                      value="Other"
+                      onClick={(e) => subjectSelect(e, "Other")}
+                    >
+                      Other
+                    </ContactUsFormSubjectButton>
+                  </ContactUsFormSubjectButtonGroup>
+                  <ContactUsForm onSubmit={handleSubmit}>
+                    <ContactUsFormLabel
+                      htmlFor="name"
+                      active={inputSelected === "input-1"}
+                    >
+                      Your Name
+                    </ContactUsFormLabel>
+                    <ContactUsFormInput
+                      type="text"
+                      name="name"
+                      value={emailContent.name}
+                      active={inputSelected === "input-1"}
+                      onClick={() => setInputSelected("input-1")}
+                      onChange={(e) => handleTextInput(e)}
+                    />
+                    <ContactUsFormLabel
+                      htmlFor="email"
+                      active={inputSelected === "input-2"}
+                    >
+                      Your Email
+                    </ContactUsFormLabel>
+                    <ContactUsFormInput
+                      type="email"
+                      name="email"
+                      value={emailContent.email}
+                      active={inputSelected === "input-2"}
+                      onClick={() => setInputSelected("input-2")}
+                      onChange={(e) => handleTextInput(e)}
+                    />
+                    <ContactUsFormLabel
+                      htmlFor="message"
+                      active={inputSelected === "input-3"}
+                    >
+                      Your Message
+                    </ContactUsFormLabel>
+                    <ContactUsFormInput
+                      type="text"
+                      name="message"
+                      value={emailContent.message}
+                      active={inputSelected === "input-3"}
+                      onClick={() => setInputSelected("input-3")}
+                      onChange={(e) => handleTextInput(e)}
+                    />
+                    <FooterSendMessageButton type="submit">
+                      <img src={SendMessageIcon} alt="send message" />
+                      Send Message
+                    </FooterSendMessageButton>
+                  </ContactUsForm>
+                </ContactUsFormContent>
+              </ContactUsFormContentContainer>
+            </RightSide>
+          :
+
+          <p style={{whiteSpace: 'pre-wrap', color: "white"}}>{emailSuccessMessage}</p>
+        }
+
       </ContactUsFormContainer>
     </FooterContainer>
   );

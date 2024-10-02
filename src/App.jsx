@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import LandingPage from "./pages/LandingPage";
 
 import GlobalStyle from "./GlobalStyle";
+import AboutUs from "./pages/AboutUs";
 
 const LandingPageContainer = styled.div`
     display: flex;
@@ -17,12 +18,13 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      
+
         <NavBar />
 
         <Routes>
 
             <Route path="/" element={<LandingPage />} />
+            <Route path='/about' element={<AboutUs />} />
 
         </Routes>
     </>

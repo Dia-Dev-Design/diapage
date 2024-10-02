@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  html {
+    font-size: 10px
+  }
+
   body {
     margin: 0;
     padding: 0;
