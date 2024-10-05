@@ -1,28 +1,23 @@
-import headerImg from "../assets/headerImage.svg";
+import DevBro from "../assets/DevBro.svg";
 import styled from "styled-components";
 
 const HeaderContainer = styled.div`
     display: flex;
     padding: 0;
-    position: relative;
     height: 85vh;
+    width: 99vw;
     ${'' /* left: 1%; */}
     justify-content: space-around;
-    gap: 6%;
+    align-items: center;
     background-color: #F2F2F2;
 `
 
 const HeaderContent = styled.div`
-  width: 40em;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  left: 48px;
-  opacity: 0px;
-  position: relative;
-  top: 150px;
-  left: 50px;
-  gap: 25px;
+  justify-content: center;
+  height: 60%;
 `
 
 const ContactButton = styled.button`
@@ -33,7 +28,7 @@ const ContactButton = styled.button`
   color: #FFFFFF;
   background-color: var(--green);
   height: 45px;
-  padding: 0;
+  padding: 1.5%;
   border: none;
   border-radius: 8px;
   transition: background-color 0.1s ease-in-out;
@@ -44,9 +39,8 @@ const ContactButton = styled.button`
 `
 
 const LandingPageHeader = styled.h1`
-  font-size: 50px;
-  text-align: left;
-  margin: 0px;
+  font-size: 5rem;
+  margin: 0 0 2%;
 `
 
 const GreenColor = styled.span`
@@ -59,39 +53,19 @@ const GreenColor = styled.span`
 `
 
 const HeaderDescription = styled.p`
-  margin: 0px;
-  width: 100%;
-  line-height: 22px;
+  width: 120%;
+  line-height: 2.2rem;
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 120%;
   font-weight: 400;
   text-align: justify;
 `
 
 const HeaderImageContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-width: 500px;
-  max-width: 581px;
-  max-height: 600px;
-  min-height: 500px;
+  width: 50%;
 
   img {
-    width: 100%;
-    height: 649.79px;
-
-    @media (max-width: 1200px) {
-      height: 649.79px; /* Override height for specific breakpoints */
-    }
-
-    @media (max-width: 1100px) {
-      height: 649.79px; /* Same height for this breakpoint */
-    }
-
-    @media (max-width: 885px) {
-      height: 649.79px; /* Same height for smaller screens */
-    }
+    width: 80%;
   }
 `
 
@@ -132,7 +106,7 @@ const Header = () => {
         <ContactButton onClick={scrollToBottom}>Contact Us</ContactButton>
       </HeaderContent>
       <HeaderImageContainer>
-        <img src={headerImg} alt="header-image" />
+        <img src={DevBro} alt="header-image" />
       </HeaderImageContainer>
     </HeaderContainer>
   );
