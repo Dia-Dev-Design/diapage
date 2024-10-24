@@ -7,7 +7,8 @@ import HandsIcon from '../assets/HandsIcon.svg'
 const WhyPageContainer = styled.div`
     height: 50vh;
     widht: 100%;
-    border: 2px solid black
+    border: 2px solid black;
+    z-index: 9;
 `
 
 const WhyWeDoIt = () => {
