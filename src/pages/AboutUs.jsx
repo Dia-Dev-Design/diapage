@@ -16,13 +16,17 @@ import BallonDog from '../assets/BalloonDog.svg'
 import BottomWavyTopRectangle from '../assets/Bottom-Wavy-Top-Rectangle.svg'
 
 const AboutUsPage = styled.div`
-    height: 420vh;
+    ${'' /* height: 420vh; */}
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    ${'' /* justify-content: normal; */}
+
 `
 
 const WeBuildContainerLeft = styled.div`
     display: flex;
-    height: 16%;
+    height: 67vh;
     width: unset;
     aspect-ratio: 85/100;
     margin-left: 4.7%;
@@ -37,6 +41,13 @@ const WeBuildContainerLeft = styled.div`
     box-shadow: 4px -4px 6px 2px rgba(0, 0, 0, 0.25) inset, -4px 4px 6px 2px rgba(0, 0, 0, 0.25) inset;
     backdrop-filter: blur(5px);
 `
+const TemporaryDiv = styled.div`
+    height: 100vh;
+    width: 100%;
+    border: 2px solid black;
+    display: block;
+    ${'' /* overflow-y: hidden; */}
+`
 
 const AboutUs = () => {
   return (
@@ -45,35 +56,41 @@ const AboutUs = () => {
         <WhyWeDoIt />
         <Consulting />
 
+        <br />
 
-        <WeBuildContainerLeft>
-            
-        </WeBuildContainerLeft>
-        {/* <div>
-            <img src={LeftCard} alt='left-we-build-card'/>
-            <img src={RightCard} alt='right-you-get-card'/>
-        </div> */}
-        <img src={Plant} alt='plant-image'/>
-        <h1>Tech & Talent Incubator</h1>
-        <div>
+        <TemporaryDiv>
+            <WeBuildContainerLeft>
+                
+            </WeBuildContainerLeft>
+            {/* <div>
+                <img src={LeftCard} alt='left-we-build-card'/>
+                <img src={RightCard} alt='right-you-get-card'/>
+            </div> */}
+            <img src={Plant} alt='plant-image'/>
+            <h1>Tech & Talent Incubator</h1>
             <div>
-                <img src={HandsOnTraining} alt='hands-on-training'/>
-                <h4>Hands-On Training</h4>
-                <p>Training and workshops covering the latest technologies and industry best practices.</p>
+                <div>
+                    <img src={HandsOnTraining} alt='hands-on-training'/>
+                    <h4>Hands-On Training</h4>
+                    <p>Training and workshops covering the latest technologies and industry best practices.</p>
+                </div>
+                <div>
+                    <img src={Performance} alt='performance'/>
+                    <h4>Performance Feedback</h4>
+                    <p>Training and workshops covering the latest technologies and industry best practices.</p>
+                </div>
+                <div>
+                    <img src={CommunityEngagement} alt='community-engagement'/>
+                    <h4>Community Engagement</h4>
+                    <p>Participate in advancing local technological innovation and progress.</p>
+                </div>
             </div>
-            <div>
-                <img src={Performance} alt='performance'/>
-                <h4>Performance Feedback</h4>
-                <p>Training and workshops covering the latest technologies and industry best practices.</p>
-            </div>
-            <div>
-                <img src={CommunityEngagement} alt='community-engagement'/>
-                <h4>Community Engagement</h4>
-                <p>Participate in advancing local technological innovation and progress.</p>
-            </div>
-        </div>
-        <img src={BallonDog} alt='ballon-dog'/>
-        <img src={BottomWavyTopRectangle} alt='bottom-wavy-top-rectangle'/>
+            <img src={BallonDog} alt='ballon-dog'/>
+            <img src={BottomWavyTopRectangle} alt='bottom-wavy-top-rectangle'/>
+
+        </TemporaryDiv>
+
+
     </AboutUsPage>
   )
 }
