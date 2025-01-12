@@ -8,6 +8,9 @@ import Footer from "../components/Footer";
 const LandingPageContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justiy-content: center;
+  ${'' /* align-items: center; */}
+  ${'' /* width: 1200px */}
 `;
 
 const LandingPage = () => {

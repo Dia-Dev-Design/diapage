@@ -26,7 +26,7 @@ const ContactUsFormContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: black;
+  background-color: #01402F;
 `;
 
 const ContactUsFormContentDescription = styled.div`

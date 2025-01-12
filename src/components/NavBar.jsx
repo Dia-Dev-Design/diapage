@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { useNavigate, Link } from "react-router-dom";
 
+import { GreenLettering } from "./GreenLettering";
+
 import navLogo from '../assets/NavbarLogo.png'
 
 const NavContainer = styled.div`
@@ -16,6 +18,11 @@ const NavContainer = styled.div`
 const NavBarLogo = styled.img`
   height: 75%
 `;
+
+const CompanyTitle = styled.h1`
+  font-size: 5rem;
+  margin-left: 1%
+`
 
 const LinksContainer = styled.div`
   height: 100%;
@@ -73,6 +80,7 @@ const NavBar = () => {
   return (
     <NavContainer>
       <NavBarLogo onClick={goHome} src={navLogo} />
+      <CompanyTitle>&lt;<GreenLettering>Día:</GreenLettering> Dev &amp; Design&gt;</CompanyTitle>
       <LinksContainer>
         <StyledButton to='/'>Home</StyledButton>
         <StyledButton to='/about'>About Us</StyledButton>

@@ -5,9 +5,9 @@ const HeaderContainer = styled.div`
     display: flex;
     padding: 0;
     height: 85vh;
-    width: 99vw;
+    ${'' /* width: 99vw; */}
     ${'' /* left: 1%; */}
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #F2F2F2;
 `
@@ -56,7 +56,7 @@ const HeaderDescription = styled.p`
   width: 120%;
   line-height: 2.2rem;
   letter-spacing: 1px;
-  font-size: 120%;
+  font-size: 140%;
   font-weight: 400;
   text-align: justify;
 `

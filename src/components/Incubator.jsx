@@ -15,7 +15,7 @@ const IncubatorPage = styled.div`
 
 const PageContainer = styled.div`
   position: absolute;
-  width: 100%
+  width: 100%;
 `;
 
 const CardsContainer = styled.div`
@@ -25,7 +25,7 @@ const CardsContainer = styled.div`
   justify-content: space-around;
   position: relative;
   left: 14%;
-  border: 1px solid black
+  border: 1px solid black;
 `;
 
 const WeBuildContainerLeft = styled.div`
@@ -65,27 +65,144 @@ const WeBuildContainerRight = styled.div`
   backdrop-filter: blur(5px);
 `;
 
-const CardHeadline = styled.p`
+const InnerContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2.5%;
+`;
 
+const InnerHeadline = styled.h3`
+  color: #070D0D;
+  font-family: Aileron;
+  font-size: 3.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 3.8% 0
 `
-const CardDetails = styled.div`
 
-`
+const Section = styled.div`
+  align-self: stretch;
+  ${'' /* height: 7.5%; */}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  ${'' /* gap: 0.6%; */}
+`;
 
+const LargeText = styled.div`
+  align-self: stretch;
+  color: #070d0d;
+  font-size: 2rem;
+  font-family: "Aileron";
+  font-weight: 700;
+  word-wrap: break-word;
+`;
+
+const SmallText = styled.div`
+  align-self: stretch;
+  color: #070d0d;
+  font-size: 1.6rem;
+  font-family: "Aileron";
+  font-weight: 400;
+  word-wrap: break-word;
+`;
 
 const Incubator = () => {
   return (
     <IncubatorPage>
       <PageContainer>
         <CardsContainer>
-            <WeBuildContainerLeft>
+          <WeBuildContainerLeft>
+            <InnerContainer>
+              <InnerHeadline>We build...</InnerHeadline>
+              <Section>
+                <LargeText>Tailored</LargeText>
+                <SmallText>
+                  Solutions for your unique business needs and goals.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>Scalable</LargeText>
+                <SmallText>
+                  Applications that evolve as your business grows.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>Responsive</LargeText>
+                <SmallText>
+                  Seamlessly compatible with all devices and screen sizes.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>Cross-Platform Integration</LargeText>
+                <SmallText>
+                  Incorporate custom applications with your current systems and software.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>Robust Architecture</LargeText>
+                <SmallText>
+                  Reliable and scalable software that can handle increasing loads and complexities.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>User-Centered Experience</LargeText>
+                <SmallText>Intuitive design and engaging interfaces.</SmallText>
+              </Section>
+              <Section>
+                <LargeText>Agile Development</LargeText>
+                <SmallText>
+                  To deliver projects on time and adapt to changing requirements quickly.
+                </SmallText>
+              </Section>
+            </InnerContainer>
+          </WeBuildContainerLeft>
 
-            </WeBuildContainerLeft>
-
-            <WeBuildContainerRight>
-
-            </WeBuildContainerRight>
-
+          <WeBuildContainerRight>
+            <InnerContainer>
+            <InnerHeadline>You get...</InnerHeadline>
+              <Section>
+                <LargeText>Increased efficiency</LargeText>
+                <SmallText>
+                  Save time and cut costs with automated, streamlined processes.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>Competitive Advantage</LargeText>
+                <SmallText>
+                  Cutting-edge technology to stay ahead in your industry and set you apart.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>Advanced Analytics</LargeText>
+                <SmallText>
+                  Reporting features to provide valuable insights into your operations.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>Security</LargeText>
+                <SmallText>
+                  Safeguard your data and observe compliance with advanced measures and best practices.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>Maintenance and Support</LargeText>
+                <SmallText>
+                  Keep your software up-to-date and optimized with ongoing care.
+                </SmallText>
+              </Section>
+              <Section>
+                <LargeText>Excellence</LargeText>
+                <SmallText>With our dedication to always delivering cutting-edge design, development, and marketing, we will ensure you're always getting the best!</SmallText>
+              </Section>
+            </InnerContainer>
+          </WeBuildContainerRight>
         </CardsContainer>
 
         <img src={Plant} alt="plant-image" />

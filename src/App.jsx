@@ -10,13 +10,16 @@ import GlobalStyle from "./GlobalStyle";
 import AboutUs from "./pages/AboutUs";
 
 const AppContainer = styled.div`
-    width: 100%
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-contents: center;
 `
 
 function App() {
   return (
     <AppContainer>
-      <GlobalStyle />
+        <GlobalStyle />
 
         <NavBar />
 
