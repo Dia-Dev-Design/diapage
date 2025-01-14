@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-import BalloonCat from '../assets/BalloonCat.svg'
-import DiaGreenLogo from '../assets/DDDGreenLogoClearBackGround.svg'
+import BalloonCat from '../../assets/BalloonCat.svg'
+import DiaGreenLogo from '../../assets/DDDGreenLogoClearBackGround.svg'
 
 const StoryContainer = styled.div`
     height: 85vh;

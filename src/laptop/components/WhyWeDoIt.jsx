@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
-import TargetIcon from '../assets/TargetIcon.svg'
-import EyeIcon from '../assets/EyeIcon.svg'
-import HandsIcon from '../assets/HandsIcon.svg'
+import TargetIcon from '../../assets/TargetIcon.svg'
+import EyeIcon from '../../assets/EyeIcon.svg'
+import HandsIcon from '../../assets/HandsIcon.svg'
 
 const WhyPageContainer = styled.div`
     height: 51vh;

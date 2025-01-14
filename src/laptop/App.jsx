@@ -9,6 +9,8 @@ import LandingPage from "./pages/LandingPage";
 import GlobalStyle from "./GlobalStyle";
 import AboutUs from "./pages/AboutUs";
 
+
+
 const AppContainer = styled.div`
     width: 100%;
     display: flex;

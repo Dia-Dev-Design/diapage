@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import { GreenLettering } from "./GreenLettering";
 
-import navLogo from '../assets/NavbarLogo.png'
+import navLogo from '../../assets/NavbarLogo.png'
 
 const NavContainer = styled.div`
   display: flex;

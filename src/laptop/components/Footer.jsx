@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { post } from "../services/authService";
+import { post } from "../../services/authService";
 import styled from "styled-components";
 
-import SendMessageIcon from "../assets/Send_Message_Icon.svg";
-import dogImage from "../assets/Dog.svg";
+import SendMessageIcon from "../../assets/Send_Message_Icon.svg";
+import dogImage from "../../assets/Dog.svg";
 
 const FooterContainer = styled.section`
   display: flex;

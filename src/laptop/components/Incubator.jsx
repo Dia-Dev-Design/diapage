@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-import Plant from "../assets/Plant.svg";
-import HandsOnTraining from "../assets/Hands-On-Training.svg";
-import Performance from "../assets/Performance.svg";
-import CommunityEngagement from "../assets/Community-Engagement.svg";
-import BallonDog from "../assets/BalloonDog.svg";
-import BottomWavyTopRectangle from "../assets/Bottom-Wavy-Top-Rectangle.svg";
+import Plant from "../../assets/Plant.svg";
+import HandsOnTraining from "../../assets/Hands-On-Training.svg";
+import Performance from "../../assets/Performance.svg";
+import CommunityEngagement from "../../assets/Community-Engagement.svg";
+import BallonDog from "../../assets/BalloonDog.svg";
+import BottomWavyTopRectangle from "../../assets/Bottom-Wavy-Top-Rectangle.svg";
 
 const IncubatorPage = styled.div`
   width: 100%;
@@ -33,7 +33,7 @@ const WeBuildContainerLeft = styled.div`
   height: 67vh;
   width: unset;
   aspect-ratio: 85/100;
-  transform: rotate(-15deg);
+  transform: rotate(-10deg);
   padding: 24px 16px 96px 16px;
   flex-direction: column;
   align-items: flex-start;
@@ -52,7 +52,7 @@ const WeBuildContainerRight = styled.div`
   height: 67vh;
   width: unset;
   aspect-ratio: 85/100;
-  transform: rotate(15deg);
+  transform: rotate(10deg);
   padding: 24px 16px 96px 16px;
   flex-direction: column;
   align-items: flex-start;
@@ -82,7 +82,7 @@ const InnerHeadline = styled.h3`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin: 3.8% 0
+  margin: 1.5% 0
 `
 
 const Section = styled.div`
@@ -199,7 +199,7 @@ const Incubator = () => {
               </Section>
               <Section>
                 <LargeText>Excellence</LargeText>
-                <SmallText>With our dedication to always delivering cutting-edge design, development, and marketing, we will ensure you're always getting the best!</SmallText>
+                <SmallText>With our dedication to always delivering cutting-edge design, development, and marketing, we ensure you always get the very best!</SmallText>
               </Section>
             </InnerContainer>
           </WeBuildContainerRight>

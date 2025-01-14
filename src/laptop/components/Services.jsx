@@ -1,7 +1,7 @@
-import WebDev from "../../src/assets/WebDev.svg";
-import CustomApplications from "../../src/assets/CustomApplications.svg";
-import ProblemSolutions from "../../src/assets/ProblemSolutions.svg";
-import TalentIncubator from "../../src/assets/TalenIncubator.svg";
+import WebDev from "../../assets/WebDev.svg";
+import CustomApplications from "../../assets/CustomApplications.svg";
+import ProblemSolutions from "../../assets/ProblemSolutions.svg";
+import TalentIncubator from "../../assets/TalenIncubator.svg";
 import styled from "styled-components";
 
 const ServicesContainer = styled.div`

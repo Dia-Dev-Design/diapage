@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-import Fishermen from '../assets/Fishermen.svg'
-import Sea from '../assets/Sea.svg'
+import Fishermen from '../../assets/Fishermen.svg'
+import Sea from '../../assets/Sea.svg'
 
 const ConsultingPage = styled.div`
   height: 80vh;

@@ -132,10 +132,10 @@
   /* width: 100%; */
 /* } */
 
-.header .about-us {
+/* .header .about-us {
   position: relative;
   left: 20rem;
-}
+} */
 
 /* .landing-page-nav-container {
   display: flex;
@@ -151,7 +151,7 @@ padding: 0px 0px 16px 0px; */
   /* opacity: 0px; */
 
 /* } */
-
+/* 
 .green-color {
   color: var(--green);
 }
@@ -161,22 +161,24 @@ padding: 0px 0px 16px 0px; */
 }
 .black-color {
   color: black !important;
-}
+} */
 
 /* .background-black { */
   /* background-color: black; */
   /* color: black; */
 /* } */
-
+/* 
 .background-white {
   background-color: white;
-  /* color: black; */
+
 }
+
 .background-green {
   background-color: var(--green) !important;
-  /* font-size: 1000px; */
-  /* color: black; */
-}
+
+
+} 
+*/
 
 /* .green-color #dia {
   transition: color 0.3s ease-in-out;
@@ -532,7 +534,7 @@ padding: 0px 0px 16px 0px; */
   background-color: #a9e6b9;
 } */
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .landing-page-about-us-container {
     top: 10vh;
   }
@@ -572,4 +574,4 @@ padding: 0px 0px 16px 0px; */
   .landing-page-header-image-container>img {
     height: 649.79px;
   }
-}
+} */
