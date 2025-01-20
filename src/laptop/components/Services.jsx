@@ -37,8 +37,7 @@ const AboutUsDescription = styled.div`
   font-size: 1.6rem;
   font-weight: 400;
   text-align: justify;
-  ${"" /* margin-top: 4%; */}
-  ${"" /* margin-left: 2%; */}
+  margin-top: 4%;
 `;
 
 const ServicesMainContainer = styled.div`

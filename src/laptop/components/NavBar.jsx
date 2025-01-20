@@ -70,11 +70,17 @@ const NavBar = () => {
     navigate('/')
   }
 
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.getElementById("contact").getBoundingClientRect().top,
-      behavior: "smooth", // Add smooth scrolling behavior
-    });
+  const scrollToBottom = async () => {
+    goHome(); // Synchronous call
+    setTimeout(() => {
+      const contactElement = document.getElementById('contact');
+      if (contactElement) {
+        window.scrollTo({
+          top: contactElement.getBoundingClientRect().top,
+          behavior: 'smooth', // Add smooth scrolling behavior
+        });
+      }
+    }, 1)
   };
 
   return (
