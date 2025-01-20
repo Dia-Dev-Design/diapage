@@ -2,20 +2,28 @@ import { useEffect, useState } from "react";
 import { post } from "../../services/authService";
 import styled from "styled-components";
 
+import MainContainer from "./MainContainer";
+
 import SendMessageIcon from "../../assets/Send_Message_Icon.svg";
 import dogImage from "../../assets/Dog.svg";
+import emailImage from "../../assets/EnvelopeFill.svg";
 
 const FooterContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh ${"" /* margin-top: 20px; */};
+  width: 100%;
+  background-color: #01402f;
 `;
 
 const SectionTitleThin = styled.h1`
-  font-weight: 100;
-  font-size: 70px;
+  margin-top: 5%;
+  font-weight: 700;
+  font-size: 9.6rem;
   color: white;
+  line-height: 100%;
+  width: fit-content;
 `;
 
 const ContactUsFormContainer = styled.div`
@@ -26,7 +34,7 @@ const ContactUsFormContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #01402F;
+  ${"" /* background-color: #01402f; */}
 `;
 
 const ContactUsFormContentDescription = styled.div`
@@ -35,7 +43,8 @@ const ContactUsFormContentDescription = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  width: 40%;
+  width: 65%;
+  margin-top: -3%;
   height: 60% ${"" /* transform: translate(10vw, -20rem); */};
 `;
 const RightSide = styled.div`
@@ -48,8 +57,9 @@ const RightSide = styled.div`
 
 const ContactUsFormTitle = styled.div`
   margin-top: -10%;
+  margin-left: 7%;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 4.9rem;
   width: 490px;
   text-align: left;
   color: white;
@@ -65,7 +75,7 @@ const GreenColor = styled.span`
 
 const ContactUsFormContentContainer = styled.div`
   width: 90%;
-  height: 75%;
+  height: 77%;
   display: flex;
   flex-direction: column;
   justif-content: space-between;
@@ -76,11 +86,23 @@ const ContactUsFormContentContainer = styled.div`
 `;
 
 const DogImage = styled.img`
-  width: 13%;
+  width: 20%;
   ${"" /* height: 10%; */}
   display: block;
   z-index: 12;
-  margin-bottom: -0.7%;
+  margin-bottom: -1%;
+  margin-left: 45%;
+`;
+
+const EmailImageDiv = styled.div`
+  margin-top: 9%;
+  margin-left: 10%;
+  width: 50%;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  ${"" /* margin-left: 10% */}
 `;
 
 const ContactUsFormContent = styled.div`
@@ -137,7 +159,7 @@ const ContactUsFormSubjectButton = styled.button`
 const ContactUsForm = styled.form`
   display: flex;
   flex-direction: column;
-  height: 70%;
+  height: 100%;
 `;
 
 const ContactUsFormLabel = styled.label`
@@ -161,7 +183,16 @@ const ContactUsFormInput = styled.input`
 `;
 
 const ContactUsFormTextArea = styled.textarea`
-`
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 3.5px solid
+    ${(props) => (props.active ? "var(--green)" : "var(--gray)")};
+  z-index: 9999;
+  width: 80%;
+  transition: border-color 0.5s ease-in-out;
+  field-sizing: content;
+`;
 
 const FooterSendMessageButton = styled.button`
   margin-top: 3%;
@@ -193,7 +224,7 @@ const Footer = () => {
     email: "",
     message: "",
   });
-  const [emailSuccessMessage, setEmailSuccessMessage] = useState('')
+  const [emailSuccessMessage, setEmailSuccessMessage] = useState("");
 
   const subjectSelect = (e, subject) => {
     let thisArray = [...subjectsSelected];
@@ -208,29 +239,29 @@ const Footer = () => {
   };
 
   const handleTextInput = (e) => {
-    setEmailContent((prev) => ({...prev, [e.target.name]: e.target.value}))
-  }
+    setEmailContent((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     post("/send-email", { emailContent, subjectsSelected })
       .then((res) => {
-        console.log(res.data.message)
-        setEmailSuccessMessage(res.data.message)
-        setSubjectsSelected([])
+        console.log(res.data.message);
+        setEmailSuccessMessage(res.data.message);
+        setSubjectsSelected([]);
         setEmailContent({
           name: "",
           email: "",
           message: "",
-        })
+        });
         setTimeout(() => {
-          setEmailSuccessMessage('')
-        }, 4500)
+          setEmailSuccessMessage("");
+        }, 4500);
       })
       .catch((err) => {
-        console.log(err)
-      })
-  }
+        console.log(err);
+      });
+  };
 
   useEffect(() => {
     document.addEventListener("mousedown", () => setInputSelected(null));
@@ -238,29 +269,30 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <ContactUsFormContainer id="contact">
-        <ContactUsFormContentDescription>
-          <SectionTitleThin>Get In Touch</SectionTitleThin>
-          <ContactUsFormTitle>
-            Let’s discuss something <GreenColor>cool</GreenColor> together!
-          </ContactUsFormTitle>
-          <span></span>
-          <span></span>
-          <span
-            style={{
-              color: "white",
-              justifySelf: "flex-end",
-              alignSelf: "flex-start",
-            }}
-          >
-            info@diadevdesign.com
-          </span>
-        </ContactUsFormContentDescription>
+      <MainContainer>
+        <ContactUsFormContainer id="contact">
+          <ContactUsFormContentDescription>
+            <SectionTitleThin>Get In Touch</SectionTitleThin>
+            <ContactUsFormTitle>
+              Let’s discuss something <GreenColor>cool</GreenColor> together!
+            </ContactUsFormTitle>
+            <EmailImageDiv>
+              <span>
+                <img src={emailImage} />
+              </span>
+              <span
+                style={{
+                  color: "white",
+                  fontSize: "2rem",
+                  fontWeight: "500",
+                }}
+              >
+                info@diadevdesign.com
+              </span>
+            </EmailImageDiv>
+          </ContactUsFormContentDescription>
 
-
-        {
-          !emailSuccessMessage ? 
-
+          {!emailSuccessMessage ? (
             <RightSide>
               <DogImage src={dogImage} alt="Dog Image" />
               <ContactUsFormContentContainer>
@@ -351,7 +383,7 @@ const Footer = () => {
                     >
                       Your Message
                     </ContactUsFormLabel>
-                    <ContactUsFormInput
+                    <ContactUsFormTextArea
                       type="text"
                       name="message"
                       value={emailContent.message}
@@ -367,12 +399,13 @@ const Footer = () => {
                 </ContactUsFormContent>
               </ContactUsFormContentContainer>
             </RightSide>
-          :
-
-          <p style={{whiteSpace: 'pre-wrap', color: "white"}}>{emailSuccessMessage}</p>
-        }
-
-      </ContactUsFormContainer>
+          ) : (
+            <p style={{ whiteSpace: "pre-wrap", color: "white", fontFamily: "Aileron-Bold", fontSize: '3.6rem', fontWeight: "900" }}>
+              {emailSuccessMessage}
+            </p>
+          )}
+        </ContactUsFormContainer>
+      </MainContainer>
     </FooterContainer>
   );
 };

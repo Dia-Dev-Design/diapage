@@ -23,11 +23,11 @@ const HeaderContainer = styled.div`
 `;
 
 const HeaderContent = styled.div`
-  width: 30%;
+  width: 49.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 60%;
+  ${'' /* height: 60%; */}
 `;
 
 const ContactButton = styled.button`
@@ -49,8 +49,8 @@ const ContactButton = styled.button`
 `;
 
 const LandingPageHeader = styled.h1`
-  font-size: 5rem;
-  margin: 0 0 2%;
+  font-size: 6.4rem;
+    margin: 0 0 2%;
 `;
 
 const GreenColor = styled.span`
@@ -63,21 +63,22 @@ const GreenColor = styled.span`
 `;
 
 const HeaderDescription = styled.p`
-  width: 120%;
+  width: 100%;
   line-height: 2.2rem;
   letter-spacing: 1px;
-  font-size: 140%;
+  font-size: 1.6rem;
   font-weight: 400;
   text-align: justify;
+  word-wrap: break-word;
 `;
 
 const HeaderImageContainer = styled.div`
-  width: 50%;
+  width: 41.1%;
   display: flex;
   justify-content: flex-end;
 
   img {
-    width: 80%;
+    width: 100%;
   }
 `;
 
