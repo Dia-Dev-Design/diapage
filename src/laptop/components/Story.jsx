@@ -1,9 +1,11 @@
 import styled from "styled-components"
 
+import MainContainer from "./MainContainer"
+
 import BalloonCat from '../../assets/BalloonCat.svg'
 import DiaGreenLogo from '../../assets/DDDGreenLogoClearBackGround.svg'
 
-const StoryContainer = styled.div`
+const PageContainer = styled.div`
     height: 85vh;
     background-color: #F2F2F2;
     width: 100%;
@@ -11,6 +13,15 @@ const StoryContainer = styled.div`
     flex-direction: column;
     align-items: center
 `
+
+const StoryContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+`
+
 const StoryTop = styled.div`
     display: flex;
     justify-content: space-between;
@@ -22,7 +33,7 @@ const StoryTop = styled.div`
 
 const StoryHeadline = styled.h1`
     font-family: 'Aileron-Bold';
-    font-size: 7.9rem;
+    font-size: 9.6rem;
     font-weight: 700;
 `
 const CatImage = styled.img`
@@ -50,24 +61,29 @@ const StoryParagraphs =  styled.div`
 `
 const StoryText = styled.div`
     font-size: 1.6rem;
+    font-family: 'Roboto'
 `
 
 const Story = () => {
   return (
-    <StoryContainer>
-        <StoryTop>
-            <StoryHeadline>Our Story</StoryHeadline>
-            <CatImage src={BalloonCat} alt='ballon-cat'/>
-        </StoryTop>
-        <StoryBottom>
-            <GreenDiaLogo src={DiaGreenLogo} alt='dia-green-logo'/>
-            <StoryParagraphs>
-                <StoryText>Día: Dev & Design organically developed as the next step venture for Ironhack graduates and it came to fruition after one of those intense conversations about the state of affairs in the tech industry. Día: Dev & Design organically developed as the next step venture for Ironhack graduates and it came to fruition after one of those intense conversations about the state of affairs in the tech industry.</StoryText>
-                <StoryText>In the early days, our discussions often turned into achieving two goals: delivering valuable technological solutions to businesses and inStoryContaineriduals while nurturing the community and emerging local talent. Our vision is a business that fosters continuous learning and growth while making a tangible impact on the tech industry.</StoryText>
-                <StoryText>Driven by this vision, we founded Día: Dev & Design. More than just a business, it is a collaborative effort that embodies our passion for problem-solving and innovation. And so we also crafted an Incubator program designed to offer internships and mentorship to jump-start careers in tech. By nurturing local enterprises, we aim to foster a community of skilled professionals propelling the technological progress of our region.</StoryText>
-            </StoryParagraphs>
-        </StoryBottom>
-    </StoryContainer>
+    <PageContainer>
+        <MainContainer>
+            <StoryContainer>    
+                <StoryTop>
+                    <StoryHeadline>Our Story</StoryHeadline>
+                    <CatImage src={BalloonCat} alt='ballon-cat'/>
+                </StoryTop>
+                <StoryBottom>
+                    <GreenDiaLogo src={DiaGreenLogo} alt='dia-green-logo'/>
+                    <StoryParagraphs>
+                        <StoryText>Día: Dev & Design organically developed as the next step venture for Ironhack graduates and it came to fruition after one of those intense conversations about the state of affairs in the tech industry. Día: Dev & Design organically developed as the next step venture for Ironhack graduates and it came to fruition after one of those intense conversations about the state of affairs in the tech industry.</StoryText>
+                        <StoryText>In the early days, our discussions often turned into achieving two goals: delivering valuable technological solutions to businesses and inStoryContaineriduals while nurturing the community and emerging local talent. Our vision is a business that fosters continuous learning and growth while making a tangible impact on the tech industry.</StoryText>
+                        <StoryText>Driven by this vision, we founded Día: Dev & Design. More than just a business, it is a collaborative effort that embodies our passion for problem-solving and innovation. And so we also crafted an Incubator program designed to offer internships and mentorship to jump-start careers in tech. By nurturing local enterprises, we aim to foster a community of skilled professionals propelling the technological progress of our region.</StoryText>
+                    </StoryParagraphs>
+                </StoryBottom>
+            </StoryContainer>
+        </MainContainer>
+    </PageContainer>
   )
 }
 

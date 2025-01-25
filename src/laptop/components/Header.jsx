@@ -6,6 +6,7 @@ import MainContainer from "./MainContainer";
 const PageContainer = styled.div`
   height: 85vh;
   width: 100%;
+  padding: 0;
   margin: 0;
   background-color: #f2f2f2;
   display: flex;
@@ -96,7 +97,7 @@ const Header = () => {
         <HeaderContainer>
           <HeaderContent>
             <LandingPageHeader>
-              Every - <GreenColor id="dia">Día</GreenColor>
+              Every-<GreenColor id="dia">Día</GreenColor>
               {". "}
             </LandingPageHeader>
             <LandingPageHeader>We build.</LandingPageHeader>

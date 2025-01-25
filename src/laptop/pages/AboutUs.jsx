@@ -3,12 +3,14 @@ import styled from "styled-components";
 import Story from "../components/Story";
 import WhyWeDoIt from "../components/WhyWeDoIt";
 import Consulting from "../components/Consulting";
+import WeBuildCards from "../components/WeBuildCards";
 import Incubator from "../components/Incubator";
 
 const AboutUsPage = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
+  justiy-content: center;
+  width: 100%;
 `;
 
 const AboutUs = () => {
@@ -17,6 +19,7 @@ const AboutUs = () => {
       <Story />
       <WhyWeDoIt />
       <Consulting />
+      <WeBuildCards />
       <Incubator />
     </AboutUsPage>
   );

@@ -12,7 +12,6 @@ const ServicesContainer = styled.div`
   background-color: #f2f2f2;
   display: flex;
   justify-content: space-around;
-  border: solid 2px red;
 `;
 
 const PageContainer = styled.div`
@@ -21,6 +20,7 @@ const PageContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `;
+
 const AboutUsContainer = styled.div`
   margin-top: 1%;
   width: 81%;

@@ -9,6 +9,7 @@ const LandingPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justiy-content: center;
+  width: 100%;
   ${'' /* align-items: center; */}
   ${'' /* width: 1200px */}
 `;
