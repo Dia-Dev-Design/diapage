@@ -8,6 +8,7 @@ const CardsPage = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 750px;
+  background-color: #F2F2F2;
 `;
 
 const PageContainer = styled.div`

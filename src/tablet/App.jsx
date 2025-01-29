@@ -2,7 +2,7 @@
 
 const App = () => {
   return (
-    <div>Hi I'm Laptop</div>
+    <div>Hi I'm Tablet</div>
   )
 }
 
