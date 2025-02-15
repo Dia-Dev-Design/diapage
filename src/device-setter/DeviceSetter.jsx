@@ -21,19 +21,14 @@ const DeviceSetter = () => {
     return (
       <>
         {
-          deviceWidth > 999 ? 
+
+          deviceWidth > 1024 ?
 
             <LaptopApp /> 
           
-          : 
-
-          deviceWidth > 768 ? 
-
-            <TabletApp /> 
-          
           :
 
-          deviceWidth  ?
+          deviceWidth ?
 
             <MobileApp /> 
           

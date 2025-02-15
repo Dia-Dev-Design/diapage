@@ -12,7 +12,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: 10px
+    font-size: 10px;
+    background-color: #F2F2F2
   }
 
   body {
@@ -22,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #F2F2F2
   }
 `;
 

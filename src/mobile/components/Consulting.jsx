@@ -3,8 +3,7 @@ import styled from "styled-components";
 import MainContainer from "./MainContainer";
 
 import Fishermen from "../../assets/Fishermen.svg";
-// import Sea from "../../assets/Sea.svg";
-import Sea from "/Sea.svg";
+import Sea from "../../assets/Sea.svg";
 
 const ConsultingPage = styled.div`
   height: 80vh;

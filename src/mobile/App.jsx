@@ -3,11 +3,11 @@ import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
 
-// import NavBar from "./components/NavBar";
-// import LandingPage from "./pages/LandingPage";
+import NavBar from "./components/NavBar";
+import LandingPage from "./pages/LandingPage";
 
 import GlobalStyle from "./GlobalStyle";
-// import AboutUs from "./pages/AboutUs";
+import AboutUs from "./pages/AboutUs";
 
 
 
@@ -21,17 +21,16 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <h1>Hi this is Mobile</h1>
         <GlobalStyle />
 
-        {/* <NavBar />
+        <NavBar />
 
         <Routes>
 
             <Route path="/" element={<LandingPage />} />
             <Route path='/about' element={<AboutUs />} />
 
-        </Routes> */}
+        </Routes>
 
     </AppContainer>
   );
