@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@fontsource-variable': 'node_modules/@fontsource-variable',
+      
+      '@fontsource-variable': 'node_modules/@fontsource-variable', '@fontsource/aeileron'
       
     },
   },
