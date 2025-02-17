@@ -1,112 +1,114 @@
 import { createGlobalStyle } from "styled-components";
 
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/700.css';
+
+import '/@fontsource-variable/inter/wght.css';
+
+import '/@fontsource-variable/inter/wght.css';
+
+import AileronRegular from '@aileron/Aileron-Regular.otf';
+import AileronBold from '@aileron/Aileron-Bold.otf';
+import AileronBlack from '@aileron/Aileron-Black.otf'
+import AileronBlackItalic from '@aileron/Aileron-BlackItalic.otf'
+import AileronBoldItalic from '@aileron/Aileron-BoldItalic.otf'
+import AileronHeavy from '@aileron/Aileron-Heavy.otf'
+import AileronHeavyItalic from '@aileron/Aileron-HeavyItalic.otf'
+import AileronItalic from '@aileron/Aileron-Italic.otf'
+import AileronLight from '@aileron/Aileron-Light.otf'
+import AileronLightItalic from '@aileron/Aileron-LightItalic.otf'
+import AileronSemiBold from '@aileron/Aileron-SemiBold.otf'
+import AileronSemiBoldItalic from '@aileron/Aileron-SemiBoldItalic.otf'
+import AileronThin from '@aileron/Aileron-Thin.otf'
+import AileronThinItalic from '@aileron/Aileron-ThinItalic.otf'
+import AileronUltraLite from '@aileron/Aileron-UltraLight.otf'
+import AileronUltraLiteItalic from 'aileron/Aileron-UltraLightItalic.otf'
+
 const GlobalStyle = createGlobalStyle`
-
-@import url('/node_modules/@fontsource-variable/inter/wght.css');
-
-@import url('/node_modules/@fontsource-variable/inter/wght.css');
-
-@import url("/node_modules/@fontsource/poppins/500.css");
-@import url("/node_modules/@fontsource/poppins/700.css");
 
 @font-face {
   font-family: "Aileron-Black";   /*Can be any text*/
-  src: local("Aileron-Black"),
-    url("./fonts/aileron/Aileron-Black.otf") format("opentype");
+  src: url(${AileronBlack}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Black-Italic";   /*Can be any text*/
-  src: local("Aileron-Black-Italic"),
-    url("./fonts/aileron/Aileron-BlackItalic.otf") format("opentype");
+  src: url(${AileronBlackItalic}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Bold";   /*Can be any text*/
-  src: local("Aileron-Bold"),
-    url("./fonts/aileron/Aileron-Bold.otf") format("opentype");
+  src: url(${AileronBold}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Bold-Italic";   /*Can be any text*/
-  src: local("Aileron-Bold-Italic"),
-    url("./fonts/aileron/Aileron-BoldItalic.otf") format("opentype");
+  src: url(${AileronBoldItalic}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Heavy";   /*Can be any text*/
-  src: local("Aileron-Heavy"),
-    url("./fonts/aileron/Aileron-Heavy.otf") format("opentype");
+  src: url(${AileronHeavy}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Heavy-Italic";   /*Can be any text*/
-  src: local("Aileron-Heavy-Italic"),
-    url("./fonts/aileron/Aileron-HeavyItalic.otf") format("opentype");
+  src: url(${AileronHeavyItalic}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Italic";   /*Can be any text*/
-  src: local("Aileron-Italic"),
-    url("./fonts/aileron/Aileron-Italic.otf") format("opentype");
+  src: url(${AileronItalic}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Light";   /*Can be any text*/
-  src: local("Aileron-Light"),
-    url("./fonts/aileron/Aileron-Light.otf") format("opentype");
+  src: url(${AileronLight}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Light-Italic";   /*Can be any text*/
-  src: local("Aileron-Light-Italic"),
-    url("./fonts/aileron/Aileron-LightItalic.otf") format("opentype");
+  src: url(${AileronLightItalic}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Regular";   /*Can be any text*/
-  src: local("Aileron-Regular"),
-    url("./fonts/aileron/Aileron-Regular.otf") format("opentype");
+  src: url(${AileronRegular}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Semi-Bold";   /*Can be any text*/
-  src: local("Aileron-Semi-Bold"),
-    url("./fonts/aileron/Aileron-SemiBold.otf") format("opentype");
+  src: url(${AileronSemiBold}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Semi-Bold-Italic";   /*Can be any text*/
-  src: local("Aileron-Semi-Bold-Italic"),
-    url("./fonts/aileron/Aileron-SemiBoldItalic.otf") format("opentype");
+  src: url(${AileronSemiBoldItalic}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Thin";   /*Can be any text*/
-  src: local("Aileron-Thin"),
-    url("./fonts/aileron/Aileron-Thin.otf") format("opentype");
+  src: url(${AileronThin}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Thin-Italic";   /*Can be any text*/
-  src: local("Aileron-Thin-Italic"),
-    url("./fonts/aileron/Aileron-ThinItalic.otf") format("opentype");
+  src: url(${AileronThinItalic}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Ultra-Lite";   /*Can be any text*/
-  src: local("Aileron-Ultra-Lite"),
-    url("./fonts/aileron/Aileron-UltraLight.otf") format("opentype");
+  src: url(${AileronUltraLite}) format("opentype");
 }
 
 @font-face {
   font-family: "Aileron-Ultra-Lite-Italic";   /*Can be any text*/
-  src: local("Aileron-Ultra-Lite-Italic"),
-    url("./fonts/aileron/Aileron-UltraLightItalic.otf") format("opentype");
+  src: url(${AileronUltraLiteItalic}) format("opentype");
 }
 
   :root {
-    font-family: "Aileron-Regular", 'Inter Variable', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
+    font-family: "Aileron-Regular", 'Inter Variable', 'poppins', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
     background-color: #ffffff;
     --green: #65B47B;
     --gray: #b4a7bc;
