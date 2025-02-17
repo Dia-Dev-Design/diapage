@@ -4,28 +4,31 @@ import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/700.css';
 
-import '/@fontsource-variable/inter/wght.css';
+import "@fontsource-variable/inter/wght.css"
 
-import '/@fontsource-variable/inter/wght.css';
-
-import AileronRegular from '@aileron/Aileron-Regular.otf';
-import AileronBold from '@aileron/Aileron-Bold.otf';
-import AileronBlack from '@aileron/Aileron-Black.otf'
-import AileronBlackItalic from '@aileron/Aileron-BlackItalic.otf'
-import AileronBoldItalic from '@aileron/Aileron-BoldItalic.otf'
-import AileronHeavy from '@aileron/Aileron-Heavy.otf'
-import AileronHeavyItalic from '@aileron/Aileron-HeavyItalic.otf'
-import AileronItalic from '@aileron/Aileron-Italic.otf'
-import AileronLight from '@aileron/Aileron-Light.otf'
-import AileronLightItalic from '@aileron/Aileron-LightItalic.otf'
-import AileronSemiBold from '@aileron/Aileron-SemiBold.otf'
-import AileronSemiBoldItalic from '@aileron/Aileron-SemiBoldItalic.otf'
-import AileronThin from '@aileron/Aileron-Thin.otf'
-import AileronThinItalic from '@aileron/Aileron-ThinItalic.otf'
-import AileronUltraLite from '@aileron/Aileron-UltraLight.otf'
-import AileronUltraLiteItalic from 'aileron/Aileron-UltraLightItalic.otf'
+import AileronRegular from '../fonts/aileron/Aileron-Regular.otf';
+import AileronBold from '../fonts/aileron/Aileron-Bold.otf';
+import AileronBlack from '../fonts/aileron/Aileron-Black.otf'
+import AileronBlackItalic from '../fonts/aileron/Aileron-BlackItalic.otf'
+import AileronBoldItalic from '../fonts/aileron/Aileron-BoldItalic.otf'
+import AileronHeavy from '../fonts/aileron/Aileron-Heavy.otf'
+import AileronHeavyItalic from '../fonts/aileron/Aileron-HeavyItalic.otf'
+import AileronItalic from '../fonts/aileron/Aileron-Italic.otf'
+import AileronLight from '../fonts/aileron/Aileron-Light.otf'
+import AileronLightItalic from '../fonts/aileron/Aileron-LightItalic.otf'
+import AileronSemiBold from '../fonts/aileron/Aileron-SemiBold.otf'
+import AileronSemiBoldItalic from '../fonts/aileron/Aileron-SemiBoldItalic.otf'
+import AileronThin from '../fonts/aileron/Aileron-Thin.otf'
+import AileronThinItalic from '../fonts/aileron/Aileron-ThinItalic.otf'
+import AileronUltraLite from '../fonts/aileron/Aileron-UltraLight.otf'
+import AileronUltraLiteItalic from '../fonts/aileron/Aileron-UltraLightItalic.otf'
 
 const GlobalStyle = createGlobalStyle`
+
+@font-face {
+  font-family: "Aileron-Regular";   /*Can be any text*/
+  src: url(${AileronRegular}) format("opentype");
+}
 
 @font-face {
   font-family: "Aileron-Black";   /*Can be any text*/
@@ -70,11 +73,6 @@ const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: "Aileron-Light-Italic";   /*Can be any text*/
   src: url(${AileronLightItalic}) format("opentype");
-}
-
-@font-face {
-  font-family: "Aileron-Regular";   /*Can be any text*/
-  src: url(${AileronRegular}) format("opentype");
 }
 
 @font-face {
