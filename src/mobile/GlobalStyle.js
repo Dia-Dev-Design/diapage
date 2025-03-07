@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/700.css';
+// import '@fontsource/poppins/400.css';
+// import '@fontsource/poppins/500.css';
+// import '@fontsource/poppins/700.css';
 
-import "@fontsource-variable/inter/wght.css"
+// import "@fontsource-variable/inter/wght.css"
 
 import AileronRegular from '../fonts/aileron/Aileron-Regular.otf';
 import AileronBold from '../fonts/aileron/Aileron-Bold.otf';
