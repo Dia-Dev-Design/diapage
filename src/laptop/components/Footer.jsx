@@ -333,9 +333,9 @@ const Footer = () => {
                     </ContactUsFormSubjectButton>
                     <ContactUsFormSubjectButton
                       key="button-6"
-                      active={subjectsSelected.includes("Data Analysis")}
-                      value="Data Analysis"
-                      onClick={(e) => subjectSelect(e, "Data Analysis")}
+                      active={subjectsSelected.includes("AI Apps/Agents")}
+                      value="AI Apps/Agents"
+                      onClick={(e) => subjectSelect(e, "AI Apps/Agents")}
                     >
                       Data Analysis
                     </ContactUsFormSubjectButton>
