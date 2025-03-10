@@ -337,7 +337,7 @@ const Footer = () => {
                       value="AI Apps/Agents"
                       onClick={(e) => subjectSelect(e, "AI Apps/Agents")}
                     >
-                      Data Analysis
+                      AI Apps/Agents
                     </ContactUsFormSubjectButton>
                     <ContactUsFormSubjectButton
                       key="button-7"
