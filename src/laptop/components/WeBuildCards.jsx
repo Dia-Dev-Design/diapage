@@ -2,32 +2,75 @@ import styled from "styled-components";
 import MainContainer from "./MainContainer";
 
 const CardsPage = styled.div`
-  width: 100%;
+  ${'' /* width: 100%; */}
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   height: 750px;
+  margin-top: 3%;
+  margin-bottom: -10%;
   background-color: #F2F2F2;
 `;
 
+
+
+// const MainContainer = styled.div`
+//     width: 1200px;
+//     height: inherit;
+//     display: inherit;
+//     flex-direction: inherit;
+//     justify-content: inherit;
+//     align-items: inherit;
+//     align-self: inherit;
+//     border: 2px solid red;
+// `
+
+// const PageContainer = styled.div`
+//   position: absolute;
+//   margin-top: 1.5%;
+//   width: 100%;
+//   height: 100%;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// `;
+
 const PageContainer = styled.div`
-  position: absolute;
-  margin-top: 1.5%;
+  ${'' /* margin-top: 3%; */}
   width: 100%;
-  height: 100%
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
+
+// const CardsContainer = styled.div`
+//   height: 100%;
+//   width: 71%;
+//   display: flex;
+//   flex-direction: row;
+//   ${'' /* margin-left: 3.5%; */}
+//   gap: 3%;
+//   justify-content: center;
+//   align-items: flex-start;
+//   align-self: center;
+//   ${'' /* position: relative; */}
+//   ${'' /* left: 14%; */}
+//   border: 2px solid blue;
+//   ${'' /* align-self: center */}
+// `;
 
 const CardsContainer = styled.div`
   height: 100%;
-  width: 71%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  margin-left: 3.5%;
-  gap: 3%;
-  ${'' /* justify-content: space-around; */}
-  position: relative;
-  left: 14%;
+  gap: 7.5%;
+  justify-content: center;
+  align-items: flex-start;
+  border: 2px solid blue;
 `;
 
 const WeBuildContainerLeft = styled.div`
@@ -35,7 +78,7 @@ const WeBuildContainerLeft = styled.div`
   height: 60%;
   width: unset;
   aspect-ratio: 85/100;
-  transform: rotate(-8deg);
+  transform: rotate(-15deg);
   padding: 24px 16px 96px 16px;
   flex-direction: column;
   align-items: flex-start;
@@ -54,7 +97,7 @@ const WeBuildContainerRight = styled.div`
   height: 60%;
   width: unset;
   aspect-ratio: 85/100;
-  transform: rotate(8deg);
+  transform: rotate(15deg);
   padding: 24px 16px 96px 16px;
   flex-direction: column;
   align-items: flex-start;
@@ -117,9 +160,7 @@ const SmallText = styled.div`
 
 const WeBuildCards = () => {
   return (
-    <div
-    // style={{width: "fit-content", height: "fit-content"}}
-    >
+
       <CardsPage>
         <MainContainer>
           <PageContainer>
@@ -227,7 +268,7 @@ const WeBuildCards = () => {
           </PageContainer>
         </MainContainer>
       </CardsPage>
-    </div>
+
   );
 };
 

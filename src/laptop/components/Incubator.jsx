@@ -14,8 +14,8 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -10%
-`
+  margin-top: -10%;
+`;
 
 const IncubatorTitle = styled.h1`
   color: #070d0d;
@@ -23,7 +23,7 @@ const IncubatorTitle = styled.h1`
   font-family: "Aileron";
   font-weight: 700;
   word-wrap: break-word;
-  margin: auto
+  margin: auto;
 `;
 
 const Container = styled.div`
@@ -79,64 +79,83 @@ const Description = styled.div`
   font-weight: 400;
   word-wrap: break-word;
 `;
+
+const DogImage = styled.img`
+  height: 40vh;
+  margin-left: -80%;
+  margin-bottom: -2.5%;
+  z-index: 1;
+  @media (max-width: 1200px) {
+    margin-left: 90%;
+    margin-bottom: -10%;
+  }
+`;
+
 const Incubator = () => {
   return (
     <PageContainer>
       <img
-        style={{ height: "40vh", marginRight: "-60%", marginBottom: "-5%" }}
+        style={{ height: "40vh", marginRight: "-55%", marginBottom: "-5%" }}
         src={Plant}
         alt="plant-image"
       />
-      <MainContainer style={{marginTop: "-20%", height: "fit-content"}}>
-        <div style={{display: "flex", flexDirection: "column", justifyContent: "center", marginBottom: "-20%"}}>
-        <IncubatorTitle>Tech Incubator</IncubatorTitle>
-        <Container>
-          <ItemContainer>
-            <Image src={HandsOnTraining} alt="hands-on-training" />
-            <ContentContainer>
-              <Title>Hands-On Training</Title>
-              <Description>
-                Training and workshops covering the latest technologies and
-                industry best practices.
-              </Description>
-            </ContentContainer>
-          </ItemContainer>
-          <ItemContainer>
-            <Image src={Performance} alt="performance" />
-            <ContentContainer>
-              <Title>Performance Feedback</Title>
-              <Description>
-                Training and workshops covering the latest technologies and
-                industry best practices.
-              </Description>
-            </ContentContainer>
-          </ItemContainer>
-          <ItemContainer>
-            <Image src={CommunityEngagement} alt="community-engagement" />
-            <ContentContainer>
-              <Title>Community Engagement</Title>
-              <Description>
-                Participate in advancing local technological innovation and
-                progress.
-              </Description>
-            </ContentContainer>
-          </ItemContainer>
-        </Container>
+      <MainContainer style={{ marginTop: "-20%", height: "fit-content" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            marginBottom: "-20%",
+          }}
+        >
+          <IncubatorTitle>Tech Incubator</IncubatorTitle>
+          <Container>
+            <ItemContainer>
+              <Image src={HandsOnTraining} alt="hands-on-training" />
+              <ContentContainer>
+                <Title>Hands-On Training</Title>
+                <Description>
+                  Training and workshops covering the latest technologies and
+                  industry best practices.
+                </Description>
+              </ContentContainer>
+            </ItemContainer>
+            <ItemContainer>
+              <Image src={Performance} alt="performance" />
+              <ContentContainer>
+                <Title>Performance Feedback</Title>
+                <Description>
+                  Training and workshops covering the latest technologies and
+                  industry best practices.
+                </Description>
+              </ContentContainer>
+            </ItemContainer>
+            <ItemContainer>
+              <Image src={CommunityEngagement} alt="community-engagement" />
+              <ContentContainer>
+                <Title>Community Engagement</Title>
+                <Description>
+                  Participate in advancing local technological innovation and
+                  progress.
+                </Description>
+              </ContentContainer>
+            </ItemContainer>
+          </Container>
         </div>
-
       </MainContainer>
-        <img
-          style={{ height: "40vh",
-           marginLeft: "-80%" 
-           }}
-          src={BallonDog}
-          alt="ballon-dog"
-        />
-        <img
-          style={{ width: "100vw" }}
-          src={BottomWavyTopRectangle}
-          alt="bottom-wavy-top-rectangle"
-        />
+      <DogImage
+        // style={{ height: "40vh",
+        //  marginLeft: "-80%"
+        //  }}
+        // src="../../assets/BalloonDog.svg"
+        src={BallonDog}
+        alt="ballon-dog"
+      />
+      <img
+        style={{ width: "100vw", zIndex: 2 }}
+        src={BottomWavyTopRectangle}
+        alt="bottom-wavy-top-rectangle"
+      />
     </PageContainer>
   );
 };

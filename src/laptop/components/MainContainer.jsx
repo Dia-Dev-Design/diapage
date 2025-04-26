@@ -8,7 +8,7 @@ const Container = styled.div`
     justify-content: inherit;
     align-items: inherit;
     align-self: inherit;
-    ${'' /* border: 2px solid red; */}
+    border: 2px solid red;
 `
 
 const MainContainer = ({children}) => {
