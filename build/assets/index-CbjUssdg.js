@@ -1242,9 +1242,10 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh ${""};
+  height: 100vh;
   width: 100%;
   background-color: #01402f;
+  z-index: 11;
 `,bw=g.h1`
   margin-top: 5%;
   font-weight: 700;
@@ -1256,10 +1257,10 @@ Error generating stack: `+o.message+`
   font-family: "Poppins";
   font-weight: 500;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
   ${""}
 `,Mw=g.div`
   align-self: flex-start;
@@ -1292,11 +1293,12 @@ Error generating stack: `+o.message+`
   }
 `,Qw=g.div`
   width: 90%;
-  height: 77%;
+  min-height: 77%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justif-content: space-between;
-  margin-right: 10%;
+  ${""}
   text-align: left;
   background-color: #eeeeee;
   border-radius: 24px;
@@ -1317,7 +1319,8 @@ Error generating stack: `+o.message+`
   align-items: center;
   ${""}
 `,qw=g.div`
-  height: 100%;
+  height: 90%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1362,7 +1365,10 @@ Error generating stack: `+o.message+`
 `,Jw=g.form`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 65%;
+  height: fit-content;
+  justify-content: space-evenly;
+  ${""}
 `,ns=g.label`
   transform: translate(3px, ${e=>e.active?"0.1rem":"1.3rem"});
   color: var(--gray);
@@ -1376,7 +1382,7 @@ Error generating stack: `+o.message+`
   border-bottom: 3.5px solid
     ${e=>e.active?"var(--green)":"var(--gray)"};
   z-index: 9999;
-  width: 80%;
+  width: 88%;
   transition: border-color 0.5s ease-in-out;
   field-sizing: content;
 `,Xw=g.textarea`
@@ -1386,36 +1392,37 @@ Error generating stack: `+o.message+`
   border-bottom: 3.5px solid
     ${e=>e.active?"var(--green)":"var(--gray)"};
   z-index: 9999;
-  width: 80%;
+  width: 88%;
   transition: border-color 0.5s ease-in-out;
   field-sizing: content;
 `,Zw=g.button`
-  margin-top: 3%;
+  ${""}
   height: 2vw;
-  width: 20vw;
-  padding: 24px 64px;
+  min-width: fit-content;
+  width: 15vw;
+  padding: 24px 0;
   background-color: var(--green);
   border-radius: 16px;
   display: flex;
   font-size: 20px;
   color: white;
   border: none;
-  justify-content: space-between;
+  justify-content: space-evenly;
   transform: translateY(3rem);
-  justify-content: center;
+  ${""}
   align-items: center;
+  align-self: center;
+  margin-left: -2.5vw;
   transition: background-color 0.5s ease-in-out;
 
   &:hover {
     background-color: #a9e6b9;
   }
-`,ex=()=>{const[e,t]=_.useState([]),[n,r]=_.useState(null),[i,o]=_.useState({name:"",email:"",message:""}),[l,s]=_.useState(""),a=(c,y)=>{let x=[...e],v=x.findIndex(w=>w===y);v>-1?x.splice(v,1):x.push(y),t(x)},u=c=>{o(y=>({...y,[c.target.name]:c.target.value}))},d=c=>{c.preventDefault(),z2("/send-email",{emailContent:i,subjectsSelected:e}).then(y=>{console.log(y.data.message),s(y.data.message),t([]),o({name:"",email:"",message:""}),setTimeout(()=>{s("")},4500)}).catch(y=>{console.log(y)})};return _.useEffect(()=>{document.addEventListener("mousedown",()=>r(null))},[]),f.jsx(Bw,{children:f.jsx(Yt,{children:f.jsxs(Uw,{id:"contact",children:[f.jsxs(Mw,{children:[f.jsx(bw,{children:"Get In Touch"}),f.jsxs(Ww,{children:["Let’s discuss something ",f.jsx(Vw,{children:"cool"})," together!"]}),f.jsxs(Gw,{children:[f.jsx("span",{children:f.jsx("img",{src:F2})}),f.jsx("span",{style:{color:"white",fontSize:"2rem",fontWeight:"500"},children:"info@diadevdesign.com"})]})]}),l?f.jsx("p",{style:{whiteSpace:"pre-wrap",color:"white",fontFamily:"Aileron-Bold",fontSize:"3.6rem",fontWeight:"900"},children:l}):f.jsxs(Hw,{children:[f.jsx(Kw,{src:D2,alt:"Dog Image"}),f.jsx(Qw,{children:f.jsxs(qw,{children:[f.jsx("span",{children:"I’m interested in..."}),f.jsxs(Yw,{children:[f.jsx(Rn,{active:e.includes("Web Development"),value:"Web Development",onClick:c=>a(c,"Web Development"),children:"Web Development"},"button-1"),f.jsx(Rn,{active:e.includes("UX/UI Design"),value:"UX/UI Design",onClick:c=>a(c,"UX/UI Design"),children:"UX/UI Design"},"button-2"),f.jsx(Rn,{active:e.includes("Graphic Design"),value:"Graphic Design",onClick:c=>a(c,"Graphic Design"),children:"Marketing"},"button-3"),f.jsx(Rn,{active:e.includes("Custom APIs"),value:"Custom APIs",onClick:c=>a(c,"Custom APIs"),children:"Custom APIs"},"button-5"),f.jsx(Rn,{active:e.includes("AI Apps/Agents"),value:"AI Apps/Agents",onClick:c=>a(c,"AI Apps/Agents"),children:"AI Apps/Agents"},"button-6"),f.jsx(Rn,{active:e.includes("Other"),value:"Other",onClick:c=>a(c,"Other"),children:"Other"},"button-7")]}),f.jsxs(Jw,{onSubmit:d,children:[f.jsx(ns,{htmlFor:"name",active:n==="input-1",children:"Your Name"}),f.jsx(Rf,{type:"text",name:"name",value:i.name,active:n==="input-1",onClick:()=>r("input-1"),onChange:c=>u(c)}),f.jsx(ns,{htmlFor:"email",active:n==="input-2",children:"Your Email"}),f.jsx(Rf,{type:"email",name:"email",value:i.email,active:n==="input-2",onClick:()=>r("input-2"),onChange:c=>u(c)}),f.jsx(ns,{htmlFor:"message",active:n==="input-3",children:"Your Message"}),f.jsx(Xw,{type:"text",name:"message",value:i.message,active:n==="input-3",onClick:()=>r("input-3"),onChange:c=>u(c)}),f.jsxs(Zw,{type:"submit",children:[f.jsx("img",{src:I2,alt:"send message"}),"Send Message"]})]})]})})]})]})})})},tx=g.div`
+`,ex=()=>{const[e,t]=_.useState([]),[n,r]=_.useState(null),[i,o]=_.useState({name:"",email:"",message:""}),[l,s]=_.useState(""),a=(c,y)=>{let x=[...e],v=x.findIndex(w=>w===y);v>-1?x.splice(v,1):x.push(y),t(x)},u=c=>{o(y=>({...y,[c.target.name]:c.target.value}))},d=c=>{c.preventDefault(),z2("/send-email",{emailContent:i,subjectsSelected:e}).then(y=>{console.log(y.data.message),s(y.data.message),t([]),o({name:"",email:"",message:""}),setTimeout(()=>{s("")},4500)}).catch(y=>{console.log(y)})};return _.useEffect(()=>{document.addEventListener("mousedown",()=>r(null))},[]),f.jsx(Bw,{children:f.jsx(Yt,{children:f.jsxs(Uw,{id:"contact",children:[f.jsxs(Mw,{children:[f.jsx(bw,{children:"Get In Touch"}),f.jsxs(Ww,{children:["Let’s discuss something ",f.jsx(Vw,{children:"cool"})," together!"]}),f.jsxs(Gw,{children:[f.jsx("span",{children:f.jsx("img",{src:F2})}),f.jsx("span",{style:{color:"white",fontSize:"2rem",fontWeight:"500"},children:"info@diadevdesign.com"})]})]}),l?f.jsx("p",{style:{whiteSpace:"pre-wrap",color:"white",fontFamily:"Aileron-Bold",fontSize:"3.6rem",fontWeight:"900"},children:l}):f.jsxs(Hw,{children:[f.jsx(Kw,{src:D2,alt:"Dog Image"}),f.jsx(Qw,{children:f.jsxs(qw,{children:[f.jsx("span",{children:"I’m interested in..."}),f.jsxs(Yw,{children:[f.jsx(Rn,{active:e.includes("Web Development"),value:"Web Development",onClick:c=>a(c,"Web Development"),children:"Web Development"},"button-1"),f.jsx(Rn,{active:e.includes("UX/UI Design"),value:"UX/UI Design",onClick:c=>a(c,"UX/UI Design"),children:"UX/UI Design"},"button-2"),f.jsx(Rn,{active:e.includes("Graphic Design"),value:"Graphic Design",onClick:c=>a(c,"Graphic Design"),children:"Marketing"},"button-3"),f.jsx(Rn,{active:e.includes("Custom APIs"),value:"Custom APIs",onClick:c=>a(c,"Custom APIs"),children:"Custom APIs"},"button-5"),f.jsx(Rn,{active:e.includes("AI Apps/Agents"),value:"AI Apps/Agents",onClick:c=>a(c,"AI Apps/Agents"),children:"AI Apps/Agents"},"button-6"),f.jsx(Rn,{active:e.includes("Other"),value:"Other",onClick:c=>a(c,"Other"),children:"Other"},"button-7")]}),f.jsxs(Jw,{onSubmit:d,children:[f.jsx(ns,{htmlFor:"name",active:n==="input-1",children:"Your Name"}),f.jsx(Rf,{type:"text",name:"name",value:i.name,active:n==="input-1",onClick:()=>r("input-1"),onChange:c=>u(c)}),f.jsx(ns,{htmlFor:"email",active:n==="input-2",children:"Your Email"}),f.jsx(Rf,{type:"email",name:"email",value:i.email,active:n==="input-2",onClick:()=>r("input-2"),onChange:c=>u(c)}),f.jsx(ns,{htmlFor:"message",active:n==="input-3",children:"Your Message"}),f.jsx(Xw,{type:"text",name:"message",value:i.message,active:n==="input-3",onClick:()=>r("input-3"),onChange:c=>u(c)}),f.jsxs(Zw,{type:"submit",children:[f.jsx("img",{src:I2,alt:"send message"}),f.jsx("p",{children:"Send Message"})]})]})]})})]})]})})})},tx=g.div`
   display: flex;
   flex-direction: column;
   justiy-content: center;
   width: 100%;
-  ${""}
-  ${""}
 `,nx=()=>f.jsxs(tx,{children:[f.jsx(jw,{}),f.jsx(Fw,{}),f.jsx(ex,{})]}),rx=hh`
 
 @font-face {
@@ -1854,8 +1861,8 @@ Error generating stack: `+o.message+`
   word-wrap: break-word;
 `,Fx=g.img`
   position: absolute;
-  bottom: 0;
-  left: 10;
+  bottom: 10%;
+  ${""}
   z-index: 1;
   height: 40vh;
   ${""}
@@ -1871,10 +1878,8 @@ Error generating stack: `+o.message+`
   z-index: 2;
   padding: 0;
   display: block;
-  @media (max-width: 1200px) {
   margin-top: 25%;
-  ${""}
-  }
+
 `,bx=()=>f.jsxs(zx,{children:[f.jsx("img",{style:{height:"40vh",marginRight:"-55%",marginBottom:"-5%"},src:nw,alt:"plant-image"}),f.jsx(Yt,{style:{marginTop:"-20%",height:"fit-content"},children:f.jsxs("div",{style:{display:"flex",flexDirection:"column",justifyContent:"center",marginBottom:"-20%"},children:[f.jsx(Ix,{children:"Tech Incubator"}),f.jsxs(Dx,{children:[f.jsxs(as,{children:[f.jsx(us,{src:rw,alt:"hands-on-training"}),f.jsxs(cs,{children:[f.jsx(fs,{children:"Hands-On Training"}),f.jsx(ds,{children:"Training and workshops covering the latest technologies and industry best practices."})]})]}),f.jsxs(as,{children:[f.jsx(us,{src:iw,alt:"performance"}),f.jsxs(cs,{children:[f.jsx(fs,{children:"Performance Feedback"}),f.jsx(ds,{children:"Training and workshops covering the latest technologies and industry best practices."})]})]}),f.jsxs(as,{children:[f.jsx(us,{src:ow,alt:"community-engagement"}),f.jsxs(cs,{children:[f.jsx(fs,{children:"Community Engagement"}),f.jsx(ds,{children:"Participate in advancing local technological innovation and progress."})]})]})]})]})}),f.jsx(Fx,{src:lw,alt:"ballon-dog"}),f.jsx(Bx,{src:sw,alt:"bottom-wavy-top-rectangle"})]}),Ux=g.div`
   display: flex;
   flex-direction: column;

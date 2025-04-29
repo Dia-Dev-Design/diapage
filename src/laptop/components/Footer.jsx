@@ -12,10 +12,12 @@ const FooterContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh ${"" /* margin-top: 20px; */};
+  height: 100vh;
   width: 100%;
   background-color: #01402f;
+  z-index: 11;
 `;
+
 
 const SectionTitleThin = styled.h1`
   margin-top: 5%;
@@ -26,14 +28,14 @@ const SectionTitleThin = styled.h1`
   width: fit-content;
 `;
 
-const ContactUsFormContainer = styled.div`
+const ContactUsContainer = styled.div`
   font-family: "Poppins";
   font-weight: 500;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
   ${"" /* background-color: #01402f; */}
 `;
 
@@ -75,11 +77,12 @@ const GreenColor = styled.span`
 
 const ContactUsFormContentContainer = styled.div`
   width: 90%;
-  height: 77%;
+  min-height: 77%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justif-content: space-between;
-  margin-right: 10%;
+  ${'' /* margin-right: 10%; */}
   text-align: left;
   background-color: #eeeeee;
   border-radius: 24px;
@@ -106,7 +109,8 @@ const EmailImageDiv = styled.div`
 `;
 
 const ContactUsFormContent = styled.div`
-  height: 100%;
+  height: 90%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -159,7 +163,10 @@ const ContactUsFormSubjectButton = styled.button`
 const ContactUsForm = styled.form`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 65%;
+  height: fit-content;
+  justify-content: space-evenly;
+  ${'' /* margin: 0; */}
 `;
 
 const ContactUsFormLabel = styled.label`
@@ -177,7 +184,7 @@ const ContactUsFormInput = styled.input`
   border-bottom: 3.5px solid
     ${(props) => (props.active ? "var(--green)" : "var(--gray)")};
   z-index: 9999;
-  width: 80%;
+  width: 88%;
   transition: border-color 0.5s ease-in-out;
   field-sizing: content;
 `;
@@ -189,26 +196,51 @@ const ContactUsFormTextArea = styled.textarea`
   border-bottom: 3.5px solid
     ${(props) => (props.active ? "var(--green)" : "var(--gray)")};
   z-index: 9999;
-  width: 80%;
+  width: 88%;
   transition: border-color 0.5s ease-in-out;
   field-sizing: content;
 `;
 
+// const FooterSendMessageButton = styled.button`
+//   margin-bottom: 5%;
+//   height: 2vw;
+//   width: 20vw;
+//   padding: 24px 64px;
+//   background-color: var(--green);
+//   border-radius: 16px;
+//   display: flex;
+//   font-size: 20px;
+//   color: white;
+//   border: none;
+//   justify-content: center;
+//   transform: translateY(3rem);
+//   ${'' /* align-items: sapce-between; */}
+//   transition: background-color 0.5s ease-in-out;
+//   align-self: center;
+
+//   &:hover {
+//     background-color: #a9e6b9;
+//   }
+// `;
+
 const FooterSendMessageButton = styled.button`
-  margin-top: 3%;
+  ${'' /* margin-top: 3%; */}
   height: 2vw;
-  width: 20vw;
-  padding: 24px 64px;
+  min-width: fit-content;
+  width: 15vw;
+  padding: 24px 0;
   background-color: var(--green);
   border-radius: 16px;
   display: flex;
   font-size: 20px;
   color: white;
   border: none;
-  justify-content: space-between;
+  justify-content: space-evenly;
   transform: translateY(3rem);
-  justify-content: center;
+  ${'' /* justify-content: center; */}
   align-items: center;
+  align-self: center;
+  margin-left: -2.5vw;
   transition: background-color 0.5s ease-in-out;
 
   &:hover {
@@ -270,7 +302,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <MainContainer>
-        <ContactUsFormContainer id="contact">
+        <ContactUsContainer id="contact">
           <ContactUsFormContentDescription>
             <SectionTitleThin>Get In Touch</SectionTitleThin>
             <ContactUsFormTitle>
@@ -393,18 +425,26 @@ const Footer = () => {
                     />
                     <FooterSendMessageButton type="submit">
                       <img src={SendMessageIcon} alt="send message" />
-                      Send Message
+                      <p>Send Message</p>
                     </FooterSendMessageButton>
                   </ContactUsForm>
                 </ContactUsFormContent>
               </ContactUsFormContentContainer>
             </RightSide>
           ) : (
-            <p style={{ whiteSpace: "pre-wrap", color: "white", fontFamily: "Aileron-Bold", fontSize: '3.6rem', fontWeight: "900" }}>
+            <p
+              style={{
+                whiteSpace: "pre-wrap",
+                color: "white",
+                fontFamily: "Aileron-Bold",
+                fontSize: "3.6rem",
+                fontWeight: "900",
+              }}
+            >
               {emailSuccessMessage}
             </p>
           )}
-        </ContactUsFormContainer>
+        </ContactUsContainer>
       </MainContainer>
     </FooterContainer>
   );

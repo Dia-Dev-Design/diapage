@@ -107,8 +107,8 @@ const Description = styled.div`
 
 const DogImage = styled.img`
   position: absolute;
-  bottom: 0;
-  left: 10;
+  bottom: 10%;
+  ${'' /* left: 3%; */}
   z-index: 1;
   height: 40vh;
   ${'' /* margin: 0 0 -2.5 -80;
@@ -129,10 +129,8 @@ const BottomWavyImage = styled.img`
   z-index: 2;
   padding: 0;
   display: block;
-  @media (max-width: 1200px) {
   margin-top: 25%;
-  ${'' /* margin-bottom: 0%; */}
-  }
+
 `
 
 const Incubator = () => {

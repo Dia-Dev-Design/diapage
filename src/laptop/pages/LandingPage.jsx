@@ -10,8 +10,6 @@ const LandingPageContainer = styled.div`
   flex-direction: column;
   justiy-content: center;
   width: 100%;
-  ${'' /* align-items: center; */}
-  ${'' /* width: 1200px */}
 `;
 
 const LandingPage = () => {
