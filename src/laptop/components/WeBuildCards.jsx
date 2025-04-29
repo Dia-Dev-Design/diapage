@@ -2,42 +2,20 @@ import styled from "styled-components";
 import MainContainer from "./MainContainer";
 
 const CardsPage = styled.div`
-  ${'' /* width: 100%; */}
+  ${"" /* width: 100%; */}
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 750px;
-  margin-top: 3%;
+  ${"" /* margin-top: -10%; */}
   margin-bottom: -10%;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
+  ${'' /* border: 2px solid purple; */}
 `;
 
-
-
-// const MainContainer = styled.div`
-//     width: 1200px;
-//     height: inherit;
-//     display: inherit;
-//     flex-direction: inherit;
-//     justify-content: inherit;
-//     align-items: inherit;
-//     align-self: inherit;
-//     border: 2px solid red;
-// `
-
-// const PageContainer = styled.div`
-//   position: absolute;
-//   margin-top: 1.5%;
-//   width: 100%;
-//   height: 100%;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// `;
-
 const PageContainer = styled.div`
-  ${'' /* margin-top: 3%; */}
+  ${"" /* margin-top: 3%; */}
   width: 100%;
   height: 100%;
   display: flex;
@@ -45,39 +23,26 @@ const PageContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-// const CardsContainer = styled.div`
-//   height: 100%;
-//   width: 71%;
-//   display: flex;
-//   flex-direction: row;
-//   ${'' /* margin-left: 3.5%; */}
-//   gap: 3%;
-//   justify-content: center;
-//   align-items: flex-start;
-//   align-self: center;
-//   ${'' /* position: relative; */}
-//   ${'' /* left: 14%; */}
-//   border: 2px solid blue;
-//   ${'' /* align-self: center */}
-// `;
 
 const CardsContainer = styled.div`
   height: 100%;
   width: 100%;
+  margin-top: -10%;
   display: flex;
   flex-direction: row;
   gap: 7.5%;
   justify-content: center;
-  align-items: flex-start;
-  border: 2px solid blue;
+  align-items: center;
+  ${'' /* border: 2px solid blue; */}
+  z-index: 1;
 `;
 
 const WeBuildContainerLeft = styled.div`
   display: flex;
   height: 60%;
-  width: unset;
-  aspect-ratio: 85/100;
+  ${"" /* width: unset; */}
+  ${"" /* aspect-ratio: 85/100; */}
+  aspect-ratio: 92.5/100;
   transform: rotate(-15deg);
   padding: 24px 16px 96px 16px;
   flex-direction: column;
@@ -95,8 +60,9 @@ const WeBuildContainerLeft = styled.div`
 const WeBuildContainerRight = styled.div`
   display: flex;
   height: 60%;
-  width: unset;
-  aspect-ratio: 85/100;
+  ${"" /* width: unset; */}
+  ${"" /* aspect-ratio: 82/100; */}
+  aspect-ratio: 92.5/100;
   transform: rotate(15deg);
   padding: 24px 16px 96px 16px;
   flex-direction: column;
@@ -160,115 +126,113 @@ const SmallText = styled.div`
 
 const WeBuildCards = () => {
   return (
+    <CardsPage>
+      <MainContainer>
+        <PageContainer>
+          <CardsContainer>
+            <WeBuildContainerLeft>
+              <InnerContainer>
+                <InnerHeadline>We build...</InnerHeadline>
+                <Section>
+                  <LargeText>Tailored</LargeText>
+                  <SmallText>
+                    Solutions for your unique business needs and goals.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Scalable</LargeText>
+                  <SmallText>
+                    Applications that evolve as your business grows.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Responsive</LargeText>
+                  <SmallText>
+                    Seamlessly compatible with all devices and screen sizes.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Cross-Platform Integration</LargeText>
+                  <SmallText>
+                    Incorporate custom applications with your current systems
+                    and software.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Robust Architecture</LargeText>
+                  <SmallText>
+                    Reliable and scalable software that can handle increasing
+                    loads and complexities.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>User-Centered Experience</LargeText>
+                  <SmallText>
+                    Intuitive design and engaging interfaces.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Agile Development</LargeText>
+                  <SmallText>
+                    To deliver projects on time and adapt to changing
+                    requirements quickly.
+                  </SmallText>
+                </Section>
+              </InnerContainer>
+            </WeBuildContainerLeft>
 
-      <CardsPage>
-        <MainContainer>
-          <PageContainer>
-            <CardsContainer>
-              <WeBuildContainerLeft>
-                <InnerContainer>
-                  <InnerHeadline>We build...</InnerHeadline>
-                  <Section>
-                    <LargeText>Tailored</LargeText>
-                    <SmallText>
-                      Solutions for your unique business needs and goals.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Scalable</LargeText>
-                    <SmallText>
-                      Applications that evolve as your business grows.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Responsive</LargeText>
-                    <SmallText>
-                      Seamlessly compatible with all devices and screen sizes.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Cross-Platform Integration</LargeText>
-                    <SmallText>
-                      Incorporate custom applications with your current systems
-                      and software.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Robust Architecture</LargeText>
-                    <SmallText>
-                      Reliable and scalable software that can handle increasing
-                      loads and complexities.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>User-Centered Experience</LargeText>
-                    <SmallText>
-                      Intuitive design and engaging interfaces.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Agile Development</LargeText>
-                    <SmallText>
-                      To deliver projects on time and adapt to changing
-                      requirements quickly.
-                    </SmallText>
-                  </Section>
-                </InnerContainer>
-              </WeBuildContainerLeft>
-
-              <WeBuildContainerRight>
-                <InnerContainer>
-                  <InnerHeadline>You get...</InnerHeadline>
-                  <Section>
-                    <LargeText>Increased efficiency</LargeText>
-                    <SmallText>
-                      Save time and cut costs with automated, streamlined
-                      processes.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Competitive Advantage</LargeText>
-                    <SmallText>
-                      Cutting-edge technology to stay ahead in your industry and
-                      set you apart.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Advanced Analytics</LargeText>
-                    <SmallText>
-                      Reporting features to provide valuable insights into your
-                      operations.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Security</LargeText>
-                    <SmallText>
-                      Safeguard your data and observe compliance with advanced
-                      measures and best practices.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Maintenance and Support</LargeText>
-                    <SmallText>
-                      Keep your software up-to-date and optimized with ongoing
-                      care.
-                    </SmallText>
-                  </Section>
-                  <Section>
-                    <LargeText>Excellence</LargeText>
-                    <SmallText>
-                      With our dedication to always delivering cutting-edge
-                      design, development, and marketing, we ensure you always
-                      get the very best!
-                    </SmallText>
-                  </Section>
-                </InnerContainer>
-              </WeBuildContainerRight>
-            </CardsContainer>
-          </PageContainer>
-        </MainContainer>
-      </CardsPage>
-
+            <WeBuildContainerRight>
+              <InnerContainer>
+                <InnerHeadline>You get...</InnerHeadline>
+                <Section>
+                  <LargeText>Increased efficiency</LargeText>
+                  <SmallText>
+                    Save time and cut costs with automated, streamlined
+                    processes.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Competitive Advantage</LargeText>
+                  <SmallText>
+                    Cutting-edge technology to stay ahead in your industry and
+                    set you apart.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Advanced Analytics</LargeText>
+                  <SmallText>
+                    Reporting features to provide valuable insights into your
+                    operations.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Security</LargeText>
+                  <SmallText>
+                    Safeguard your data and observe compliance with advanced
+                    measures and best practices.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Maintenance and Support</LargeText>
+                  <SmallText>
+                    Keep your software up-to-date and optimized with ongoing
+                    care.
+                  </SmallText>
+                </Section>
+                <Section>
+                  <LargeText>Excellence</LargeText>
+                  <SmallText>
+                    With our dedication to always delivering cutting-edge
+                    design, development, and marketing, we ensure you always get
+                    the very best!
+                  </SmallText>
+                </Section>
+              </InnerContainer>
+            </WeBuildContainerRight>
+          </CardsContainer>
+        </PageContainer>
+      </MainContainer>
+    </CardsPage>
   );
 };
 

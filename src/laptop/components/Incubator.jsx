@@ -9,12 +9,24 @@ import BottomWavyTopRectangle from "../../assets/Bottom-Wavy-Top-Rectangle.svg";
 
 import MainContainer from "./MainContainer";
 
+// const PageContainer = styled.div`
+//   align-self: center;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   margin-top: -10%;
+//   position: relative;
+//   width: 100%
+// `;
+
 const PageContainer = styled.div`
+  position: relative;
   align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: -10%;
+  width: 100%; /* Make sure this has a defined width */
 `;
 
 const IncubatorTitle = styled.h1`
@@ -32,6 +44,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   display: inline-flex;
+  z-index: 2;
 `;
 
 const ItemContainer = styled.div`
@@ -80,16 +93,47 @@ const Description = styled.div`
   word-wrap: break-word;
 `;
 
+// const DogImage = styled.img`
+//   height: 40vh;
+//   margin: 0 0 -2.5 -80;
+//   margin-left: -80%;
+//   margin-bottom: -2.5%;
+//   padding: 0;
+//   z-index: 1;
+//   @media (max-width: 1200px) {
+//     margin: 0% 0% -10% 90%;
+//   }
+// `;
+
 const DogImage = styled.img`
-  height: 40vh;
-  margin-left: -80%;
-  margin-bottom: -2.5%;
+  position: absolute;
+  bottom: 0;
+  left: 10;
   z-index: 1;
+  height: 40vh;
+  ${'' /* margin: 0 0 -2.5 -80;
+  margin-left: -80%;
+  margin-bottom: -2.5%; */}
+  padding: 0;
+  z-index: 1;
+  
   @media (max-width: 1200px) {
-    margin-left: 90%;
-    margin-bottom: -10%;
+    left: 85%;
+    bottom: 3%;
   }
 `;
+
+
+const BottomWavyImage = styled.img`
+  width: 100vw;
+  z-index: 2;
+  padding: 0;
+  display: block;
+  @media (max-width: 1200px) {
+  margin-top: 25%;
+  ${'' /* margin-bottom: 0%; */}
+  }
+`
 
 const Incubator = () => {
   return (
@@ -151,8 +195,8 @@ const Incubator = () => {
         src={BallonDog}
         alt="ballon-dog"
       />
-      <img
-        style={{ width: "100vw", zIndex: 2 }}
+      <BottomWavyImage
+        // style={{ width: "100vw", zIndex: 2 }}
         src={BottomWavyTopRectangle}
         alt="bottom-wavy-top-rectangle"
       />
