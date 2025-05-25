@@ -9,14 +9,14 @@ import { GreenLettering } from "../../laptop/components/GreenLettering";
 
 const NavContainer = styled.div`
   width: 100%;
-  height: 32vw;
+  height: calc(100vw * 0.3);
   position: fixed;
   z-index: 99;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: #F2F2F2;
+  background-color: white;
 `;
 
 const LogoContainer = styled.div`
@@ -32,7 +32,7 @@ const LogoContainer = styled.div`
 const Logo = styled.img`
   height: 70%;
   width: auto;
-  margin-left: -40%;
+  margin-left: -45%;
 `;
 
 const BlackText = styled.span`

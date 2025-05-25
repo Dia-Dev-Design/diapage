@@ -107,7 +107,11 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     font-family: "Aileron-Regular", 'Inter Variable', 'poppins', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
-    background-color: #ffffff;
+    ${'' /* background-color: #ffffff; */}
+
+    background-color: black;
+
+
     --green: #65B47B;
     --gray: #b4a7bc;
     -moz-osx-font-smoothing: grayscale;
@@ -117,7 +121,8 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 10px;
-    background-color: #F2F2F2
+    ${'' /* background-color: #F2F2F2 */}
+    background-color: black;
   }
 
   body {
@@ -127,7 +132,8 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #F2F2F2
+    ${'' /* background-color: #F2F2F2 */}
+    ${'' /* background-color: black */}
   }
 `;
 
