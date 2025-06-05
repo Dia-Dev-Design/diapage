@@ -21,7 +21,7 @@ function App() {
     <AppContainer>
       <GlobalStyle />
 
-      <NavBar />
+      {/* <NavBar /> */}
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
