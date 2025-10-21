@@ -6,27 +6,22 @@ import Footer from "../components/Footer";
 
 
 const LandingPageContainer = styled.div`
-    display: flex;
+  display: flex;
   flex-direction: column;
-    justify-content: center;
+  align-items: center;
   width: 100%;
-  
-  // @media (max-width: 1024px) {
-  //   display: none;
-  // }
+  min-height: 100vh;
+  overflow-x: hidden;
 `;
 
 const LandingPage = () => {
-    return (
+  return (
     <LandingPageContainer>
       <Header />
       <Services />
       <Footer />
-      <br style={{'width': '99vw'}} />
-      <hr style={{'width': '99vw', 'color': 'black', 'height': '0.5vh', 'backgroundColor': 'black'}}/>
-      <h1>Under Construction...</h1>
     </LandingPageContainer>
-    );
+  );
 };
 
 export default LandingPage;
