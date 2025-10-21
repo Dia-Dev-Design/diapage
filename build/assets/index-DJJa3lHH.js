@@ -78,14 +78,10 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
 `,Fy=()=>c.jsx($y,{children:c.jsx("h1",{children:"Hello, welcome to Footer"})}),By=x.div`
-    display: flex;
+  display: flex;
   flex-direction: column;
-    justify-content: center;
+  justify-content: center;
   width: 100%;
-  
-  // @media (max-width: 1024px) {
-  //   display: none;
-  // }
 `,Uy=()=>c.jsxs(By,{children:[c.jsx(Iy,{}),c.jsx(Dy,{}),c.jsx(Fy,{}),c.jsx("br",{style:{width:"99vw"}}),c.jsx("hr",{style:{width:"99vw",color:"black",height:"0.5vh",backgroundColor:"black"}}),c.jsx("h1",{children:"Under Construction..."})]}),My="/assets/fonts/Aileron-Regular-CtKlDjcc.otf",by="/assets/fonts/Aileron-Bold-BWrAr8GE.otf",Hy="/assets/fonts/Aileron-Black-DX8rpg6F.otf",Wy="/assets/fonts/Aileron-BlackItalic-CDBNzfOi.otf",Vy="/assets/fonts/Aileron-BoldItalic-BpRWpHqE.otf",Qy="/assets/fonts/Aileron-Heavy-CNC5NjKR.otf",Ky="/assets/fonts/Aileron-HeavyItalic-Cu9nKrNV.otf",Gy="/assets/fonts/Aileron-Italic-DYUE3e7y.otf",qy="/assets/fonts/Aileron-Light-LZTtHK4h.otf",Yy="/assets/fonts/Aileron-LightItalic-WKAGcBBf.otf",Jy="/assets/fonts/Aileron-SemiBold-C3IbYb9I.otf",Xy="/assets/fonts/Aileron-SemiBoldItalic-DLbJRGCk.otf",Zy="/assets/fonts/Aileron-Thin-Brp9Y9vu.otf",ev="/assets/fonts/Aileron-ThinItalic-CWr2f7xD.otf",tv="/assets/fonts/Aileron-UltraLight-Cw0yx4GS.otf",nv="/assets/fonts/Aileron-UltraLightItalic-B5h6okXt.otf",rv=xh`
 
 @font-face {
@@ -1216,4 +1212,4 @@ Error generating stack: `+o.message+`
     display: flex;
     flex-direction: column;
     justify-contents: center;
-`;function nS(){return c.jsxs(tS,{children:[c.jsx(r2,{}),c.jsx(Av,{}),c.jsxs(Oh,{children:[c.jsx(ii,{path:"/",element:c.jsx(n2,{})}),c.jsx(ii,{path:"/about",element:c.jsx(eS,{})})]})]})}const rS=()=>{const[e,t]=_.useState(null);return window.addEventListener("resize",()=>{let n=window.document.body.getBoundingClientRect().width;t(n)}),_.useEffect(()=>{let n=window.document.body.getBoundingClientRect().width;t(n)},[]),c.jsx(c.Fragment,{children:e>1024?c.jsx(nS,{}):e?c.jsx(Ev,{}):null})};hs.createRoot(document.getElementById("root")).render(c.jsx(Ze.StrictMode,{children:c.jsx(Ry,{children:c.jsx(rS,{})})}));
+`;function nS(){return c.jsxs(tS,{children:[c.jsx(r2,{}),c.jsx(Av,{}),c.jsxs(Oh,{children:[c.jsx(ii,{path:"/",element:c.jsx(n2,{})}),c.jsx(ii,{path:"/about",element:c.jsx(eS,{})})]})]})}const rS=()=>{const[e,t]=_.useState(null);return window.addEventListener("resize",()=>{let n=window.document.body.getBoundingClientRect().width;t(n)}),_.useEffect(()=>{let n=window.document.body.getBoundingClientRect().width;return t(n),()=>{window.removeEventListener("resize",()=>{let r=window.document.body.getBoundingClientRect().width;t(r)})}},[]),c.jsx(c.Fragment,{children:e>1024?c.jsx(nS,{}):e?c.jsx(Ev,{}):null})};hs.createRoot(document.getElementById("root")).render(c.jsx(Ze.StrictMode,{children:c.jsx(Ry,{children:c.jsx(rS,{})})}));
