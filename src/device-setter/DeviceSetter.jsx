@@ -17,6 +17,13 @@ const DeviceSetter = () => {
     useEffect(() => {
       let width = window.document.body.getBoundingClientRect().width
       setDeviceWidth(width)
+
+      return () => {
+        window.removeEventListener('resize', () => {
+          let width = window.document.body.getBoundingClientRect().width
+          setDeviceWidth(width)
+        })
+      }
     }, [])
 
     return (
