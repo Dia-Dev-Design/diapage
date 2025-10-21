@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 import MobileApp from "../mobile/App";
-import TabletApp from '../tablet/App'
+
+// import TabletApp from '../tablet/App'
 import LaptopApp from '../laptop/App'
 
 const DeviceSetter = () => {
@@ -25,13 +26,13 @@ const DeviceSetter = () => {
           deviceWidth > 1024 ?
 
             <LaptopApp /> 
-          
+
           :
 
           deviceWidth ?
 
             <MobileApp /> 
-          
+
           :
 
           null

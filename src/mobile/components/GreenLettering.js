@@ -1,10 +1,16 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const GreenLettering = styled.span`
-  color: var(--green);
+const GreenLetteringContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
-  &:hover {
-    color: #a9e6b9;
-    transition: color 0.3s ease-in-out;
-  }
-`
+const GreenLettering = () => {
+  return (
+    <GreenLetteringContainer>
+      <h1>Hello, welcome to GreenLettering</h1>
+    </GreenLetteringContainer>
+  );
+};
+
+export default GreenLettering;

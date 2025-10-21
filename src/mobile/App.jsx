@@ -9,24 +9,29 @@ import LandingPage from "./pages/LandingPage";
 import GlobalStyle from "./GlobalStyle";
 import AboutUs from "./pages/AboutUs";
 
-const AppContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-contents: center;
-`;
 
-function App() {
+
+const AppContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-contents: center;
+`
+
+const App = () => {
   return (
     <AppContainer>
-      <GlobalStyle />
+        <GlobalStyle />
 
-      {/* <NavBar /> */}
+        <NavBar />
 
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/about" element={<AboutUs />} />
-      </Routes>
+        <Routes>
+
+            <Route path="/" element={<LandingPage />} />
+            <Route path='/about' element={<AboutUs />} />
+
+        </Routes>
+
     </AppContainer>
   );
 }

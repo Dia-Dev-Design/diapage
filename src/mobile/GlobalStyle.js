@@ -109,7 +109,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Aileron-Regular", 'Inter Variable', 'poppins', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
     ${'' /* background-color: #ffffff; */}
 
-    background-color: black;
+    ${'' /* background-color: black */}
 
 
     --green: #65B47B;
@@ -122,13 +122,13 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 10px;
     ${'' /* background-color: #F2F2F2 */}
-    background-color: black;
+    ${'' /* background-color: black; */}
   }
 
   body {
     margin: 0;
     padding: 0;
-    width: 99vw;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
