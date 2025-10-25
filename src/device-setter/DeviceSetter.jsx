@@ -3,28 +3,29 @@ import { useEffect, useState } from "react";
 import MobileApp from "../mobile/App";
 
 // import TabletApp from '../tablet/App'
-import LaptopApp from '../laptop/App'
+import LaptopApp from "../laptop/App";
 
 const DeviceSetter = () => {
+  const [deviceWidth, setDeviceWidth] = useState(null);
 
-    const [deviceWidth, setDeviceWidth] = useState(null)
+  const resize = () => {
+    let width = window.document.body.getBoundingClientRect().width;
+    setDeviceWidth(width);
+  };
 
-    window.addEventListener('resize', () => {
-      let width = window.document.body.getBoundingClientRect().width
-      setDeviceWidth(width)
-    })
+  useEffect(() => {
+    resize();
 
-    useEffect(() => {
-      let width = window.document.body.getBoundingClientRect().width
-      setDeviceWidth(width)
+    window.addEventListener("resize", () => {
+      resize();
+    });
 
-      return () => {
-        window.removeEventListener('resize', () => {
-          let width = window.document.body.getBoundingClientRect().width
-          setDeviceWidth(width)
-        })
-      }
-    }, [])
+    return () => {
+      window.removeEventListener("resize", () => {
+        setDeviceWidth(null);
+      });
+    };
+  }, []);
 
     return (
       <>
@@ -32,13 +33,13 @@ const DeviceSetter = () => {
 
           deviceWidth > 1024 ?
 
-            <LaptopApp /> 
+            <LaptopApp resize={resize} /> 
 
           :
 
           deviceWidth ?
 
-            <MobileApp /> 
+            <MobileApp resize={resize} /> 
 
           :
 

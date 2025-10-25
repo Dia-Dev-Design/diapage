@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import "./App.css";
+import { useEffect } from "react";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -9,31 +10,30 @@ import LandingPage from "./pages/LandingPage";
 import GlobalStyle from "./GlobalStyle";
 import AboutUs from "./pages/AboutUs";
 
-
-
 const AppContainer = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-contents: center;
-`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-contents: center;
+`;
 
-function App() {
+let App = ({ resize }) => {
+  useEffect(() => {
+    resize();
+  }, []);
+
   return (
     <AppContainer>
-        <GlobalStyle />
+      <GlobalStyle />
 
-        <NavBar />
+      <NavBar />
 
-        <Routes>
-
-            <Route path="/" element={<LandingPage />} />
-            <Route path='/about' element={<AboutUs />} />
-
-        </Routes>
-
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
     </AppContainer>
   );
-}
+};
 
 export default App;
