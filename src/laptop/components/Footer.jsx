@@ -153,7 +153,7 @@ const ContactUsFormSubjectButton = styled.button`
   }
 
   ${(props) =>
-    props.active &&
+    props.$active &&
     `
     background-color: var(--green);
     color: black;
@@ -170,10 +170,10 @@ const ContactUsForm = styled.form`
 `;
 
 const ContactUsFormLabel = styled.label`
-  transform: translate(3px, ${(props) => (props.active ? "0.1rem" : "1.3rem")});
+  transform: translate(3px, ${(props) => (props.$active ? "0.1rem" : "1.3rem")});
   color: var(--gray);
   margin-top: 2rem;
-  font-size: ${(props) => (props.active ? "15px" : "20px")};
+  font-size: ${(props) => (props.$active ? "15px" : "20px")};
   transition: transform 0.5s ease-in-out, font-size 0.5s ease-in-out;
 `;
 
@@ -182,7 +182,7 @@ const ContactUsFormInput = styled.input`
   background-color: transparent;
   outline: none;
   border-bottom: 3.5px solid
-    ${(props) => (props.active ? "var(--green)" : "var(--gray)")};
+    ${(props) => (props.$active ? "var(--green)" : "var(--gray)")};
   z-index: 9999;
   width: 88%;
   transition: border-color 0.5s ease-in-out;
@@ -194,7 +194,7 @@ const ContactUsFormTextArea = styled.textarea`
   background-color: transparent;
   outline: none;
   border-bottom: 3.5px solid
-    ${(props) => (props.active ? "var(--green)" : "var(--gray)")};
+    ${(props) => (props.$active ? "var(--green)" : "var(--gray)")};
   z-index: 9999;
   width: 88%;
   transition: border-color 0.5s ease-in-out;
@@ -333,7 +333,7 @@ const Footer = () => {
                   <ContactUsFormSubjectButtonGroup>
                     <ContactUsFormSubjectButton
                       key="button-1"
-                      active={subjectsSelected.includes("Web Development")}
+                      $active={subjectsSelected.includes("Web Development")}
                       value="Web Development"
                       onClick={(e) => subjectSelect(e, "Web Development")}
                     >
@@ -341,7 +341,7 @@ const Footer = () => {
                     </ContactUsFormSubjectButton>
                     <ContactUsFormSubjectButton
                       key="button-2"
-                      active={subjectsSelected.includes("UX/UI Design")}
+                      $active={subjectsSelected.includes("UX/UI Design")}
                       value="UX/UI Design"
                       onClick={(e) => subjectSelect(e, "UX/UI Design")}
                     >
@@ -349,7 +349,7 @@ const Footer = () => {
                     </ContactUsFormSubjectButton>
                     <ContactUsFormSubjectButton
                       key="button-3"
-                      active={subjectsSelected.includes("Graphic Design")}
+                      $active={subjectsSelected.includes("Graphic Design")}
                       value="Graphic Design"
                       onClick={(e) => subjectSelect(e, "Graphic Design")}
                     >
@@ -357,7 +357,7 @@ const Footer = () => {
                     </ContactUsFormSubjectButton>
                     <ContactUsFormSubjectButton
                       key="button-5"
-                      active={subjectsSelected.includes("Custom APIs")}
+                      $active={subjectsSelected.includes("Custom APIs")}
                       value="Custom APIs"
                       onClick={(e) => subjectSelect(e, "Custom APIs")}
                     >
@@ -365,7 +365,7 @@ const Footer = () => {
                     </ContactUsFormSubjectButton>
                     <ContactUsFormSubjectButton
                       key="button-6"
-                      active={subjectsSelected.includes("AI Apps/Agents")}
+                      $active={subjectsSelected.includes("AI Apps/Agents")}
                       value="AI Apps/Agents"
                       onClick={(e) => subjectSelect(e, "AI Apps/Agents")}
                     >
@@ -373,7 +373,7 @@ const Footer = () => {
                     </ContactUsFormSubjectButton>
                     <ContactUsFormSubjectButton
                       key="button-7"
-                      active={subjectsSelected.includes("Other")}
+                      $active={subjectsSelected.includes("Other")}
                       value="Other"
                       onClick={(e) => subjectSelect(e, "Other")}
                     >
@@ -383,7 +383,7 @@ const Footer = () => {
                   <ContactUsForm onSubmit={handleSubmit}>
                     <ContactUsFormLabel
                       htmlFor="name"
-                      active={inputSelected === "input-1"}
+                      $active={inputSelected === "input-1"}
                     >
                       Your Name
                     </ContactUsFormLabel>
@@ -391,13 +391,13 @@ const Footer = () => {
                       type="text"
                       name="name"
                       value={emailContent.name}
-                      active={inputSelected === "input-1"}
+                      $active={inputSelected === "input-1"}
                       onClick={() => setInputSelected("input-1")}
                       onChange={(e) => handleTextInput(e)}
                     />
                     <ContactUsFormLabel
                       htmlFor="email"
-                      active={inputSelected === "input-2"}
+                      $active={inputSelected === "input-2"}
                     >
                       Your Email
                     </ContactUsFormLabel>
@@ -405,13 +405,13 @@ const Footer = () => {
                       type="email"
                       name="email"
                       value={emailContent.email}
-                      active={inputSelected === "input-2"}
+                      $active={inputSelected === "input-2"}
                       onClick={() => setInputSelected("input-2")}
                       onChange={(e) => handleTextInput(e)}
                     />
                     <ContactUsFormLabel
                       htmlFor="message"
-                      active={inputSelected === "input-3"}
+                      $active={inputSelected === "input-3"}
                     >
                       Your Message
                     </ContactUsFormLabel>
@@ -419,7 +419,7 @@ const Footer = () => {
                       type="text"
                       name="message"
                       value={emailContent.message}
-                      active={inputSelected === "input-3"}
+                      $active={inputSelected === "input-3"}
                       onClick={() => setInputSelected("input-3")}
                       onChange={(e) => handleTextInput(e)}
                     />
