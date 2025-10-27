@@ -10,10 +10,6 @@ const LandingPageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  
-  // @media (max-width: 1024px) {
-  //   display: none;
-  // }
 `;
 
 const LandingPage = () => {

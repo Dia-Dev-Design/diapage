@@ -483,7 +483,7 @@ Error generating stack: `+o.message+`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-`,S2=()=>u.jsxs(w2,{children:[u.jsx(mv,{}),u.jsx(Rv,{}),u.jsx(x2,{}),u.jsx("br",{style:{width:"99vw"}}),u.jsx("hr",{style:{width:"99vw",color:"black",height:"0.5vh",backgroundColor:"black"}})]}),C2="/assets/fonts/Aileron-Regular-CtKlDjcc.otf",k2="/assets/fonts/Aileron-Bold-BWrAr8GE.otf",E2="/assets/fonts/Aileron-Black-DX8rpg6F.otf",j2="/assets/fonts/Aileron-BlackItalic-CDBNzfOi.otf",P2="/assets/fonts/Aileron-BoldItalic-BpRWpHqE.otf",R2="/assets/fonts/Aileron-Heavy-CNC5NjKR.otf",T2="/assets/fonts/Aileron-HeavyItalic-Cu9nKrNV.otf",_2="/assets/fonts/Aileron-Italic-DYUE3e7y.otf",A2="/assets/fonts/Aileron-Light-LZTtHK4h.otf",N2="/assets/fonts/Aileron-LightItalic-WKAGcBBf.otf",L2="/assets/fonts/Aileron-SemiBold-C3IbYb9I.otf",I2="/assets/fonts/Aileron-SemiBoldItalic-DLbJRGCk.otf",$2="/assets/fonts/Aileron-Thin-Brp9Y9vu.otf",O2="/assets/fonts/Aileron-ThinItalic-CWr2f7xD.otf",z2="/assets/fonts/Aileron-UltraLight-Cw0yx4GS.otf",D2="/assets/fonts/Aileron-UltraLightItalic-B5h6okXt.otf",b2=Ih`
+`,S2=()=>u.jsxs(w2,{children:[u.jsx(mv,{}),u.jsx(Rv,{}),u.jsx(x2,{})]}),C2="/assets/fonts/Aileron-Regular-CtKlDjcc.otf",k2="/assets/fonts/Aileron-Bold-BWrAr8GE.otf",E2="/assets/fonts/Aileron-Black-DX8rpg6F.otf",j2="/assets/fonts/Aileron-BlackItalic-CDBNzfOi.otf",P2="/assets/fonts/Aileron-BoldItalic-BpRWpHqE.otf",R2="/assets/fonts/Aileron-Heavy-CNC5NjKR.otf",T2="/assets/fonts/Aileron-HeavyItalic-Cu9nKrNV.otf",_2="/assets/fonts/Aileron-Italic-DYUE3e7y.otf",A2="/assets/fonts/Aileron-Light-LZTtHK4h.otf",N2="/assets/fonts/Aileron-LightItalic-WKAGcBBf.otf",L2="/assets/fonts/Aileron-SemiBold-C3IbYb9I.otf",I2="/assets/fonts/Aileron-SemiBoldItalic-DLbJRGCk.otf",$2="/assets/fonts/Aileron-Thin-Brp9Y9vu.otf",O2="/assets/fonts/Aileron-ThinItalic-CWr2f7xD.otf",z2="/assets/fonts/Aileron-UltraLight-Cw0yx4GS.otf",D2="/assets/fonts/Aileron-UltraLightItalic-B5h6okXt.otf",b2=Ih`
 
 @font-face {
   font-family: "Aileron-Regular";   /*Can be any text*/
@@ -1217,10 +1217,6 @@ Error generating stack: `+o.message+`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  
-  // @media (max-width: 1024px) {
-  //   display: none;
-  // }
 `,Xw=()=>u.jsxs(Yw,{children:[u.jsx(ww,{}),u.jsx(Iw,{}),u.jsx(qw,{})]}),Jw=Ih`
 
 

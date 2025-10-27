@@ -17,15 +17,6 @@ const LandingPage = () => {
       <Header />
       <Services />
       <Footer />
-      <br style={{ width: "99vw" }} />
-      <hr
-        style={{
-          width: "99vw",
-          color: "black",
-          height: "0.5vh",
-          backgroundColor: "black",
-        }}
-      />
     </LandingPageContainer>
   );
 };
