@@ -8,32 +8,34 @@ import LandingPage from "./pages/LandingPage";
 
 import GlobalStyle from "./GlobalStyle";
 import AboutUs from "./pages/AboutUs";
-
-
+import { useEffect } from "react";
 
 const AppContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-contents: center;
-`
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+`;
 
-const App = () => {
+const App = ({ resize }) => {
+  useEffect(() => {
+    resize();
+  }, []);
+
   return (
     <AppContainer>
-        <GlobalStyle />
+      <GlobalStyle />
 
-        <NavBar />
+      <NavBar />
 
-        <Routes>
-
-            <Route path="/" element={<LandingPage />} />
-            <Route path='/about' element={<AboutUs />} />
-
-        </Routes>
-
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
     </AppContainer>
   );
-}
+};
 
 export default App;

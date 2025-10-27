@@ -3,21 +3,37 @@ import { useEffect, useState } from "react";
 import MobileApp from "../mobile/App";
 
 // import TabletApp from '../tablet/App'
-import LaptopApp from '../laptop/App'
+import LaptopApp from "../laptop/App";
 
 const DeviceSetter = () => {
+  const [deviceWidth, setDeviceWidth] = useState(null);
 
-    const [deviceWidth, setDeviceWidth] = useState(null)
+  const resize = () => {
+    // Use window.innerWidth for more accurate viewport measurement
+    let width = window.innerWidth;
+    setDeviceWidth(width);
+  };
 
-    window.addEventListener('resize', () => {
-      let width = window.document.body.getBoundingClientRect().width
-      setDeviceWidth(width)
-    })
+  useEffect(() => {
+    // Initial measurement
+    resize();
 
-    useEffect(() => {
-      let width = window.document.body.getBoundingClientRect().width
-      setDeviceWidth(width)
-    }, [])
+    // Debounced resize handler for better performance
+    let timeoutId;
+    const debouncedResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        resize();
+      }, 150); // 150ms debounce delay
+    };
+
+    window.addEventListener("resize", debouncedResize);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("resize", debouncedResize);
+    };
+  }, []);
 
     return (
       <>
@@ -25,13 +41,13 @@ const DeviceSetter = () => {
 
           deviceWidth > 1024 ?
 
-            <LaptopApp /> 
+            <LaptopApp resize={resize} /> 
 
           :
 
           deviceWidth ?
 
-            <MobileApp /> 
+            <MobileApp resize={resize} /> 
 
           :
 
