@@ -1,0 +1,237 @@
+# Cursor AI Rules for diapage Project
+
+## Project Context
+React application with device-specific rendering (DeviceSetter at 1024px breakpoint).
+Mobile and laptop versions are separate implementations, not responsive variants.
+Uses styled-components for all styling (no inline styles or CSS files except GlobalStyle).
+
+## Workflow Priority
+**Always prefer: Figma → MCP → Code Generation**
+
+When working on mobile components:
+1. Start with Figma frame reference
+2. Use MCP to generate from design specs
+3. Follow templates in `.cursor/mcp-prompt-templates.md`
+4. Reference `DESIGN_SYSTEM_REFERENCE.md` for consistency
+5. Validate against Figma before considering complete
+
+See `FIGMA_MCP_WORKFLOW.md` for detailed process.
+
+## Technology Stack
+- React 18.2
+- React Router 6.26
+- styled-components 6.1
+- Vite 5.2 (build tool)
+- Aileron font family (16 variants)
+
+## File Structure
+```
+src/
+├── device-setter/
+│   └── DeviceSetter.jsx          ← Switches at 1024px
+├── mobile/
+│   ├── App.jsx                    ← Mobile entry point
+│   ├── GlobalStyle.js             ← Mobile-specific global styles
+│   ├── components/                ← Mobile components here
+│   └── pages/                     ← Mobile pages here
+├── laptop/
+│   ├── App.jsx                    ← Laptop entry point
+│   └── ...                        ← Laptop components
+└── assets/                         ← Shared assets (SVG, fonts, images)
+```
+
+## Code Standards
+
+### Mobile Components Must:
+- Use styled-components (import from 'styled-components')
+- Be mobile-first: flex-direction: column by default
+- Use responsive units:
+  - Typography: `clamp(min, preferred, max)` in rem
+  - Spacing: % for padding/margin, avoid fixed px
+  - Widths: 100%, max-width constraints, box-sizing: border-box
+- Use :active states (not :hover) for mobile interactions
+- Have touch-friendly sizes: min 48px height for buttons/links
+- Import assets from: `../../assets/[filename]`
+- Use semantic HTML: `<nav>`, `<section>`, `<header>`, `<footer>`
+
+### Color Variables (from GlobalStyle.js)
+```css
+--green: #65B47B      /* Primary brand */
+--gray: #b4a7bc       /* Secondary/disabled */
+```
+Always use `var(--green)` and `var(--gray)` instead of hex codes.
+
+### Typography
+- Font families: "Aileron-Regular", "Aileron-Bold", "Aileron-Semi-Bold"
+- Use clamp() for responsive sizing
+- Standard clamps (refer to DESIGN_SYSTEM_REFERENCE.md):
+  - H1: clamp(3.2rem, 8vw, 4.8rem)
+  - H2: clamp(4rem, 10vw, 6rem)
+  - H3: clamp(2rem, 5vw, 2.4rem)
+  - Body: clamp(1.4rem, 4vw, 1.6rem)
+
+### Component Template
+```jsx
+import styled from "styled-components";
+import AssetName from "../../assets/AssetName.svg";
+
+const ComponentContainer = styled.div`
+  width: 100%;
+  padding: 6% 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ComponentName = () => {
+  return (
+    <ComponentContainer>
+      {/* Content */}
+    </ComponentContainer>
+  );
+};
+
+export default ComponentName;
+```
+
+## When Generating Components
+
+### Always:
+- Check DESIGN_SYSTEM_REFERENCE.md for existing patterns
+- Use MCP templates from `.cursor/mcp-prompt-templates.md`
+- Validate against Figma before completion
+- Run `npm run lint` to check for errors
+- Test responsive behavior (320px - 768px for mobile)
+- Add proper alt text to images
+- Use aria-labels for icon-only buttons
+
+### Never:
+- Use inline styles (style={{...}})
+- Use :hover on mobile components (use :active)
+- Hardcode colors (use CSS variables)
+- Use fixed px for widths (use %, vw, or responsive units)
+- Create buttons < 48px height
+- Skip semantic HTML tags
+- Forget box-sizing: border-box
+
+## Testing Requirements
+Before considering component complete:
+1. Renders correctly in browser at < 1024px width
+2. No linter errors (`npm run lint`)
+3. Responsive across 320px - 768px range
+4. Matches Figma design (use Template 5 to validate)
+5. Touch-friendly interactions work
+6. Assets load correctly
+7. Accessible (semantic HTML, alt text, ARIA labels)
+
+## MCP Workflow Steps (Quick Reference)
+1. **Generate:** Use Template 1 with Figma frame ID
+2. **Validate:** Use Template 5 to compare vs Figma
+3. **Fix:** Use Template 4 for any discrepancies
+4. **Test:** Run dev server, test in Responsively app
+5. **Optimize:** Use Template 9 for touch, Template 10 for accessibility
+6. **Commit:** One component per commit with descriptive message
+
+## Common Patterns
+
+### Responsive Container
+```jsx
+const Container = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  padding: 6% 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+```
+
+### Touch-Friendly Button
+```jsx
+const Button = styled.button`
+  width: 100%;
+  max-width: 250px;
+  height: 56px;
+  background-color: var(--green);
+  color: #ffffff;
+  font-size: clamp(1.8rem, 4vw, 2rem);
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:active {
+    background-color: #a9e6b9;
+  }
+`;
+```
+
+### Responsive Image
+```jsx
+const ResponsiveImage = styled.img`
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+`;
+```
+
+## DeviceSetter Context
+The app uses DeviceSetter.jsx to switch between MobileApp and LaptopApp at 1024px.
+- Mobile: < 1024px
+- Laptop: ≥ 1024px
+
+Do NOT add media queries to mobile components. The DeviceSetter handles the breakpoint.
+Within mobile, use clamp() and relative units for fluid responsiveness.
+
+## Asset Usage
+Assets in `src/assets/` are shared between mobile and laptop.
+Always use relative imports: `import Icon from "../../assets/Icon.svg"`
+
+Common assets:
+- DevBro.svg (header illustration)
+- WebDevNew.svg, CustomApplicationsNew.svg, ProblemSolutionsNew.svg, TalentIncubatorNew.svg (service cards)
+- Dog.svg, emailImage (footer)
+- NavbarLogo.png, Mobile-Menu.svg (navbar)
+
+## Linting
+Run before committing: `npm run lint`
+Fix all errors. Code must be lint-free.
+
+## Git Workflow
+- Commit one component at a time
+- Message format: "Add mobile [ComponentName] via Figma MCP"
+- Don't commit node_modules, build, or .vscode (in .gitignore)
+
+## Documentation References
+- `FIGMA_MCP_WORKFLOW.md` - Full workflow guide
+- `DESIGN_SYSTEM_REFERENCE.md` - Styling standards
+- `.cursor/figma-mcp-quick-reference.md` - Quick commands
+- `.cursor/mcp-prompt-templates.md` - Copy-paste prompts
+- `WORKFLOW_SETUP_COMPLETE.md` - Overview and quick start
+
+## AI Interaction Preferences
+When user asks for help:
+1. Check if Figma MCP should be used (for new/updated components)
+2. Reference design system before suggesting styles
+3. Propose changes, don't just describe them
+4. Run linter after edits
+5. Provide specific, copy-paste-ready code
+6. Follow mobile-first responsive patterns
+7. Validate against Figma if applicable
+
+## Quick Wins to Always Apply
+- Fix typos (e.g., justify-contents → justify-content)
+- Add box-sizing: border-box if missing
+- Replace fixed px with responsive units where appropriate
+- Add aria-labels to icon buttons
+- Ensure alt text on images
+- Use semantic HTML tags
+
+## Context for Future Sessions
+This project has comprehensive workflow documentation for Figma→MCP→Code generation.
+Mobile components (Header, Services, Footer, NavBar) were built as reference implementations.
+All future mobile components should use the MCP workflow with provided templates.
+Designer's Figma file is the source of truth for all styling decisions.
+

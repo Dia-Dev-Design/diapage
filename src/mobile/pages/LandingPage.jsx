@@ -26,7 +26,6 @@ const LandingPage = () => {
           backgroundColor: "black",
         }}
       />
-      <h1>Under Construction...</h1>
     </LandingPageContainer>
   );
 };

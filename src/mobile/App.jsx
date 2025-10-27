@@ -11,10 +11,12 @@ import AboutUs from "./pages/AboutUs";
 import { useEffect } from "react";
 
 const AppContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-contents: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 `;
 
 const App = ({ resize }) => {

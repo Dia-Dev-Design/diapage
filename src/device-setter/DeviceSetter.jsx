@@ -9,21 +9,29 @@ const DeviceSetter = () => {
   const [deviceWidth, setDeviceWidth] = useState(null);
 
   const resize = () => {
-    let width = window.document.body.getBoundingClientRect().width;
+    // Use window.innerWidth for more accurate viewport measurement
+    let width = window.innerWidth;
     setDeviceWidth(width);
   };
 
   useEffect(() => {
+    // Initial measurement
     resize();
 
-    window.addEventListener("resize", () => {
-      resize();
-    });
+    // Debounced resize handler for better performance
+    let timeoutId;
+    const debouncedResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        resize();
+      }, 150); // 150ms debounce delay
+    };
+
+    window.addEventListener("resize", debouncedResize);
 
     return () => {
-      window.removeEventListener("resize", () => {
-        setDeviceWidth(null);
-      });
+      clearTimeout(timeoutId);
+      window.removeEventListener("resize", debouncedResize);
     };
   }, []);
 
