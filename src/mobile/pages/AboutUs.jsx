@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logoSubmark from "../../assets/DDDGreenLogoClearBackGround.svg";
-import fishingIllustration from "../../assets/Fishermen.svg";
-import seaBackground from "../../assets/Sea-2.png";
+import seaWave from "../../assets/Sea.svg";
+import fishermanBoat from "../../assets/Fishermen.svg";
 
 // Page Container
 const PageContainer = styled.div`
@@ -104,11 +104,11 @@ const FeatureText = styled.p`
   margin: 0;
 `;
 
-// Why We Do It Section (with illustration and sea background)
+// Why We Do It Section (with fisherman scene)
 const WhySection = styled.section`
   width: 100%;
   min-height: 708px;
-  background: #01402f;
+  background: linear-gradient(180deg, #B8D8F0 0%, #7BB8E8 100%);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -116,39 +116,44 @@ const WhySection = styled.section`
   align-items: center;
   padding: 8% 4% 0;
   box-sizing: border-box;
+`;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150%;
-    max-width: 1512px;
-    height: 200px;
-    background-image: url(${seaBackground});
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    z-index: 1;
+// Sea Wave at Bottom
+const SeaWave = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  max-width: 1512px;
+  height: auto;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 `;
 
-const WhySectionTitle = styled.h2`
-  font-size: clamp(3.6rem, 9vw, 4.8rem);
-  font-weight: 700;
-  font-family: "Aileron-Bold";
-  color: #ffffff;
-  margin: 0 0 6%;
-  text-align: center;
+// Fisherman Scene Container
+const FishermanScene = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  margin: 4% 0 6%;
   z-index: 2;
 `;
 
-const WhyIllustrationContainer = styled.div`
-  width: 100%;
-  max-width: 400px;
-  margin: 4% 0;
-  z-index: 2;
+// Fisherman Boat (from Fishermen.svg)
+const FishermanBoat = styled.div`
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  width: 45%;
+  height: auto;
+  z-index: 3;
 
   img {
     width: 100%;
@@ -156,10 +161,115 @@ const WhyIllustrationContainer = styled.div`
   }
 `;
 
+// Sun
+const Sun = styled.div`
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #FFF9E6 0%, #FFE066 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 224, 102, 0.6);
+  z-index: 2;
+`;
+
+// Birds Container
+const Birds = styled.div`
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 100px;
+  height: 30px;
+  z-index: 2;
+`;
+
+// Individual Bird
+const Bird = styled.div`
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: #5A8AB5;
+    border-radius: 2px;
+  }
+
+  &::before {
+    left: 0;
+    transform: rotate(-20deg);
+  }
+
+  &::after {
+    right: 0;
+    transform: rotate(20deg);
+  }
+
+  &:nth-child(1) {
+    left: 0;
+    top: 5px;
+  }
+
+  &:nth-child(2) {
+    left: 25px;
+    top: 0;
+  }
+
+  &:nth-child(3) {
+    left: 50px;
+    top: 8px;
+  }
+`;
+
+// Seagull
+const Seagull = styled.div`
+  position: absolute;
+  top: 25%;
+  right: 15%;
+  width: 30px;
+  height: 15px;
+  z-index: 2;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    background: #4A7AA0;
+    border-radius: 3px;
+  }
+
+  &::before {
+    left: 0;
+    transform: rotate(-25deg);
+  }
+
+  &::after {
+    right: 0;
+    transform: rotate(25deg);
+  }
+`;
+
+const WhySectionTitle = styled.h2`
+  font-size: clamp(3.6rem, 9vw, 4.8rem);
+  font-weight: 700;
+  font-family: "Aileron-Bold";
+  color: #070d0d;
+  margin: 0 0 6%;
+  text-align: center;
+  z-index: 2;
+`;
+
 const WhyBodyText = styled.p`
   font-size: clamp(1.4rem, 4vw, 1.6rem);
-  font-family: "Aileron-Regular";
-  color: #ffffff;
+  font-family: "Roboto", "Aileron-Regular", sans-serif;
+  color: #070d0d;
   line-height: 1.6;
   margin: 0 0 6%;
   text-align: center;
@@ -430,13 +540,23 @@ const AboutUs = () => {
           </FeatureList>
         </Section>
 
-        {/* Why We Do It Section (Dark Background with Illustration) */}
+        {/* Why We Do It Section (Blue Sky with Fisherman Scene) */}
         <WhySection>
           <WhySectionTitle>Why We Do It</WhySectionTitle>
           
-          <WhyIllustrationContainer>
-            <img src={fishingIllustration} alt="Team collaboration illustration" />
-          </WhyIllustrationContainer>
+          {/* Fisherman Scene with Sky Elements */}
+          <FishermanScene>
+            <Sun />
+            <Birds>
+              <Bird />
+              <Bird />
+              <Bird />
+            </Birds>
+            <Seagull />
+            <FishermanBoat>
+              <img src={fishermanBoat} alt="Fisherman in boat" />
+            </FishermanBoat>
+          </FishermanScene>
 
           <WhyBodyText>
             At &lt;Dia, Dev, & Design&gt;, we offer tailored solutions to meet your unique challenges, 
@@ -455,6 +575,11 @@ const AboutUs = () => {
             systems which are designed to anticipate and mitigate future issues. Additionally, we offer 
             continuous support with ongoing recommendations to drive your business's continual improvement.
           </WhyBodyText>
+
+          {/* Sea Wave at Bottom */}
+          <SeaWave>
+            <img src={seaWave} alt="Ocean waves" />
+          </SeaWave>
         </WhySection>
 
         {/* We Build Card */}
