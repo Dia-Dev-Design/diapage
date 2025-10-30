@@ -104,156 +104,79 @@ const FeatureText = styled.p`
   margin: 0;
 `;
 
-// Why We Do It Section (with fisherman scene)
-const WhySection = styled.section`
+// Fisherman Scene Section (Off-white background, just the fisherman on sea)
+const FishermanSceneSection = styled.section`
   width: 100%;
-  min-height: 708px;
-  background: linear-gradient(180deg, #B8D8F0 0%, #7BB8E8 100%);
+  background-color: #f2f2f2;
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 8% 4% 0;
   box-sizing: border-box;
+  overflow: hidden;
 `;
 
-// Sea Wave at Bottom
+// Fisherman and Sea Container (fisherman sits on water in valley between crests)
+const FishermanSeaContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 0;
+`;
+
+// Sea Wave (spans FULL width, creates wave crests rising on left/right edges)
 const SeaWave = styled.div`
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150%;
-  max-width: 1512px;
+  bottom: -238%;
+  left: -10%;
+  width: 220%;
   height: auto;
   z-index: 1;
 
+  @media (max-width: 321px) {
+    bottom: -188%;
+  }
   img {
     width: 100%;
+    ${'' /* left: -20px; */}
     height: auto;
     display: block;
   }
 `;
 
-// Fisherman Scene Container
-const FishermanScene = styled.div`
+// Fisherman floating ON TOP of sea in the valley (middle)
+const FishermanContainer = styled.div`
   position: relative;
   width: 100%;
-  max-width: 400px;
-  height: 250px;
-  margin: 4% 0 6%;
-  z-index: 2;
-`;
-
-// Fisherman Boat (from Fishermen.svg)
-const FishermanBoat = styled.div`
-  position: absolute;
-  left: 15%;
-  top: 30%;
-  width: 45%;
-  height: auto;
-  z-index: 3;
+  max-width: 212px;
+  margin-bottom: 15px;
+  z-index: 10;
 
   img {
     width: 100%;
     height: auto;
+    display: block;
+    position: relative;
+    z-index: 10;
   }
 `;
 
-// Sun
-const Sun = styled.div`
-  position: absolute;
-  top: 5%;
-  right: 20%;
-  width: 50px;
-  height: 50px;
-  background: radial-gradient(circle, #FFF9E6 0%, #FFE066 100%);
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(255, 224, 102, 0.6);
-  z-index: 2;
-`;
-
-// Birds Container
-const Birds = styled.div`
-  position: absolute;
-  top: 10%;
-  left: 30%;
-  width: 100px;
-  height: 30px;
-  z-index: 2;
-`;
-
-// Individual Bird
-const Bird = styled.div`
-  position: absolute;
-  width: 20px;
-  height: 10px;
-  
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 2px;
-    background: #5A8AB5;
-    border-radius: 2px;
-  }
-
-  &::before {
-    left: 0;
-    transform: rotate(-20deg);
-  }
-
-  &::after {
-    right: 0;
-    transform: rotate(20deg);
-  }
-
-  &:nth-child(1) {
-    left: 0;
-    top: 5px;
-  }
-
-  &:nth-child(2) {
-    left: 25px;
-    top: 0;
-  }
-
-  &:nth-child(3) {
-    left: 50px;
-    top: 8px;
-  }
-`;
-
-// Seagull
-const Seagull = styled.div`
-  position: absolute;
-  top: 25%;
-  right: 15%;
-  width: 30px;
-  height: 15px;
-  z-index: 2;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 3px;
-    background: #4A7AA0;
-    border-radius: 3px;
-  }
-
-  &::before {
-    left: 0;
-    transform: rotate(-25deg);
-  }
-
-  &::after {
-    right: 0;
-    transform: rotate(25deg);
-  }
+// Blue Text Section (starts where boat meets water - seamless with sea!)
+const BlueTextSection = styled.section`
+  width: 100%;
+  background-color: #77B9F3;
+  padding: 0 4% 8%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
 `;
 
 const WhySectionTitle = styled.h2`
@@ -261,8 +184,9 @@ const WhySectionTitle = styled.h2`
   font-weight: 700;
   font-family: "Aileron-Bold";
   color: #070d0d;
-  margin: 0 0 6%;
+  margin: 6% 0;
   text-align: center;
+  position: relative;
   z-index: 2;
 `;
 
@@ -274,6 +198,7 @@ const WhyBodyText = styled.p`
   margin: 0 0 6%;
   text-align: center;
   max-width: 361px;
+  position: relative;
   z-index: 2;
 `;
 
@@ -540,24 +465,23 @@ const AboutUs = () => {
           </FeatureList>
         </Section>
 
-        {/* Why We Do It Section (Blue Sky with Fisherman Scene) */}
-        <WhySection>
+        {/* Fisherman Scene (Off-white background) */}
+        <FishermanSceneSection>
+          {/* Fisherman floating on sea in valley between wave crests */}
+          <FishermanSeaContainer>
+            <SeaWave>
+              <img src={seaWave} alt="Ocean waves" />
+            </SeaWave>
+            <FishermanContainer>
+              <img src={fishermanBoat} alt="Fisherman in boat" />
+            </FishermanContainer>
+          </FishermanSeaContainer>
+        </FishermanSceneSection>
+
+        {/* Blue Section (title + text - seamlessly continues from sea) */}
+        <BlueTextSection>
           <WhySectionTitle>Why We Do It</WhySectionTitle>
           
-          {/* Fisherman Scene with Sky Elements */}
-          <FishermanScene>
-            <Sun />
-            <Birds>
-              <Bird />
-              <Bird />
-              <Bird />
-            </Birds>
-            <Seagull />
-            <FishermanBoat>
-              <img src={fishermanBoat} alt="Fisherman in boat" />
-            </FishermanBoat>
-          </FishermanScene>
-
           <WhyBodyText>
             At &lt;Dia, Dev, & Design&gt;, we offer tailored solutions to meet your unique challenges, 
             ensuring that your business benefits from rapid responses and minimal downtime. Our team 
@@ -575,12 +499,7 @@ const AboutUs = () => {
             systems which are designed to anticipate and mitigate future issues. Additionally, we offer 
             continuous support with ongoing recommendations to drive your business's continual improvement.
           </WhyBodyText>
-
-          {/* Sea Wave at Bottom */}
-          <SeaWave>
-            <img src={seaWave} alt="Ocean waves" />
-          </SeaWave>
-        </WhySection>
+        </BlueTextSection>
 
         {/* We Build Card */}
         <Section>
