@@ -2,6 +2,9 @@ import styled from "styled-components";
 import logoSubmark from "../../assets/DDDGreenLogoClearBackGround.svg";
 import seaWave from "../../assets/Sea.svg";
 import fishermanBoat from "../../assets/Fishermen.svg";
+import HandsOnTraining from "../../assets/Hands-On-Training.svg";
+import Performance from "../../assets/Performance.svg";
+import CommunityEngagement from "../../assets/Community-Engagement.svg";
 
 // Page Container
 const PageContainer = styled.div`
@@ -395,17 +398,17 @@ const AboutUs = () => {
 
   const incubatorPrograms = [
     {
-      image: null, // Placeholder for actual image
+      image: HandsOnTraining, // Placeholder for actual image
       title: "Hands-On Training",
       description: "Training and workshops covering the latest technologies and industry best practices."
     },
     {
-      image: null,
+      image: Performance,
       title: "Performance Feedback",
       description: "Training and workshops covering the latest technologies and industry best practices."
     },
     {
-      image: null,
+      image: CommunityEngagement,
       title: "Community Engagement",
       description: "Participate in advancing local technological innovation and progress."
     }
@@ -531,7 +534,7 @@ const AboutUs = () => {
 
         {/* Talent Incubator Section */}
         <TalentSection>
-          <TalentTitle>Talent Incubator</TalentTitle>
+          <TalentTitle>Tech Incubator</TalentTitle>
           <TalentCardList>
             {incubatorPrograms.map((program, index) => (
               <TalentCard key={index}>
