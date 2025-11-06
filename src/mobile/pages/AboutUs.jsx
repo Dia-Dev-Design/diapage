@@ -10,7 +10,7 @@ import CommunityEngagement from "../../assets/Community-Engagement.svg";
 const PageContainer = styled.div`
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
+  background: #f2f2f2;
   display: flex;
   flex-direction: column;
 `;
@@ -30,6 +30,7 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: #f2f2f2;
 `;
 
 const SectionTitle = styled.h2`
@@ -264,6 +265,7 @@ const TalentSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f2f2f2;
 `;
 
 const TalentTitle = styled.h2`

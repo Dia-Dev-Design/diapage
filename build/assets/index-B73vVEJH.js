@@ -485,6 +485,7 @@ Error generating stack: `+o.message+`
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: #f2f2f2;
 `,Rx=()=>u.jsxs(jx,{children:[u.jsx(wv,{}),u.jsx(Nv,{}),u.jsx(Ex,{})]}),Px="/assets/fonts/Aileron-Regular-CtKlDjcc.otf",Tx="/assets/fonts/Aileron-Bold-BWrAr8GE.otf",_x="/assets/fonts/Aileron-Black-DX8rpg6F.otf",Ax="/assets/fonts/Aileron-BlackItalic-CDBNzfOi.otf",Lx="/assets/fonts/Aileron-BoldItalic-BpRWpHqE.otf",Nx="/assets/fonts/Aileron-Heavy-CNC5NjKR.otf",Ix="/assets/fonts/Aileron-HeavyItalic-Cu9nKrNV.otf",$x="/assets/fonts/Aileron-Italic-DYUE3e7y.otf",zx="/assets/fonts/Aileron-Light-LZTtHK4h.otf",Ox="/assets/fonts/Aileron-LightItalic-WKAGcBBf.otf",Dx="/assets/fonts/Aileron-SemiBold-C3IbYb9I.otf",bx="/assets/fonts/Aileron-SemiBoldItalic-DLbJRGCk.otf",Fx="/assets/fonts/Aileron-Thin-Brp9Y9vu.otf",Bx="/assets/fonts/Aileron-ThinItalic-CWr2f7xD.otf",Mx="/assets/fonts/Aileron-UltraLight-Cw0yx4GS.otf",Ux="/assets/fonts/Aileron-UltraLightItalic-B5h6okXt.otf",Hx=Ih`
 
 @font-face {
@@ -600,7 +601,7 @@ Error generating stack: `+o.message+`
 `,P0="/assets/img/DDDGreenLogoClearBackGround-g-vtVwvB.svg",Wx="data:image/svg+xml,%3csvg%20width='1512'%20height='657'%20viewBox='0%200%201512%20657'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20preserveAspectRatio='none'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M962.408%2046.0762C1037.52%2065.7203%201108.42%2084.265%201184.4%2084.2649C1385.21%2084.2649%201512%2017.7214%201512%2017.7214V175.219H0V0C38.0005%200%2073.3722%207.92574%20113.298%2016.872C200.793%2036.4769%20310.159%2060.9827%20516.994%2017.7214C704.245%20-21.444%20839.001%2013.8002%20962.408%2046.0762ZM1512%20175.219V602.831C1512%20602.831%201253.7%20548.888%20964.688%20602.831C761.911%20640.679%20733.582%20637.047%20626.749%20623.35C581.316%20617.526%20521.685%20609.88%20428.4%20602.831C115.763%20579.206%200.000242615%20656.775%200.000242615%20656.775V175.219H1512Z'%20fill='%2377B9F3'/%3e%3c/svg%3e",T0="/assets/img/Fishermen-D8grav2G.svg",_0="/assets/img/Hands-On-Training-CAh4lW99.svg",A0="/assets/img/Performance-CiLV-Kb0.svg",L0="/assets/img/Community-Engagement-Cuw581Qp.svg",Vx=y.div`
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
+  background: #f2f2f2;
   display: flex;
   flex-direction: column;
 `,Qx=y.main`
@@ -614,6 +615,7 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: #f2f2f2;
 `,$d=y.h2`
   font-size: clamp(3.6rem, 9vw, 4.8rem);
   font-weight: 700;
@@ -797,6 +799,7 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f2f2f2;
 `,ow=y.h2`
   font-size: clamp(3.6rem, 9vw, 4.8rem);
   font-weight: 700;
@@ -852,6 +855,7 @@ Error generating stack: `+o.message+`
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: #f2f2f2;
 `,pw=({resize:e})=>(T.useEffect(()=>{e()},[]),u.jsxs(fw,{children:[u.jsx(Hx,{}),u.jsx(hv,{}),u.jsxs(Vh,{children:[u.jsx(oi,{path:"/",element:u.jsx(Rx,{})}),u.jsx(oi,{path:"/about",element:u.jsx(dw,{})})]})]})),hw=y.span`
   color: var(--green);
 
