@@ -5,6 +5,7 @@ import fishermanBoat from "../../assets/Fishermen.svg";
 import HandsOnTraining from "../../assets/Hands-On-Training.svg";
 import Performance from "../../assets/Performance.svg";
 import CommunityEngagement from "../../assets/Community-Engagement.svg";
+import DiaGreenLogo from "../../assets/DiaGreenLogo-2.png";
 
 // Page Container
 const PageContainer = styled.div`
@@ -444,7 +445,7 @@ const AboutUs = () => {
           </BodyText>
 
           <LogoContainer>
-            <img src={logoSubmark} alt="Día Dev & Design Logo" />
+            <img src={DiaGreenLogo} alt="Día Dev & Design Logo" />
           </LogoContainer>
         </Section>
 
