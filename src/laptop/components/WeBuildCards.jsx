@@ -11,7 +11,7 @@ const CardsPage = styled.div`
   ${"" /* margin-top: -10%; */}
   margin-bottom: -10%;
   background-color: #f2f2f2;
-  ${'' /* border: 2px solid purple; */}
+  ${"" /* border: 2px solid purple; */}
 `;
 
 const PageContainer = styled.div`
@@ -33,7 +33,7 @@ const CardsContainer = styled.div`
   gap: 7.5%;
   justify-content: center;
   align-items: center;
-  ${'' /* border: 2px solid blue; */}
+  ${"" /* border: 2px solid blue; */}
   z-index: 1;
 `;
 
@@ -51,7 +51,8 @@ const WeBuildContainerLeft = styled.div`
   border-radius: 20px;
   border: 8px solid #77b9f3;
   background: rgba(119, 185, 243, 0.3);
-  box-shadow: 4px -4px 6px 2px rgba(0, 0, 0, 0.25) inset,
+  box-shadow:
+    4px -4px 6px 2px rgba(0, 0, 0, 0.25) inset,
     -4px 4px 6px 2px rgba(0, 0, 0, 0.25) inset;
   backdrop-filter: blur(5px);
   z-index: 2;
@@ -71,7 +72,8 @@ const WeBuildContainerRight = styled.div`
   border-radius: 20px;
   border: 8px solid #77b9f3;
   background: rgba(119, 185, 243, 0.3);
-  box-shadow: 4px -4px 6px 2px rgba(0, 0, 0, 0.25) inset,
+  box-shadow:
+    4px -4px 6px 2px rgba(0, 0, 0, 0.25) inset,
     -4px 4px 6px 2px rgba(0, 0, 0, 0.25) inset;
   backdrop-filter: blur(5px);
 `;

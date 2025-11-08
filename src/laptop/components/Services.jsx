@@ -45,8 +45,8 @@ const ServicesMainContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  ${'' /* justify-content: space-around; */}
-`
+  ${"" /* justify-content: space-around; */}
+`;
 
 const ServicesMainHeader = styled.h1`
   display: flex;
@@ -68,7 +68,6 @@ const ServicesFlexContainer = styled.div`
   width: 100%;
   height: 50%;
 `;
-
 
 const ServiceCard = styled.div`
   display: flex;
@@ -108,34 +107,34 @@ const ServicesImageContainer = styled.div`
   width: 100%; */
   }
   width: 38%;
-  ${'' /* border: 1px solid black; */}
+  ${"" /* border: 1px solid black; */}
 `;
 
 const ServiceImage = styled.img`
   height: 62%;
   width: 62%;
-  ${'' /* border: 1px solid black; */}
+  ${"" /* border: 1px solid black; */}
 `;
 
 const ServicesDescriptionContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  ${'' /* justify-content: space-around; */}
-  ${'' /* justify-content: flex-start; */}
+  ${"" /* justify-content: space-around; */}
+  ${"" /* justify-content: flex-start; */}
   width: 56%;
   padding: 0;
-  margin: 0
-  `;
+  margin: 0;
+`;
 
 const ServicesHeader = styled.h1`
   font-size: 2.4rem;
   font-weight: 700;
   color: #77b9f3;
-  ${'' /* margin-bottom: 2%; */}
+  ${"" /* margin-bottom: 2%; */}
   text-align: left;
   margin: 0;
-  padding: 0
+  padding: 0;
 `;
 
 const ServicesDescription = styled.p`
@@ -147,7 +146,7 @@ const ServicesDescription = styled.p`
   }
 
   color: var(--Natural-2, #070D0D);
-  
+
   font-family: Aileron;
   font-size: 1.6rem;
   font-style: normal;
@@ -279,7 +278,10 @@ const Services = () => {
                   <ServicesHeader>Tech Incubator</ServicesHeader>
 
                   <ServicesDescription>
-                    If feel you have a really marketable tech concept that needs help, we are ready to take your business concept and, with our focus on excellence, turn it into a product the changes the world!
+                    If feel you have a really marketable tech concept that needs
+                    help, we are ready to take your business concept and, with
+                    our focus on excellence, turn it into a product the changes
+                    the world!
                   </ServicesDescription>
                 </ServicesDescriptionContainer>
               </ServiceCard4>

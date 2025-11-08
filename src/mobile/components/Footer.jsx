@@ -50,7 +50,7 @@ const EmailDisplayContainer = styled.div`
   gap: 3%;
   margin-bottom: 8%;
   color: white;
-  
+
   img {
     width: 24px;
     height: auto;
@@ -111,7 +111,9 @@ const SubjectButton = styled.button`
   background-color: white;
   color: #b4a7bc;
   margin-bottom: 3%;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
   cursor: pointer;
 
   &:active {
@@ -267,7 +269,7 @@ const Footer = () => {
     <FooterContainer id="contact">
       <SectionTitle>Get In Touch</SectionTitle>
       <ContactFormTitle>
-        Let's discuss something <GreenColor>cool</GreenColor> together!
+        Let&apos;s discuss something <GreenColor>cool</GreenColor> together!
       </ContactFormTitle>
       <EmailDisplayContainer>
         <img src={emailImage} alt="Email icon" />
@@ -279,7 +281,7 @@ const Footer = () => {
           <DogImage src={dogImage} alt="Dog mascot" />
           <FormContainer>
             <FormContent>
-              <SubjectLabel>I'm interested in...</SubjectLabel>
+              <SubjectLabel>I&apos;m interested in...</SubjectLabel>
               <SubjectButtonGroup>
                 <SubjectButton
                   $active={subjectsSelected.includes("Web Development")}
@@ -332,7 +334,10 @@ const Footer = () => {
                   onChange={(e) => handleTextInput(e)}
                   required
                 />
-                <FormLabel htmlFor="email" $active={inputSelected === "input-2"}>
+                <FormLabel
+                  htmlFor="email"
+                  $active={inputSelected === "input-2"}
+                >
                   Your Email
                 </FormLabel>
                 <FormInput
@@ -345,7 +350,10 @@ const Footer = () => {
                   onChange={(e) => handleTextInput(e)}
                   required
                 />
-                <FormLabel htmlFor="message" $active={inputSelected === "input-3"}>
+                <FormLabel
+                  htmlFor="message"
+                  $active={inputSelected === "input-3"}
+                >
                   Your Message
                 </FormLabel>
                 <FormTextArea

@@ -1,19 +1,17 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Container = styled.div`
-    width: 1200px;
-    height: inherit;
-    display: inherit;
-    flex-direction: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    align-self: inherit;
-`
+  width: 1200px;
+  height: inherit;
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  align-self: inherit;
+`;
 
-const MainContainer = ({children}) => {
-  return (
-    <Container>{children}</Container>
-  )
-}
+const MainContainer = ({ children }) => {
+  return <Container>{children}</Container>;
+};
 
-export default MainContainer
+export default MainContainer;

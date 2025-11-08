@@ -11,7 +11,7 @@ const PageContainer = styled.div`
   background-color: #f2f2f2;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 `;
 
 const HeaderContainer = styled.div`
@@ -28,7 +28,7 @@ const HeaderContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  ${'' /* height: 60%; */}
+  ${"" /* height: 60%; */}
 `;
 
 const ContactButton = styled.button`
@@ -51,7 +51,7 @@ const ContactButton = styled.button`
 
 const LandingPageHeader = styled.h1`
   font-size: 6.4rem;
-    margin: 0 0 2%;
+  margin: 0 0 2%;
 `;
 
 const GreenColor = styled.span`

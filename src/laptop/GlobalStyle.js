@@ -23,7 +23,6 @@ import { createGlobalStyle } from "styled-components";
 // import AileronUltraLite from '../fonts/aileron/Aileron-UltraLight.otf'
 // import AileronUltraLiteItalic from '../fonts/aileron/Aileron-UltraLightItalic.otf'
 
-
 // @font-face {
 //   font-family: "Aileron-Regular";   /*Can be any text*/
 //   src: url(${AileronRegular}) format("opentype");

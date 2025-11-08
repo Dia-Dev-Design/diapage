@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import "./App.css";
-import { useEffect } from "react";
-
 import { Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
@@ -17,11 +15,7 @@ const AppContainer = styled.div`
   justify-contents: center;
 `;
 
-let App = ({ resize }) => {
-  useEffect(() => {
-    resize();
-  }, []);
-
+const App = () => {
   return (
     <AppContainer>
       <GlobalStyle />

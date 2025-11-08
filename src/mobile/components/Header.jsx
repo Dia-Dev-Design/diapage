@@ -104,8 +104,8 @@ const Header = () => {
         </LandingPageHeader>
         <HeaderDescription>
           We partner with you to craft tailored applications that meet your
-          unique requirements, operational needs, and strategic goals. Our
-          focus is on efficiency, productivity, and innovation.
+          unique requirements, operational needs, and strategic goals. Our focus
+          is on efficiency, productivity, and innovation.
         </HeaderDescription>
         <ContactButton onClick={scrollToBottom}>Contact Us</ContactButton>
       </HeaderContent>

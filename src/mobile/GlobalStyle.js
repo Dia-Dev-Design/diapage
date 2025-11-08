@@ -6,22 +6,22 @@ import { createGlobalStyle } from "styled-components";
 
 // import "@fontsource-variable/inter/wght.css"
 
-import AileronRegular from '../fonts/aileron/Aileron-Regular.otf';
-import AileronBold from '../fonts/aileron/Aileron-Bold.otf';
-import AileronBlack from '../fonts/aileron/Aileron-Black.otf'
-import AileronBlackItalic from '../fonts/aileron/Aileron-BlackItalic.otf'
-import AileronBoldItalic from '../fonts/aileron/Aileron-BoldItalic.otf'
-import AileronHeavy from '../fonts/aileron/Aileron-Heavy.otf'
-import AileronHeavyItalic from '../fonts/aileron/Aileron-HeavyItalic.otf'
-import AileronItalic from '../fonts/aileron/Aileron-Italic.otf'
-import AileronLight from '../fonts/aileron/Aileron-Light.otf'
-import AileronLightItalic from '../fonts/aileron/Aileron-LightItalic.otf'
-import AileronSemiBold from '../fonts/aileron/Aileron-SemiBold.otf'
-import AileronSemiBoldItalic from '../fonts/aileron/Aileron-SemiBoldItalic.otf'
-import AileronThin from '../fonts/aileron/Aileron-Thin.otf'
-import AileronThinItalic from '../fonts/aileron/Aileron-ThinItalic.otf'
-import AileronUltraLite from '../fonts/aileron/Aileron-UltraLight.otf'
-import AileronUltraLiteItalic from '../fonts/aileron/Aileron-UltraLightItalic.otf'
+import AileronRegular from "../fonts/aileron/Aileron-Regular.otf";
+import AileronBold from "../fonts/aileron/Aileron-Bold.otf";
+import AileronBlack from "../fonts/aileron/Aileron-Black.otf";
+import AileronBlackItalic from "../fonts/aileron/Aileron-BlackItalic.otf";
+import AileronBoldItalic from "../fonts/aileron/Aileron-BoldItalic.otf";
+import AileronHeavy from "../fonts/aileron/Aileron-Heavy.otf";
+import AileronHeavyItalic from "../fonts/aileron/Aileron-HeavyItalic.otf";
+import AileronItalic from "../fonts/aileron/Aileron-Italic.otf";
+import AileronLight from "../fonts/aileron/Aileron-Light.otf";
+import AileronLightItalic from "../fonts/aileron/Aileron-LightItalic.otf";
+import AileronSemiBold from "../fonts/aileron/Aileron-SemiBold.otf";
+import AileronSemiBoldItalic from "../fonts/aileron/Aileron-SemiBoldItalic.otf";
+import AileronThin from "../fonts/aileron/Aileron-Thin.otf";
+import AileronThinItalic from "../fonts/aileron/Aileron-ThinItalic.otf";
+import AileronUltraLite from "../fonts/aileron/Aileron-UltraLight.otf";
+import AileronUltraLiteItalic from "../fonts/aileron/Aileron-UltraLightItalic.otf";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -107,9 +107,9 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     font-family: "Aileron-Regular", 'Inter Variable', 'poppins', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
-    ${'' /* background-color: #ffffff; */}
+    ${"" /* background-color: #ffffff; */}
 
-    ${'' /* background-color: black */}
+    ${"" /* background-color: black */}
 
 
     --green: #65B47B;
@@ -121,8 +121,8 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 10px;
-    ${'' /* background-color: #F2F2F2 */}
-    ${'' /* background-color: black; */}
+    ${"" /* background-color: #F2F2F2 */}
+    ${"" /* background-color: black; */}
   }
 
   body {
@@ -132,8 +132,8 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    ${'' /* background-color: #F2F2F2 */}
-    ${'' /* background-color: black */}
+    ${"" /* background-color: #F2F2F2 */}
+    ${"" /* background-color: black */}
   }
 `;
 

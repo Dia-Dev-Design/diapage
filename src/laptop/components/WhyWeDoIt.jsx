@@ -7,30 +7,29 @@ import EyeIcon from "../../assets/EyeIcon.svg";
 import HandsIcon from "../../assets/HandsIcon.svg";
 
 const WhyPageContainer = styled.div`
-  ${'' /* height: 510vh; */}
+  ${"" /* height: 510vh; */}
   width: 100%;
 
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   align-self: center;
-
 `;
 
 const MainContainerAmmended = styled(MainContainer)`
-  flex-direction: column
-`
+  flex-direction: column;
+`;
 
 const Headline = styled.h1`
   font-family: "Aileron-Bold";
   font-size: 9.6rem;
   font-weight: 700;
   width: 100%;
-  ${'' /* padding: 0; */}
-  ${'' /* margin-top: -50% */}
+  ${"" /* padding: 0; */}
+  ${"" /* margin-top: -50% */}
 `;
 const WhyContent = styled.div`
   width: 100%;

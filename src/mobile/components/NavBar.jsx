@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
-import navLogo from "../../assets/NavbarLogo.png";
+import DiaLogo from "../../assets/DiaGreenLogo-No-Title-Clear-Background.png";
 import hamburgerIcon from "../../assets/Mobile-Menu.svg";
 
 const NavBarContainer = styled.nav`
@@ -146,7 +146,7 @@ const NavBar = () => {
     <>
       <NavBarContainer>
         <NavContent>
-          <NavLogo onClick={goHome} src={navLogo} alt="Día Dev & Design Logo" />
+          <NavLogo onClick={goHome} src={DiaLogo} alt="Día Dev & Design Logo" />
           <CompanyTitle>
             &lt;<GreenText>Día:</GreenText> Dev &amp; Design&gt;
           </CompanyTitle>

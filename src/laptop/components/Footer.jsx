@@ -18,7 +18,6 @@ const FooterContainer = styled.section`
   z-index: 11;
 `;
 
-
 const SectionTitleThin = styled.h1`
   margin-top: 5%;
   font-weight: 700;
@@ -82,7 +81,7 @@ const ContactUsFormContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justif-content: space-between;
-  ${'' /* margin-right: 10%; */}
+  ${"" /* margin-right: 10%; */}
   text-align: left;
   background-color: #eeeeee;
   border-radius: 24px;
@@ -141,7 +140,9 @@ const ContactUsFormSubjectButton = styled.button`
   border-color: var(--gray);
   background-color: white;
   color: #b4a7bc;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 
   &:hover {
     background-color: #a9e6b9;
@@ -166,15 +167,20 @@ const ContactUsForm = styled.form`
   min-height: 65%;
   height: fit-content;
   justify-content: space-evenly;
-  ${'' /* margin: 0; */}
+  ${"" /* margin: 0; */}
 `;
 
 const ContactUsFormLabel = styled.label`
-  transform: translate(3px, ${(props) => (props.$active ? "0.1rem" : "1.3rem")});
+  transform: translate(
+    3px,
+    ${(props) => (props.$active ? "0.1rem" : "1.3rem")}
+  );
   color: var(--gray);
   margin-top: 2rem;
   font-size: ${(props) => (props.$active ? "15px" : "20px")};
-  transition: transform 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  transition:
+    transform 0.5s ease-in-out,
+    font-size 0.5s ease-in-out;
 `;
 
 const ContactUsFormInput = styled.input`
@@ -224,7 +230,7 @@ const ContactUsFormTextArea = styled.textarea`
 // `;
 
 const FooterSendMessageButton = styled.button`
-  ${'' /* margin-top: 3%; */}
+  ${"" /* margin-top: 3%; */}
   height: 2vw;
   min-width: fit-content;
   width: 15vw;
@@ -237,7 +243,7 @@ const FooterSendMessageButton = styled.button`
   border: none;
   justify-content: space-evenly;
   transform: translateY(3rem);
-  ${'' /* justify-content: center; */}
+  ${"" /* justify-content: center; */}
   align-items: center;
   align-self: center;
   margin-left: -2.5vw;

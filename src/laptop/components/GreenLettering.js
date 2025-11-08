@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const GreenLettering = styled.span`
   color: var(--green);
@@ -7,4 +7,4 @@ export const GreenLettering = styled.span`
     color: #a9e6b9;
     transition: color 0.3s ease-in-out;
   }
-`
+`;

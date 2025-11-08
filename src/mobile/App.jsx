@@ -8,23 +8,18 @@ import LandingPage from "./pages/LandingPage";
 
 import GlobalStyle from "./GlobalStyle";
 import AboutUs from "./pages/AboutUs";
-import { useEffect } from "react";
 
 const AppContainer = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f2f2f2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
 `;
 
-const App = ({ resize }) => {
-  useEffect(() => {
-    resize();
-  }, []);
-
+const App = () => {
   return (
     <AppContainer>
       <GlobalStyle />

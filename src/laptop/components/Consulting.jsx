@@ -3,8 +3,7 @@ import styled from "styled-components";
 import MainContainer from "./MainContainer";
 
 import Fishermen from "../../assets/Fishermen.svg";
-// import Sea from "../../assets/Sea.svg";
-import Sea from "/Sea.svg";
+import Sea from "../../assets/Sea.svg";
 
 const ConsultingPage = styled.div`
   height: 80vh;
@@ -48,7 +47,7 @@ const ConsultingContent = styled.div`
   height: 50%;
   ${"" /* position: relative; */}
   ${"" /* top: -25%; */}
-  ${'' /* margin: -25% 0; */}
+  ${"" /* margin: -25% 0; */}
   margin-top: -10%;
   z-index: 13;
   display: flex;
@@ -83,7 +82,6 @@ const Headline = styled.h1`
 const InformationContainer = styled.div`
   width: 100%;
   margin-top: -2%;
-
 `;
 
 const Information = styled.p`
@@ -96,8 +94,8 @@ const Information = styled.p`
   width: 100%;
   text-align: center;
   @media (min-width: 1800px) {
-      font-size: 22px;
-    }
+    font-size: 22px;
+  }
 `;
 
 const Consulting = () => {
@@ -109,39 +107,36 @@ const Consulting = () => {
         </FishermenContainer>
 
         <MainContainer>
-
           <ConsultingContent>
             <Headline>Consulting</Headline>
             <InformationContainer>
               <Information>
                 At {"<Día Dev & Design>"}, we offer tailored solutions to meet
-                your unique challenges, ensuring that your business benefits from
-                rapid responses and minimal downtime. Our team conducts thorough
-                analyses to pinpoint the root causes of technical issues, helping
-                you enhance your operational efficiency and streamline your
-                processes. By addressing problems quickly and effectively, we
-                drive cost savings and maximize the value of your technology
-                investments. Let us help you boost your business performance with
-                our cost-efficient services.
+                your unique challenges, ensuring that your business benefits
+                from rapid responses and minimal downtime. Our team conducts
+                thorough analyses to pinpoint the root causes of technical
+                issues, helping you enhance your operational efficiency and
+                streamline your processes. By addressing problems quickly and
+                effectively, we drive cost savings and maximize the value of
+                your technology investments. Let us help you boost your business
+                performance with our cost-efficient services.
               </Information>
               <Information>
                 At {"<Día Dev & Design>"}, we are committed to fostering a
-                collaborative partnership with your team, ensuring we fully grasp
-                the context and impact of each issue. Using advanced tools and
-                techniques, we conduct comprehensive diagnostics to identify
+                collaborative partnership with your team, ensuring we fully
+                grasp the context and impact of each issue. Using advanced tools
+                and techniques, we conduct comprehensive diagnostics to identify
                 problems and perform in-depth root cause analysis to ensure
-                recurring issues are fixed. Our tailored strategies are crafted to
-                meet your specific objectives. We also offer preventative
+                recurring issues are fixed. Our tailored strategies are crafted
+                to meet your specific objectives. We also offer preventative
                 monitoring through systems which are designed to anticipate and
-                mitigate future issues. Additionally, we offer continuous support
-                with ongoing recommendations to drive your business's continual
-                improvement.
+                mitigate future issues. Additionally, we offer continuous
+                support with ongoing recommendations to drive your
+                business&apos;s continual improvement.
               </Information>
             </InformationContainer>
           </ConsultingContent>
-
         </MainContainer>
-
       </ConsultingPageContainer>
     </ConsultingPage>
   );

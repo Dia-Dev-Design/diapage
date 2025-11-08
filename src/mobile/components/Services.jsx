@@ -31,7 +31,7 @@ const AboutUsDescription = styled.div`
   font-size: clamp(1.4rem, 4vw, 1.6rem);
   font-weight: 400;
   line-height: 2.2rem;
-  
+
   p {
     margin: 0 0 4%;
     text-align: left;
@@ -137,13 +137,13 @@ const Services = () => {
             solutions that align with your goals.
           </p>
           <p>
-            Our primary focus is on delivering customized technology that
-            caters to your unique requirements.
+            Our primary focus is on delivering customized technology that caters
+            to your unique requirements.
           </p>
           <p>
-            Simultaneously, we support our community through continuous
-            learning and creative collaboration, turning our efforts into
-            sustainable, fulfilling careers and successful businesses.
+            Simultaneously, we support our community through continuous learning
+            and creative collaboration, turning our efforts into sustainable,
+            fulfilling careers and successful businesses.
           </p>
         </AboutUsDescription>
       </AboutUsSection>
@@ -169,15 +169,18 @@ const Services = () => {
 
           <ServiceCard2>
             <ServicesImageContainer>
-              <ServiceImage src={CustomApplications} alt="Custom Applications" />
+              <ServiceImage
+                src={CustomApplications}
+                alt="Custom Applications"
+              />
             </ServicesImageContainer>
             <ServicesDescriptionContainer>
               <ServicesHeader>Custom Applications</ServicesHeader>
               <ServicesDescription>
-                Solutions for your unique business needs and goals.
-                Applications that evolve as your business grows. Seamlessly
-                compatible with all devices and screen sizes. Intuitive design
-                and engaging interfaces.
+                Solutions for your unique business needs and goals. Applications
+                that evolve as your business grows. Seamlessly compatible with
+                all devices and screen sizes. Intuitive design and engaging
+                interfaces.
               </ServicesDescription>
             </ServicesDescriptionContainer>
           </ServiceCard2>
@@ -190,8 +193,8 @@ const Services = () => {
               <ServicesHeader>Marketing</ServicesHeader>
               <ServicesDescription>
                 Solutions that address your specific challenges. Fast and
-                efficient responses that minimize downtime and disruption.
-                Drive savings through swift and effective issue resolution.
+                efficient responses that minimize downtime and disruption. Drive
+                savings through swift and effective issue resolution.
               </ServicesDescription>
             </ServicesDescriptionContainer>
           </ServiceCard3>

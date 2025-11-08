@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 import { GreenLettering } from "./GreenLettering";
 
-import navLogo from '../../assets/NavbarLogo.png'
+import navLogo from "../../assets/NavbarLogo.png";
 
 const NavContainer = styled.div`
   display: flex;
@@ -16,13 +16,13 @@ const NavContainer = styled.div`
 `;
 
 const NavBarLogo = styled.img`
-  height: 75%
+  height: 75%;
 `;
 
 const CompanyTitle = styled.h1`
   font-size: 5rem;
-  margin-left: 1%
-`
+  margin-left: 1%;
+`;
 
 const LinksContainer = styled.div`
   height: 100%;
@@ -30,11 +30,11 @@ const LinksContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-`
+`;
 
 const StyledButton = styled(Link)`
   font-size: 2.1rem;
-  font-family: 'Aileron-Bold';
+  font-family: "Aileron-Bold";
   text-decoration: none;
   font-weight: bolder;
   color: black;
@@ -42,7 +42,7 @@ const StyledButton = styled(Link)`
   &:hover {
     color: var(--green);
   }
-`
+`;
 
 const ContactButton = styled.button`
   width: 33%;
@@ -63,33 +63,34 @@ const ContactButton = styled.button`
 `;
 
 const NavBar = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const goHome = () => {
-    navigate('/')
-  }
+    navigate("/");
+  };
 
   const scrollToBottom = async () => {
     goHome(); // Synchronous call
     setTimeout(() => {
-      const contactElement = document.getElementById('contact');
+      const contactElement = document.getElementById("contact");
       if (contactElement) {
         window.scrollTo({
           top: contactElement.getBoundingClientRect().top,
-          behavior: 'smooth', // Add smooth scrolling behavior
+          behavior: "smooth", // Add smooth scrolling behavior
         });
       }
-    }, 1)
+    }, 1);
   };
 
   return (
     <NavContainer>
       <NavBarLogo onClick={goHome} src={navLogo} />
-      <CompanyTitle>&lt;<GreenLettering>Día:</GreenLettering> Dev &amp; Design&gt;</CompanyTitle>
+      <CompanyTitle>
+        &lt;<GreenLettering>Día:</GreenLettering> Dev &amp; Design&gt;
+      </CompanyTitle>
       <LinksContainer>
-        <StyledButton to='/'>Home</StyledButton>
-        <StyledButton to='/about'>About Us</StyledButton>
+        <StyledButton to="/">Home</StyledButton>
+        <StyledButton to="/about">About Us</StyledButton>
         <ContactButton onClick={scrollToBottom}>Contact Us</ContactButton>
       </LinksContainer>
     </NavContainer>

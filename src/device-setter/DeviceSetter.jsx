@@ -35,29 +35,15 @@ const DeviceSetter = () => {
     };
   }, []);
 
-    return (
-      <>
-        {
-
-          deviceWidth > 1024 ?
-
-            <LaptopApp resize={resize} /> 
-
-          :
-
-          deviceWidth ?
-
-            <MobileApp resize={resize} /> 
-
-          :
-
-          null
-
-        }
-
-      </>
-    )
-
+  return (
+    <>
+      {deviceWidth > 1024 ? (
+        <LaptopApp resize={resize} />
+      ) : deviceWidth ? (
+        <MobileApp resize={resize} />
+      ) : null}
+    </>
+  );
 };
 
-export { DeviceSetter }
+export { DeviceSetter };

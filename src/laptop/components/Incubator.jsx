@@ -108,21 +108,22 @@ const Description = styled.div`
 const DogImage = styled.img`
   position: absolute;
   bottom: 10%;
-  ${'' /* left: 3%; */}
+  ${"" /* left: 3%; */}
   z-index: 1;
   height: 40vh;
-  ${'' /* margin: 0 0 -2.5 -80;
+  ${
+    "" /* margin: 0 0 -2.5 -80;
   margin-left: -80%;
-  margin-bottom: -2.5%; */}
+  margin-bottom: -2.5%; */
+  }
   padding: 0;
   z-index: 1;
-  
+
   @media (max-width: 1200px) {
     left: 85%;
     bottom: 3%;
   }
 `;
-
 
 const BottomWavyImage = styled.img`
   width: 100vw;
@@ -130,8 +131,7 @@ const BottomWavyImage = styled.img`
   padding: 0;
   display: block;
   margin-top: 25%;
-
-`
+`;
 
 const Incubator = () => {
   return (
