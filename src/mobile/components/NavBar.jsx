@@ -114,6 +114,10 @@ const ContactButton = styled.button`
   }
 `;
 
+const TitleBlueText = styled.span`
+  color: #77b9f3;
+`;
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -182,7 +186,8 @@ const NavBar = () => {
         <NavContent>
           <NavLogo onClick={goHome} src={DiaLogo} alt="Día Dev & Design Logo" />
           <CompanyTitle>
-            &lt;<GreenText>Día:</GreenText> Dev &amp; Design&gt;
+            &lt;<GreenText>Día</GreenText>: <TitleBlueText>Dev</TitleBlueText>{" "}
+            &amp; <TitleBlueText>Design</TitleBlueText> /&gt;
           </CompanyTitle>
           <HamburgerButton onClick={toggleMenu} aria-label="Toggle menu">
             <img src={hamburgerIcon} alt="Menu" />
