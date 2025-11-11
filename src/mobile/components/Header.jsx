@@ -82,11 +82,21 @@ const HeaderImageContainer = styled.div`
 `;
 
 const Header = () => {
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth",
-    });
+  const scrollToContact = () => {
+    // Small delay to ensure click handler completes
+    setTimeout(() => {
+      const contactElement = document.getElementById("contact");
+      if (contactElement) {
+        const navbarHeight = 70; // Height of sticky navbar
+        const elementTop = contactElement.offsetTop;
+        const scrollPosition = elementTop - navbarHeight;
+
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: "smooth",
+        });
+      }
+    }, 100);
   };
 
   return (
@@ -107,7 +117,7 @@ const Header = () => {
           unique requirements, operational needs, and strategic goals. Our focus
           is on efficiency, productivity, and innovation.
         </HeaderDescription>
-        <ContactButton onClick={scrollToBottom}>Contact Us</ContactButton>
+        <ContactButton onClick={scrollToContact}>Contact Us</ContactButton>
       </HeaderContent>
       <HeaderImageContainer>
         <img src={DevBro} alt="Developer illustration" />

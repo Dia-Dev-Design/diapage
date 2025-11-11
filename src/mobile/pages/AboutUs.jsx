@@ -159,14 +159,14 @@ const FishermanContainer = styled.div`
   width: 100%;
   max-width: 212px;
   margin-bottom: 15px;
-  z-index: 10;
+  z-index: 5;
 
   img {
     width: 100%;
     height: auto;
     display: block;
     position: relative;
-    z-index: 10;
+    z-index: 5;
   }
 `;
 
@@ -192,7 +192,7 @@ const WhySectionTitle = styled.h2`
   margin: 6% 0;
   text-align: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 `;
 
 const WhyBodyText = styled.p`
@@ -204,7 +204,7 @@ const WhyBodyText = styled.p`
   text-align: center;
   max-width: 361px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 `;
 
 // Glass Effect Cards
@@ -220,6 +220,8 @@ const GlassCard = styled.div`
     4px -4px 6px 2px inset rgba(0, 0, 0, 0.25),
     -4px 4px 6px 2px inset rgba(0, 0, 0, 0.25);
   margin-bottom: 8%;
+  position: relative;
+  z-index: 3;
 `;
 
 const CardTitle = styled.h3`

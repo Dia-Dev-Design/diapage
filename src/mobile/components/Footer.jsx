@@ -67,7 +67,8 @@ const DogImage = styled.img`
   width: 30%;
   max-width: 150px;
   margin-bottom: -2%;
-  z-index: 12;
+  position: relative;
+  z-index: 1;
 `;
 
 const FormContainer = styled.div`

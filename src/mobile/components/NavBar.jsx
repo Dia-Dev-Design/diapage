@@ -70,6 +70,7 @@ const MobileMenu = styled.div`
   transition: height 0.3s ease-in-out;
   box-shadow: ${(props) =>
     props.$isOpen ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none"};
+  z-index: 999;
 `;
 
 const MenuContent = styled.div`
@@ -124,22 +125,55 @@ const NavBar = () => {
   const goHome = () => {
     setIsMenuOpen(false);
     navigate("/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const navigateAndClose = (path) => {
     setIsMenuOpen(false);
     navigate(path);
+    // Scroll to top when navigating to a new page
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 50);
   };
 
   const scrollToContact = () => {
     setIsMenuOpen(false);
-    navigate("/");
-    setTimeout(() => {
-      const contactElement = document.getElementById("contact");
-      if (contactElement) {
-        contactElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
+
+    // If already on home page, just scroll
+    if (window.location.pathname === "/") {
+      // Small delay to ensure menu closes and layout stabilizes
+      setTimeout(() => {
+        const contactElement = document.getElementById("contact");
+        if (contactElement) {
+          const navbarHeight = 70; // Height of sticky navbar
+          const elementTop = contactElement.offsetTop;
+          const scrollPosition = elementTop - navbarHeight;
+
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
+    } else {
+      // Navigate home first, then scroll
+      navigate("/");
+      // Longer delay to ensure page fully renders
+      setTimeout(() => {
+        const contactElement = document.getElementById("contact");
+        if (contactElement) {
+          const navbarHeight = 70;
+          const elementTop = contactElement.offsetTop;
+          const scrollPosition = elementTop - navbarHeight;
+
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        }
+      }, 500);
+    }
   };
 
   return (
