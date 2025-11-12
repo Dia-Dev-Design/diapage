@@ -405,13 +405,14 @@ Error generating stack: `+o.message+`
     color 0.2s ease;
   cursor: pointer;
 
+  &:hover,
   &:active {
     background-color: #a9e6b9;
     color: black;
   }
 
   ${e=>e.$active&&`
-    background-color: var(--green);
+    background-color: #77b9f3;
     color: black;
     border-color: var(--green);
   `}
@@ -1225,7 +1226,7 @@ Error generating stack: `+o.message+`
   }
 
   ${e=>e.$active&&`
-    background-color: var(--green);
+    background-color: #77b9f3;
     color: black;
     `}
 `,n3=y.form`

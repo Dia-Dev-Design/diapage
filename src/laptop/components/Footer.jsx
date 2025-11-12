@@ -156,7 +156,7 @@ const ContactUsFormSubjectButton = styled.button`
   ${(props) =>
     props.$active &&
     `
-    background-color: var(--green);
+    background-color: #77b9f3;
     color: black;
     `}
 `;

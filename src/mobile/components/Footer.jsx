@@ -117,6 +117,7 @@ const SubjectButton = styled.button`
     color 0.2s ease;
   cursor: pointer;
 
+  &:hover,
   &:active {
     background-color: #a9e6b9;
     color: black;
@@ -125,7 +126,7 @@ const SubjectButton = styled.button`
   ${(props) =>
     props.$active &&
     `
-    background-color: var(--green);
+    background-color: #77b9f3;
     color: black;
     border-color: var(--green);
   `}
