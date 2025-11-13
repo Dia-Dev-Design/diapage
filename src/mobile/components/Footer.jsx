@@ -121,6 +121,9 @@ const SubjectButton = styled.button`
     background-color: #a9e6b9;
     color: black;
   }
+  &:active {
+    background-color: #77b9f;
+  }
 
   ${(props) =>
     props.$active &&
