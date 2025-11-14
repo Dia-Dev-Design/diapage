@@ -40,8 +40,11 @@ const CompanyTitle = styled.h1`
   overflow: hidden;
   text-overflow: ellipsis;
 
-  @media (max-width: 320px) {
-    font-size: 1.8rem;
+  @media (max-width: 394px) {
+    font-size: 2.21.8rem;
+  }
+  @media (max-width: 321px) {
+    font-size: 1.9rem;
   }
 `;
 
