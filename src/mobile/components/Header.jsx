@@ -81,6 +81,10 @@ const HeaderImageContainer = styled.div`
   }
 `;
 
+const TitleBlueText = styled.span`
+  color: #77b9f3;
+`;
+
 const Header = () => {
   const scrollToContact = () => {
     // Small delay to ensure click handler completes
@@ -103,7 +107,7 @@ const Header = () => {
     <HeaderContainer>
       <HeaderContent>
         <LandingPageHeader>
-          Every-<GreenColor>Día</GreenColor>
+          Every-<TitleBlueText>Día</TitleBlueText>
           {". "}
         </LandingPageHeader>
         <LandingPageHeader>We build.</LandingPageHeader>

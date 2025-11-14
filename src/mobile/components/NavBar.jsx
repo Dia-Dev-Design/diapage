@@ -18,6 +18,7 @@ const NavContent = styled.div`
   height: 70px;
   padding: 0 5%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
@@ -29,13 +30,19 @@ const NavLogo = styled.img`
 `;
 
 const CompanyTitle = styled.h1`
-  font-size: clamp(1.6rem, 4vw, 2rem);
-  margin: 0 auto 0 3%;
-  font-family: "Aileron-Bold";
+  font-size: 2.5rem;
+  margin: 0 auto;
+  font-family: "Aileron-Black", "Aileron-Heavy", "Aileron-Bold";
+  font-weight: 900;
   flex: 1;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @media (max-width: 320px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const GreenText = styled.span`
@@ -186,8 +193,9 @@ const NavBar = () => {
         <NavContent>
           <NavLogo onClick={goHome} src={DiaLogo} alt="Día Dev & Design Logo" />
           <CompanyTitle>
-            &lt;<GreenText>Día</GreenText>: <TitleBlueText>Dev</TitleBlueText>{" "}
-            &amp; <TitleBlueText>Design</TitleBlueText> /&gt;
+            <TitleBlueText>&lt;</TitleBlueText>
+            <GreenText>Día</GreenText>
+            <TitleBlueText>: Dev &amp; Design /&gt;</TitleBlueText>
           </CompanyTitle>
           <HamburgerButton onClick={toggleMenu} aria-label="Toggle menu">
             <img src={hamburgerIcon} alt="Menu" />

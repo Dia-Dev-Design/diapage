@@ -8,6 +8,7 @@ import navLogo from "../../assets/NavbarLogo.png";
 
 const NavContainer = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -68,7 +69,6 @@ const NavBar = () => {
   const goHome = () => {
     navigate("/");
   };
-
   const scrollToBottom = async () => {
     goHome(); // Synchronous call
     setTimeout(() => {
