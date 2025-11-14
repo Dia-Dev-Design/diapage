@@ -96,7 +96,7 @@ Error generating stack: `+o.message+`
   text-overflow: ellipsis;
 
   @media (max-width: 394px) {
-    font-size: 2.21.8rem;
+    font-size: 2.3rem;
   }
   @media (max-width: 321px) {
     font-size: 1.9rem;
