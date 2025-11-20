@@ -5,6 +5,7 @@ import HandsOnTraining from "../../assets/Hands-On-Training.svg";
 import Performance from "../../assets/Performance.svg";
 import CommunityEngagement from "../../assets/Community-Engagement.svg";
 import DiaGreenLogo from "../../assets/DiaGreenLogo-2.png";
+import Plant from "../../assets/Plant.svg";
 
 // Page Container
 const PageContainer = styled.div`
@@ -224,6 +225,23 @@ const GlassCard = styled.div`
   z-index: 3;
 `;
 
+const CardWithPlant = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+const PlantImage = styled.img`
+  position: absolute;
+  bottom: -15%;
+  right: 0;
+  width: 30%;
+  max-width: 120px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+  // margin-bottom: 10%;
+`;
+
 const CardTitle = styled.h3`
   font-size: clamp(2.8rem, 7vw, 3.4rem);
   font-weight: 700;
@@ -263,7 +281,7 @@ const CardItemDescription = styled.p`
 // Talent Incubator Section
 const TalentSection = styled.section`
   width: 100%;
-  padding: 6% 4%;
+  padding: 17% 4%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -550,19 +568,22 @@ const AboutUs = () => {
           </GlassCard>
 
           {/* You Get Card */}
-          <GlassCard>
-            <CardTitle>You get…</CardTitle>
-            <CardItemList>
-              {benefits.map((benefit, index) => (
-                <CardItem key={index}>
-                  <CardItemTitle>{benefit.title}</CardItemTitle>
-                  <CardItemDescription>
-                    {benefit.description}
-                  </CardItemDescription>
-                </CardItem>
-              ))}
-            </CardItemList>
-          </GlassCard>
+          <CardWithPlant>
+            <GlassCard>
+              <CardTitle>You get…</CardTitle>
+              <CardItemList>
+                {benefits.map((benefit, index) => (
+                  <CardItem key={index}>
+                    <CardItemTitle>{benefit.title}</CardItemTitle>
+                    <CardItemDescription>
+                      {benefit.description}
+                    </CardItemDescription>
+                  </CardItem>
+                ))}
+              </CardItemList>
+            </GlassCard>
+            <PlantImage src={Plant} alt="Decorative plant illustration" />
+          </CardWithPlant>
         </Section>
 
         {/* Talent Incubator Section */}
