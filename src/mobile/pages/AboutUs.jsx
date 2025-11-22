@@ -356,37 +356,35 @@ const TalentCardDescription = styled.p`
   margin: 0;
 `;
 
-const WavyBottomContainer = styled.div`
-  // position: absolute;
-  justify-self: flex-end;
-  // bottom: 0;
-  // left: 0;
+// Decorative Bottom Section - separate from TalentSection for flexbox
+const DecorativeBottomSection = styled.section`
   width: 100%;
-  // height: fit-content;
-  margin-top: -85%;
-  // margin-bottom: 0%;
-  // overflow: visible;
-  z-index: 1;
+  position: relative;
+  margin-top: -95%;
+  padding-bottom: 15%;
+  min-height: 350px;
+  background-color: transparent;
+  overflow-x: hidden;
   overflow-y: visible;
-  // pointer-events: none;
+  z-index: 2;
 `;
 
 const WavyBottomImage = styled.img`
-  // position: absolute;
+  position: absolute;
   bottom: 0;
-  left: 0;
-  width: 130%;
-  height: 130%;
-  z-index: 1;
+  left: -10%;
+  width: 140%;
+  height: auto;
+  z-index: 3;
   pointer-events: none;
 `;
 
 const BalloonDogImage = styled.img`
-  // position: absolute;
-  bottom: 55%;
-  left: -5%;
-  width: 35%;
-  max-width: 160px;
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
+  width: 30%;
+  max-width: 140px;
   height: auto;
   z-index: 2;
   pointer-events: none;
@@ -567,7 +565,7 @@ const AboutUs = () => {
 
         {/* Blue Section (title + text - seamlessly continues from sea) */}
         <BlueTextSection>
-          <WhySectionTitle>Why We Do It</WhySectionTitle>
+          <WhySectionTitle>We Bring Good Tech to Life!</WhySectionTitle>
 
           <WhyBodyText>
             At &lt;Dia, Dev, & Design&gt;, we offer tailored solutions to meet
@@ -650,22 +648,18 @@ const AboutUs = () => {
             ))}
           </TalentCardList>
         </TalentSection>
-        <WavyBottomContainer>
-          {/* <h1
-            style={{
-              // position: "absolute",
-              // bottom: 0,
-              // left: 0,
-              color: "red",
-              fontSize: "100px",
-            }}
-          >
-            Hello
-          </h1> */}
 
-          <BalloonDogImage src={BalloonDog} alt="Balloon Dog" />
-          <WavyBottomImage src={WavyBottom} alt="Wavy bottom" />
-        </WavyBottomContainer>
+        {/* Decorative Bottom Elements */}
+        <DecorativeBottomSection>
+          <BalloonDogImage
+            src={BalloonDog}
+            alt="Decorative balloon dog illustration"
+          />
+          <WavyBottomImage
+            src={WavyBottom}
+            alt="Decorative wavy bottom shape"
+          />
+        </DecorativeBottomSection>
       </MainContent>
     </PageContainer>
   );
