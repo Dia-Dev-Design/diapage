@@ -6,6 +6,8 @@ import Performance from "../../assets/Performance.svg";
 import CommunityEngagement from "../../assets/Community-Engagement.svg";
 import DiaGreenLogo from "../../assets/DiaGreenLogo-2.png";
 import Plant from "../../assets/Plant.svg";
+import BalloonDog from "../../assets/BalloonDog.svg";
+import WavyBottom from "../../assets/Bottom-Wavy-Top-Rectangle.svg";
 
 // Page Container
 const PageContainer = styled.div`
@@ -281,12 +283,16 @@ const CardItemDescription = styled.p`
 // Talent Incubator Section
 const TalentSection = styled.section`
   width: 100%;
-  padding: 17% 4%;
+  // padding: 17% 4% 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f2f2f2;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-bottom: 90%;
 `;
 
 const TalentTitle = styled.h2`
@@ -313,6 +319,7 @@ const TalentCard = styled.div`
   text-align: center;
   padding: 6%;
   box-sizing: border-box;
+  z-index: 3;
 `;
 
 const TalentImage = styled.div`
@@ -347,6 +354,42 @@ const TalentCardDescription = styled.p`
   color: #070d0d;
   line-height: 1.5;
   margin: 0;
+`;
+
+const WavyBottomContainer = styled.div`
+  // position: absolute;
+  justify-self: flex-end;
+  // bottom: 0;
+  // left: 0;
+  width: 100%;
+  // height: fit-content;
+  margin-top: -85%;
+  // margin-bottom: 0%;
+  // overflow: visible;
+  z-index: 1;
+  overflow-y: visible;
+  // pointer-events: none;
+`;
+
+const WavyBottomImage = styled.img`
+  // position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 130%;
+  height: 130%;
+  z-index: 1;
+  pointer-events: none;
+`;
+
+const BalloonDogImage = styled.img`
+  // position: absolute;
+  bottom: 55%;
+  left: -5%;
+  width: 35%;
+  max-width: 160px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
 `;
 
 const AboutUs = () => {
@@ -607,6 +650,22 @@ const AboutUs = () => {
             ))}
           </TalentCardList>
         </TalentSection>
+        <WavyBottomContainer>
+          {/* <h1
+            style={{
+              // position: "absolute",
+              // bottom: 0,
+              // left: 0,
+              color: "red",
+              fontSize: "100px",
+            }}
+          >
+            Hello
+          </h1> */}
+
+          <BalloonDogImage src={BalloonDog} alt="Balloon Dog" />
+          <WavyBottomImage src={WavyBottom} alt="Wavy bottom" />
+        </WavyBottomContainer>
       </MainContent>
     </PageContainer>
   );
