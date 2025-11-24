@@ -16,6 +16,7 @@ const PageContainer = styled.div`
   background: #f2f2f2;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 `;
 
 // Main Content Container
@@ -23,6 +24,8 @@ const MainContent = styled.main`
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 `;
 
 // Section Styling
@@ -360,9 +363,10 @@ const TalentCardDescription = styled.p`
 const DecorativeBottomSection = styled.section`
   width: 100%;
   position: relative;
-  margin-top: -95%;
-  padding-bottom: 15%;
-  min-height: 350px;
+  margin-top: -115%;
+  margin-bottom: 0;
+  padding: 0;
+  height: 400px;
   background-color: transparent;
   overflow-x: hidden;
   overflow-y: visible;
@@ -372,21 +376,23 @@ const DecorativeBottomSection = styled.section`
 const WavyBottomImage = styled.img`
   position: absolute;
   bottom: 0;
-  left: -10%;
+  left: 0;
   width: 140%;
   height: auto;
-  z-index: 3;
+  transform: scale(1.6);
+  transform-origin: bottom left;
+  z-index: 10;
   pointer-events: none;
 `;
 
 const BalloonDogImage = styled.img`
   position: absolute;
-  bottom: 15%;
+  bottom: 25%;
   left: 3%;
-  width: 30%;
-  max-width: 140px;
+  width: 25%;
+  max-width: 120px;
   height: auto;
-  z-index: 2;
+  z-index: 5;
   pointer-events: none;
 `;
 
