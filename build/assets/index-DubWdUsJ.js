@@ -429,7 +429,7 @@ Error generating stack: `+o.message+`
   ${e=>e.$active&&`
     background-color: #77b9f3;
     color: black;
-    border-color: var(--green);
+    // border-color: var(--green);
   `}
 `,Tx=y.form`
   display: flex;
@@ -500,7 +500,7 @@ Error generating stack: `+o.message+`
   font-weight: 900;
   text-align: center;
   margin-top: 10%;
-`,Ax=()=>{const[e,t]=R.useState([]),[n,r]=R.useState(null),[i,o]=R.useState({name:"",email:"",message:""}),[l,s]=R.useState(""),a=(d,g)=>{d.preventDefault();let w=[...e],v=w.findIndex(x=>x===g);v>-1?w.splice(v,1):w.push(g),t(w)},c=d=>{o(g=>({...g,[d.target.name]:d.target.value}))},f=d=>{d.preventDefault(),C0("/send-email",{emailContent:i,subjectsSelected:e}).then(g=>{console.log(g.data.message),s(g.data.message),t([]),o({name:"",email:"",message:""}),setTimeout(()=>{s("")},4500)}).catch(g=>{console.log(g)})};return R.useEffect(()=>{const d=()=>r(null);return document.addEventListener("mousedown",d),()=>document.removeEventListener("mousedown",d)},[]),u.jsxs(mx,{id:"contact",children:[u.jsx(gx,{children:"Get In Touch"}),u.jsxs(yx,{children:["Let's discuss something ",u.jsx(vx,{children:"cool"})," together!"]}),u.jsxs(xx,{children:[u.jsx("img",{src:j0,alt:"Email icon"}),u.jsx(wx,{children:"info@diadevdesign.com"})]}),l?u.jsx(_x,{children:l}):u.jsxs(u.Fragment,{children:[u.jsx(Sx,{src:E0,alt:"Dog mascot"}),u.jsx(Cx,{children:u.jsxs(kx,{children:[u.jsx(Ex,{children:"I'm interested in..."}),u.jsxs(jx,{children:[u.jsx(Tn,{$active:e.includes("Web Development"),onClick:d=>a(d,"Web Development"),children:"Web Development"}),u.jsx(Tn,{$active:e.includes("UX/UI Design"),onClick:d=>a(d,"UX/UI Design"),children:"UX/UI Design"}),u.jsx(Tn,{$active:e.includes("Marketing"),onClick:d=>a(d,"Marketing"),children:"Marketing"}),u.jsx(Tn,{$active:e.includes("Custom APIs"),onClick:d=>a(d,"Custom APIs"),children:"Custom APIs"}),u.jsx(Tn,{$active:e.includes("AI Apps/Agents"),onClick:d=>a(d,"AI Apps/Agents"),children:"AI Apps/Agents"}),u.jsx(Tn,{$active:e.includes("Other"),onClick:d=>a(d,"Other"),children:"Other"})]}),u.jsxs(Tx,{onSubmit:f,children:[u.jsx(as,{htmlFor:"name",$active:n==="input-1",children:"Your Name"}),u.jsx(Nd,{type:"text",name:"name",id:"name",value:i.name,$active:n==="input-1",onClick:()=>r("input-1"),onChange:d=>c(d),required:!0}),u.jsx(as,{htmlFor:"email",$active:n==="input-2",children:"Your Email"}),u.jsx(Nd,{type:"email",name:"email",id:"email",value:i.email,$active:n==="input-2",onClick:()=>r("input-2"),onChange:d=>c(d),required:!0}),u.jsx(as,{htmlFor:"message",$active:n==="input-3",children:"Your Message"}),u.jsx(Px,{name:"message",id:"message",value:i.message,$active:n==="input-3",onClick:()=>r("input-3"),onChange:d=>c(d),required:!0}),u.jsxs(Rx,{type:"submit",children:[u.jsx("img",{src:k0,alt:"Send message icon"}),u.jsx("p",{children:"Send Message"})]})]})]})})]})]})},Lx=y.div`
+`,Ax=()=>{const[e,t]=R.useState([]),[n,r]=R.useState(null),[i,o]=R.useState({name:"",email:"",message:""}),[l,s]=R.useState(""),a=(d,g)=>{let w=[...e],v=w.findIndex(x=>x===g);v>-1?w.splice(v,1):w.push(g),t(w)},c=d=>{o(g=>({...g,[d.target.name]:d.target.value}))},f=d=>{d.preventDefault(),C0("/send-email",{emailContent:i,subjectsSelected:e}).then(g=>{console.log(g.data.message),s(g.data.message),t([]),o({name:"",email:"",message:""}),setTimeout(()=>{s("")},4500)}).catch(g=>{console.log(g)})};return R.useEffect(()=>{const d=()=>r(null);return document.addEventListener("mousedown",d),()=>document.removeEventListener("mousedown",d)},[]),u.jsxs(mx,{id:"contact",children:[u.jsx(gx,{children:"Get In Touch"}),u.jsxs(yx,{children:["Let's discuss something ",u.jsx(vx,{children:"cool"})," together!"]}),u.jsxs(xx,{children:[u.jsx("img",{src:j0,alt:"Email icon"}),u.jsx(wx,{children:"info@diadevdesign.com"})]}),l?u.jsx(_x,{children:l}):u.jsxs(u.Fragment,{children:[u.jsx(Sx,{src:E0,alt:"Dog mascot"}),u.jsx(Cx,{children:u.jsxs(kx,{children:[u.jsx(Ex,{children:"I'm interested in..."}),u.jsxs(jx,{children:[u.jsx(Tn,{$active:e.includes("Web Development"),onClick:d=>a(d,"Web Development"),children:"Web Development"}),u.jsx(Tn,{$active:e.includes("UX/UI Design"),onClick:d=>a(d,"UX/UI Design"),children:"UX/UI Design"}),u.jsx(Tn,{$active:e.includes("Marketing"),onClick:d=>a(d,"Marketing"),children:"Marketing"}),u.jsx(Tn,{$active:e.includes("Custom APIs"),onClick:d=>a(d,"Custom APIs"),children:"Custom APIs"}),u.jsx(Tn,{$active:e.includes("AI Apps/Agents"),onClick:d=>a(d,"AI Apps/Agents"),children:"AI Apps/Agents"}),u.jsx(Tn,{$active:e.includes("Other"),onClick:d=>a(d,"Other"),children:"Other"})]}),u.jsxs(Tx,{onSubmit:f,children:[u.jsx(as,{htmlFor:"name",$active:n==="input-1",children:"Your Name"}),u.jsx(Nd,{type:"text",name:"name",id:"name",value:i.name,$active:n==="input-1",onClick:()=>r("input-1"),onChange:d=>c(d),required:!0}),u.jsx(as,{htmlFor:"email",$active:n==="input-2",children:"Your Email"}),u.jsx(Nd,{type:"email",name:"email",id:"email",value:i.email,$active:n==="input-2",onClick:()=>r("input-2"),onChange:d=>c(d),required:!0}),u.jsx(as,{htmlFor:"message",$active:n==="input-3",children:"Your Message"}),u.jsx(Px,{name:"message",id:"message",value:i.message,$active:n==="input-3",onClick:()=>r("input-3"),onChange:d=>c(d),required:!0}),u.jsxs(Rx,{type:"submit",children:[u.jsx("img",{src:k0,alt:"Send message icon"}),u.jsx("p",{children:"Send Message"})]})]})]})})]})]})},Lx=y.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -627,6 +627,8 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
 `,Xx=y.main`
   width: 100%;
   display: flex;
@@ -799,14 +801,14 @@ Error generating stack: `+o.message+`
   width: 100%;
 `,cw=y.img`
   position: absolute;
-  bottom: -15%;
+  bottom: -16%;
   right: 0;
   width: 30%;
   max-width: 120px;
   height: auto;
   z-index: 2;
   pointer-events: none;
-  // margin-bottom: 10%;
+  // margin-bottom: 40%;
 `,Dd=y.h3`
   font-size: clamp(2.8rem, 7vw, 3.4rem);
   font-weight: 700;
@@ -835,23 +837,22 @@ Error generating stack: `+o.message+`
   margin: 0;
 `,dw=y.section`
   width: 100%;
-  // padding: 17% 4% 0;
+  padding: 8% 4% 10%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f2f2f2;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: visible;
-  padding-bottom: 90%;
+  overflow: visible;
 `,fw=y.h2`
   font-size: clamp(3.6rem, 9vw, 4.8rem);
   font-weight: 700;
   font-family: "Aileron-Bold";
   color: #070d0d;
-  margin: 0 0 8%;
+  margin: 10% 0 8%;
   text-align: center;
+  z-index: 1;
 `,pw=y.div`
   width: 100%;
   display: flex;
@@ -897,10 +898,11 @@ Error generating stack: `+o.message+`
 `,vw=y.section`
   width: 100%;
   position: relative;
-  margin-top: -115%;
+  margin-top: -35%;
   margin-bottom: 0;
   padding: 0;
-  height: 400px;
+  min-height: 300px;
+  height: auto;
   background-color: transparent;
   overflow-x: hidden;
   overflow-y: visible;
@@ -917,7 +919,7 @@ Error generating stack: `+o.message+`
   pointer-events: none;
 `,ww=y.img`
   position: absolute;
-  bottom: 25%;
+  bottom: 20%;
   left: 3%;
   width: 25%;
   max-width: 120px;

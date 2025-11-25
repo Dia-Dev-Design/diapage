@@ -131,7 +131,7 @@ const SubjectButton = styled.button`
     `
     background-color: #77b9f3;
     color: black;
-    border-color: var(--green);
+    // border-color: var(--green);
   `}
 `;
 
@@ -227,7 +227,7 @@ const Footer = () => {
   const [emailSuccessMessage, setEmailSuccessMessage] = useState("");
 
   const subjectSelect = (e, subject) => {
-    e.preventDefault();
+    // e.preventDefault();
     let thisArray = [...subjectsSelected];
     let index = thisArray.findIndex((element) => element === subject);
 

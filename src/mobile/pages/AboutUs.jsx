@@ -17,6 +17,8 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
 `;
 
 // Main Content Container
@@ -237,14 +239,14 @@ const CardWithPlant = styled.div`
 
 const PlantImage = styled.img`
   position: absolute;
-  bottom: -15%;
+  bottom: -16%;
   right: 0;
   width: 30%;
   max-width: 120px;
   height: auto;
   z-index: 2;
   pointer-events: none;
-  // margin-bottom: 10%;
+  // margin-bottom: 40%;
 `;
 
 const CardTitle = styled.h3`
@@ -286,16 +288,14 @@ const CardItemDescription = styled.p`
 // Talent Incubator Section
 const TalentSection = styled.section`
   width: 100%;
-  // padding: 17% 4% 0;
+  padding: 8% 4% 10%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f2f2f2;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: visible;
-  padding-bottom: 90%;
+  overflow: visible;
 `;
 
 const TalentTitle = styled.h2`
@@ -303,8 +303,9 @@ const TalentTitle = styled.h2`
   font-weight: 700;
   font-family: "Aileron-Bold";
   color: #070d0d;
-  margin: 0 0 8%;
+  margin: 10% 0 8%;
   text-align: center;
+  z-index: 1;
 `;
 
 const TalentCardList = styled.div`
@@ -363,10 +364,11 @@ const TalentCardDescription = styled.p`
 const DecorativeBottomSection = styled.section`
   width: 100%;
   position: relative;
-  margin-top: -115%;
+  margin-top: -35%;
   margin-bottom: 0;
   padding: 0;
-  height: 400px;
+  min-height: 300px;
+  height: auto;
   background-color: transparent;
   overflow-x: hidden;
   overflow-y: visible;
@@ -387,7 +389,7 @@ const WavyBottomImage = styled.img`
 
 const BalloonDogImage = styled.img`
   position: absolute;
-  bottom: 25%;
+  bottom: 20%;
   left: 3%;
   width: 25%;
   max-width: 120px;
