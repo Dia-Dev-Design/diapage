@@ -158,6 +158,7 @@ const ContactUsFormSubjectButton = styled.button`
     `
     background-color: #77b9f3;
     color: black;
+    border-color: var(--green);
     `}
 `;
 

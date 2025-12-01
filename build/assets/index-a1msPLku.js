@@ -423,14 +423,14 @@ Error generating stack: `+o.message+`
   }
 
   &:active {
-    background-color: #77b9f;
+    background-color: var(--green);
   }
 
   ${e=>e.$active&&`
     background-color: #77b9f3;
     color: black;
-    // border-color: var(--green);
-  `}
+    border-color: var(--green);
+    `}
 `,Tx=y.form`
   display: flex;
   flex-direction: column;
@@ -1297,6 +1297,7 @@ Error generating stack: `+o.message+`
   ${e=>e.$active&&`
     background-color: #77b9f3;
     color: black;
+    border-color: var(--green);
     `}
 `,d3=y.form`
   display: flex;

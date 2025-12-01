@@ -123,7 +123,7 @@ const SubjectButton = styled.button`
   }
 
   &:active {
-    background-color: #77b9f;
+    background-color: var(--green);
   }
 
   ${(props) =>
@@ -131,8 +131,8 @@ const SubjectButton = styled.button`
     `
     background-color: #77b9f3;
     color: black;
-    // border-color: var(--green);
-  `}
+    border-color: var(--green);
+    `}
 `;
 
 const ContactForm = styled.form`
