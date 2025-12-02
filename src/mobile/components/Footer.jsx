@@ -122,9 +122,9 @@ const SubjectButton = styled.button`
     color: black;
   }
 
-  &:active {
-    background-color: var(--green);
-  }
+  // &:active {
+  //   background-color: var(--green);
+  // }
 
   ${(props) =>
     props.$active &&

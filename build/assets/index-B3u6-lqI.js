@@ -422,9 +422,9 @@ Error generating stack: `+o.message+`
     color: black;
   }
 
-  &:active {
-    background-color: var(--green);
-  }
+  // &:active {
+  //   background-color: var(--green);
+  // }
 
   ${e=>e.$active&&`
     background-color: #77b9f3;
