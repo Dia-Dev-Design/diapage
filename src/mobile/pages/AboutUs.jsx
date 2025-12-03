@@ -323,7 +323,7 @@ const TalentCard = styled.div`
   text-align: center;
   padding: 6%;
   box-sizing: border-box;
-  z-index: 3;
+  z-index: 1;
 `;
 
 const TalentImage = styled.div`
@@ -358,43 +358,47 @@ const TalentCardDescription = styled.p`
   color: #070d0d;
   line-height: 1.5;
   margin: 0;
+  width: 110%;
+  z-index: 99;
+  overflow-y: visible;
 `;
 
-// Decorative Bottom Section - separate from TalentSection for flexbox
+// Decorative Bottom Section - Footer area for AboutUs page
 const DecorativeBottomSection = styled.section`
   width: 100%;
   position: relative;
-  margin-top: -35%;
-  margin-bottom: 0;
-  padding: 0;
-  min-height: 300px;
-  height: auto;
-  background-color: transparent;
+  height: 300px;
+  background-color: #f2f2f2;
   overflow-x: hidden;
+  margin-top: -40%;
+  padding: 0;
+  // z-index: 2;
   overflow-y: visible;
-  z-index: 2;
+  container-type: size;
 `;
 
 const WavyBottomImage = styled.img`
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 140%;
-  height: auto;
-  transform: scale(1.6);
-  transform-origin: bottom left;
-  z-index: 10;
+  width: 130%;
+  // height: calc(width * 0.9);
+  // height: calc(var(--variable-width) * 0.9);
+  // aspect-ratio: 503 / 109;
+  // aspect-ratio: 4.5 / 1;
+  height: calc(100cqw * 1000%);
+  z-index: 2;
   pointer-events: none;
 `;
 
 const BalloonDogImage = styled.img`
   position: absolute;
-  bottom: 20%;
-  left: 3%;
-  width: 25%;
-  max-width: 120px;
+  bottom: 15%;
+  left: 2%;
+  width: 22%;
+  max-width: 100px;
   height: auto;
-  z-index: 5;
+  // z-index: 3;
   pointer-events: none;
 `;
 

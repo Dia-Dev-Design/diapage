@@ -866,7 +866,7 @@ Error generating stack: `+o.message+`
   text-align: center;
   padding: 6%;
   box-sizing: border-box;
-  z-index: 3;
+  z-index: 1;
 `,mw=y.div`
   width: 200px;
   height: 200px;
@@ -895,36 +895,40 @@ Error generating stack: `+o.message+`
   color: #070d0d;
   line-height: 1.5;
   margin: 0;
+  width: 110%;
+  z-index: 99;
+  overflow-y: visible;
 `,vw=y.section`
   width: 100%;
   position: relative;
-  margin-top: -35%;
-  margin-bottom: 0;
-  padding: 0;
-  min-height: 300px;
-  height: auto;
-  background-color: transparent;
+  height: 300px;
+  background-color: #f2f2f2;
   overflow-x: hidden;
+  margin-top: -40%;
+  padding: 0;
+  // z-index: 2;
   overflow-y: visible;
-  z-index: 2;
+  container-type: size;
 `,xw=y.img`
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 140%;
-  height: auto;
-  transform: scale(1.6);
-  transform-origin: bottom left;
-  z-index: 10;
+  width: 130%;
+  // height: calc(width * 0.9);
+  // height: calc(var(--variable-width) * 0.9);
+  // aspect-ratio: 503 / 109;
+  // aspect-ratio: 4.5 / 1;
+  height: calc(100cqw * 1000%);
+  z-index: 2;
   pointer-events: none;
 `,ww=y.img`
   position: absolute;
-  bottom: 20%;
-  left: 3%;
-  width: 25%;
-  max-width: 120px;
+  bottom: 15%;
+  left: 2%;
+  width: 22%;
+  max-width: 100px;
   height: auto;
-  z-index: 5;
+  // z-index: 3;
   pointer-events: none;
 `,Sw=()=>{const e=[{icon:"🎯",text:"We are committed to empowering your business with cutting-edge solutions that align with your goals."},{icon:"⚙️",text:"Our primary focus is on delivering customized technology that caters to your unique requirements."},{icon:"🤝",text:"Simultaneously we support our community through continuous learning and creative collaboration, turning our efforts into sustainable, fulfilling careers and successful businesses."}],t=[{title:"Tailored",description:"Solutions for your unique business needs and goals."},{title:"Scalable",description:"Applications that evolve as your business grows."},{title:"Responsive",description:"Seamlessly compatible with all devices and screen sizes."},{title:"Cross-Platform Integration",description:"Incorporate custom applications with your current systems and software."},{title:"Robust Architecture",description:"Reliable and scalable software that can handle increasing loads and complexities."},{title:"User-Centered Experience",description:"Intuitive design and engaging interfaces."},{title:"Agile Development",description:"To deliver projects on time and adapt to changing requirements quickly."}],n=[{title:"Increased efficiency",description:"Save time and cut costs with automated, streamlined processes."},{title:"Competitive Advantage",description:"Cutting-edge technology to stay ahead in your industry and set you apart."},{title:"Advanced Analytics",description:"Reporting features to provide valuable insights into your operations."},{title:"Security",description:"Safeguard your data and observe compliance with advanced measures and best practices."},{title:"Maintenance and Support",description:"Keep your software up-to-date and optimized with ongoing care."}],r=[{image:R0,title:"Hands-On Training",description:"Training and workshops covering the latest technologies and industry best practices."},{image:_0,title:"Performance Feedback",description:"Training and workshops covering the latest technologies and industry best practices."},{image:A0,title:"Community Engagement",description:"Participate in advancing local technological innovation and progress."}];return u.jsx(Yx,{children:u.jsxs(Xx,{children:[u.jsxs(us,{children:[u.jsx(Id,{children:"Our Story"}),u.jsx(Hi,{children:"Día: Dev & Design organically developed as the next step venture for Ironhack graduates and it came to fruition after one of those intense conversations about the state of affairs in the tech industry. Día: Dev & Design organically developed as the next step venture for Ironhack graduates and it came to fruition after one of those intense conversations about the state of affairs in the tech industry."}),u.jsx(Hi,{children:"In the early days, our discussions often turned into achieving two goals: delivering valuable technological solutions to businesses and individuals while nurturing the community and emerging local talent. Our vision is a business that fosters continuous learning and growth while making a tangible impact on the tech industry."}),u.jsx(Hi,{children:"Driven by this vision, we founded Día: Dev & Design. More than just a business, it is a collaborative effort that embodies our passion for problem-solving and innovation. And so we also crafted an Incubator program designed to offer internships and mentorship to jump-start careers in tech. By nurturing local enterprises, we aim to foster a community of skilled professionals propelling the technological progress of our region."}),u.jsx(Jx,{children:u.jsx("img",{src:L0,alt:"Día Dev & Design Logo"})})]}),u.jsxs(us,{children:[u.jsx(Id,{children:"Why We Do It"}),u.jsx(Hi,{children:"We are committed to empowering your business with cutting-edge solutions that align with your goals. Our primary focus is on delivering customized technology that caters to your unique requirements. Simultaneously we support our community through continuous learning and creative collaboration, turning our efforts into sustainable, fulfilling careers and successful businesses."}),u.jsx(Zx,{children:e.map((i,o)=>u.jsxs(ew,{children:[u.jsx(tw,{children:u.jsx("span",{style:{fontSize:"32px"},children:i.icon})}),u.jsx(nw,{children:i.text})]},o))})]}),u.jsx(rw,{children:u.jsxs(iw,{children:[u.jsx(ow,{children:u.jsx("img",{src:T0,alt:"Ocean waves"})}),u.jsx(lw,{children:u.jsx("img",{src:P0,alt:"Fisherman in boat"})})]})}),u.jsxs(sw,{children:[u.jsx(aw,{children:"We Bring Good Tech to Life!"}),u.jsx($d,{children:"At <Dia, Dev, & Design>, we offer tailored solutions to meet your unique challenges, ensuring that your business benefits from rapid responses and minimal downtime. Our team conducts thorough analyses to pinpoint the root causes of technical issues, helping you enhance your operational efficiency and streamline your processes. By addressing problems quickly and effectively, we drive cost savings and maximize the value of your technology investments. Let us help you boost your business performance with our cost-efficient services."}),u.jsx($d,{children:"At <Dia, Dev, & Design>, we are committed to fostering a collaborative partnership with your team, ensuring we fully grasp the context and impact of each issue. Using advanced tools and techniques, we conduct comprehensive diagnostics to identify problems and perform in-depth root cause analysis to ensure recurring issues are fixed. Our tailored strategies are crafted to meet your specific objectives. We also offer preventative monitoring through systems which are designed to anticipate and mitigate future issues. Additionally, we offer continuous support with ongoing recommendations to drive your business's continual improvement."})]}),u.jsxs(us,{children:[u.jsxs(Od,{children:[u.jsx(Dd,{children:"We build…"}),u.jsx(bd,{children:t.map((i,o)=>u.jsxs(Fd,{children:[u.jsx(Bd,{children:i.title}),u.jsx(Md,{children:i.description})]},o))})]}),u.jsxs(uw,{children:[u.jsxs(Od,{children:[u.jsx(Dd,{children:"You get…"}),u.jsx(bd,{children:n.map((i,o)=>u.jsxs(Fd,{children:[u.jsx(Bd,{children:i.title}),u.jsx(Md,{children:i.description})]},o))})]}),u.jsx(cw,{src:z0,alt:"Decorative plant illustration"})]})]}),u.jsxs(dw,{children:[u.jsx(fw,{children:"Tech Incubator"}),u.jsx(pw,{children:r.map((i,o)=>u.jsxs(hw,{children:[u.jsx(mw,{children:i.image?u.jsx("img",{src:i.image,alt:i.title}):u.jsx("span",{style:{fontSize:"64px",color:"#ccc"},children:"📷"})}),u.jsx(gw,{children:i.title}),u.jsx(yw,{children:i.description})]},o))})]}),u.jsxs(vw,{children:[u.jsx(ww,{src:N0,alt:"Decorative balloon dog illustration"}),u.jsx(xw,{src:I0,alt:"Decorative wavy bottom shape"})]})]})})},Cw=y.div`
   width: 100%;
