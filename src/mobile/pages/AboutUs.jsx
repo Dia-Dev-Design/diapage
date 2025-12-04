@@ -7,7 +7,7 @@ import CommunityEngagement from "../../assets/Community-Engagement.svg";
 import DiaGreenLogo from "../../assets/DiaGreenLogo-2.png";
 import Plant from "../../assets/Plant.svg";
 import BalloonDog from "../../assets/BalloonDog.svg";
-import WavyBottom from "../../assets/Bottom-Wavy-Top-Rectangle.svg";
+import WavyBottom from "../../assets/Mobile-Bottom-Wavy.png";
 
 // Page Container
 const PageContainer = styled.div`
@@ -370,9 +370,9 @@ const DecorativeBottomSection = styled.section`
   height: 300px;
   background-color: #f2f2f2;
   overflow-x: hidden;
-  margin-top: -40%;
+  margin-top: -30%;
   padding: 0;
-  // z-index: 2;
+  z-index: 99;
   overflow-y: visible;
   container-type: size;
 `;
@@ -381,11 +381,7 @@ const WavyBottomImage = styled.img`
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 130%;
-  // height: calc(width * 0.9);
-  // height: calc(var(--variable-width) * 0.9);
-  // aspect-ratio: 503 / 109;
-  // aspect-ratio: 4.5 / 1;
+  width: 99.7vw;
   height: calc(100cqw * 1000%);
   z-index: 2;
   pointer-events: none;
@@ -393,12 +389,10 @@ const WavyBottomImage = styled.img`
 
 const BalloonDogImage = styled.img`
   position: absolute;
-  bottom: 15%;
+  bottom: 30%;
   left: 2%;
-  width: 22%;
-  max-width: 100px;
+  width: 18%;
   height: auto;
-  // z-index: 3;
   pointer-events: none;
 `;
 

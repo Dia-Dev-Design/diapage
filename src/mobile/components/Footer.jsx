@@ -117,10 +117,10 @@ const SubjectButton = styled.button`
     color 0.2s ease;
   cursor: pointer;
 
-  &:hover {
-    background-color: #a9e6b9;
-    color: black;
-  }
+  // &:hover {
+  //   background-color: #a9e6b9;
+  //   color: black;
+  // }
 
   // &:active {
   //   background-color: var(--green);
