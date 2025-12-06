@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 import { useNavigate, Link } from "react-router-dom";
 
-import { GreenLettering } from "./GreenLettering";
-
-import navLogo from "../../assets/NavbarLogo.png";
+import DiaLogo from "../../assets/DiaGreenLogo-No-Title-Clear-Background.png";
 
 const NavContainer = styled.div`
   display: flex;
@@ -13,16 +11,31 @@ const NavContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 15vh;
+  padding: 0 2%;
+  box-sizing: border-box;
   background-color: #ffffff;
 `;
 
 const NavBarLogo = styled.img`
-  height: 75%;
+  height: 65%;
+  cursor: pointer;
 `;
 
 const CompanyTitle = styled.h1`
-  font-size: 5rem;
-  margin-left: 1%;
+  font-size: clamp(2.5rem, 3vw, 4rem);
+  font-family: "Aileron-Black", "Aileron-Heavy", "Aileron-Bold";
+  font-weight: 900;
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+`;
+
+const GreenText = styled.span`
+  color: var(--green);
+`;
+
+const BlueText = styled.span`
+  color: #77b9f3;
 `;
 
 const LinksContainer = styled.div`
@@ -84,9 +97,11 @@ const NavBar = () => {
 
   return (
     <NavContainer>
-      <NavBarLogo onClick={goHome} src={navLogo} />
+      <NavBarLogo onClick={goHome} src={DiaLogo} alt="Día Dev & Design Logo" />
       <CompanyTitle>
-        &lt;<GreenLettering>Día:</GreenLettering> Dev &amp; Design&gt;
+        <BlueText>&lt;</BlueText>
+        <GreenText>Día</GreenText>
+        <BlueText>: Dev &amp; Design /&gt;</BlueText>
       </CompanyTitle>
       <LinksContainer>
         <StyledButton to="/">Home</StyledButton>
