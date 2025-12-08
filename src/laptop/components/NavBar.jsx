@@ -24,7 +24,7 @@ const NavBarLogo = styled.img`
 const CompanyTitle = styled.h1`
   font-size: clamp(2.5rem, 3vw, 4rem);
   font-family: "Aileron-Black", "Aileron-Heavy", "Aileron-Bold";
-  font-weight: 900;
+  font-weight: 300;
   flex: 1;
   text-align: center;
   white-space: nowrap;

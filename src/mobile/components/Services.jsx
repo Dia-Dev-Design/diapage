@@ -55,7 +55,7 @@ const ServicesMainHeader = styled.h2`
 const ServicesFlexContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5%;
+  gap: 50%;
   width: 100%;
 `;
 
@@ -69,10 +69,12 @@ const ServiceCard = styled.div`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   width: 100%;
   box-sizing: border-box;
+  margin-top: 5%;
 `;
 
 const ServiceCard1 = styled(ServiceCard)`
   background-color: #edf3ff;
+  margin-top: 0;
 `;
 
 const ServiceCard2 = styled(ServiceCard)`

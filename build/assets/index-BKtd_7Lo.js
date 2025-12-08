@@ -273,7 +273,7 @@ Error generating stack: `+o.message+`
 `,Iv=y.div`
   display: flex;
   flex-direction: column;
-  gap: 5%;
+  gap: 50%;
   width: 100%;
 `,yl=y.div`
   display: flex;
@@ -285,8 +285,10 @@ Error generating stack: `+o.message+`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   width: 100%;
   box-sizing: border-box;
+  margin-top: 5%;
 `,Lv=y(yl)`
   background-color: #edf3ff;
+  margin-top: 0;
 `,zv=y(yl)`
   background-color: #fffaec;
 `,Nv=y(yl)`
@@ -977,7 +979,7 @@ Error generating stack: `+o.message+`
 `,$w=y.h1`
   font-size: clamp(2.5rem, 3vw, 4rem);
   font-family: "Aileron-Black", "Aileron-Heavy", "Aileron-Bold";
-  font-weight: 900;
+  font-weight: 300;
   flex: 1;
   text-align: center;
   white-space: nowrap;
