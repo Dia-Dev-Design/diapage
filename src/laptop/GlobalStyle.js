@@ -105,21 +105,26 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
+  /* ============================================================
+     LIGHT MODE ENFORCEMENT (styled-components layer)
+     ============================================================ */
 
   :root {
+    color-scheme: light only;
     font-family: "Aileron-Regular", 'Inter Variable', 'poppins', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
-    background-color: #ffffff;
+    background-color: #F2F2F2 !important;
     --green: #65B47B;
     --gray: #b4a7bc;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    
   }
 
   html {
     font-size: 10px;
-    background-color: #F2F2F2
+    background-color: #F2F2F2 !important;
+    color-scheme: light only !important;
+    filter: none !important;
   }
 
   body {
@@ -129,7 +134,21 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #F2F2F2
+    background-color: #F2F2F2 !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html, body {
+      background-color: #F2F2F2 !important;
+      color: #070d0d !important;
+      filter: none !important;
+    }
+  }
+
+  @media (forced-colors: active) {
+    *, *::before, *::after {
+      forced-color-adjust: none !important;
+    }
   }
 `;
 

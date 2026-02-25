@@ -1,4 +1,52 @@
-@import url('/node_modules/@fontsource-variable/inter/wght.css');
+/* ============================================================
+   LIGHT MODE ENFORCEMENT - All layers, all threats
+   ============================================================ */
+
+/* Layer 1: Declare light-only color scheme to the browser */
+:root {
+  color-scheme: light only;
+}
+
+/* Layer 2: Force light background and text on html/body at all times */
+html,
+body {
+  background-color: #f2f2f2 !important;
+  color: #070d0d !important;
+  color-scheme: light only !important;
+}
+
+/* Layer 3: Block dark mode media query from applying anything */
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #f2f2f2 !important;
+    color: #070d0d !important;
+    filter: none !important;
+  }
+
+  /* Nuclear option: prevent any inversion or filter applied by
+     dark-mode browser extensions (e.g. Dark Reader) */
+  html {
+    filter: none !important;
+  }
+}
+
+/* Layer 4: Block Windows High Contrast / forced-colors mode */
+@media (forced-colors: active) {
+  *,
+  *::before,
+  *::after {
+    forced-color-adjust: none !important;
+  }
+}
+
+/* Layer 5: Nuclear filter guard - if an extension inverts the
+   page, this cancels it out at the root level */
+html {
+  filter: none !important;
+}
+
+/* ============================================================ */
 
 @import url('/node_modules/@fontsource-variable/inter/wght.css');
 
