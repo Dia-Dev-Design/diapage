@@ -214,6 +214,21 @@ const NavBar = () => {
           <MenuLink to="/about" onClick={() => navigateAndClose("/about")}>
             About Us
           </MenuLink>
+          <MenuLink to="/people" onClick={() => navigateAndClose("/people")}>
+            People
+          </MenuLink>
+          <MenuLink
+            to="/client-stories"
+            onClick={() => navigateAndClose("/client-stories")}
+          >
+            Client Stories
+          </MenuLink>
+          <MenuLink
+            to="/services"
+            onClick={() => navigateAndClose("/services")}
+          >
+            Services
+          </MenuLink>
           <ContactButton onClick={scrollToContact}>Contact Us</ContactButton>
         </MenuContent>
       </MobileMenu>

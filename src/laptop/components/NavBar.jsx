@@ -40,7 +40,7 @@ const BlueText = styled.span`
 
 const LinksContainer = styled.div`
   height: 100%;
-  width: 35%;
+  width: 55%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -106,6 +106,9 @@ const NavBar = () => {
       <LinksContainer>
         <StyledButton to="/">Home</StyledButton>
         <StyledButton to="/about">About Us</StyledButton>
+        <StyledButton to="/people">People</StyledButton>
+        <StyledButton to="/client-stories">Client Stories</StyledButton>
+        <StyledButton to="/services">Services</StyledButton>
         <ContactButton onClick={scrollToBottom}>Contact Us</ContactButton>
       </LinksContainer>
     </NavContainer>
