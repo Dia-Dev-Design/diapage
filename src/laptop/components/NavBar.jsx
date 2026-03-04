@@ -106,9 +106,9 @@ const NavBar = () => {
       <LinksContainer>
         <StyledButton to="/">Home</StyledButton>
         <StyledButton to="/about">About Us</StyledButton>
-        <StyledButton to="/people">People</StyledButton>
+        {/* <StyledButton to="/people">People</StyledButton>
         <StyledButton to="/client-stories">Client Stories</StyledButton>
-        <StyledButton to="/services">Services</StyledButton>
+        <StyledButton to="/services">Services</StyledButton> */}
         <ContactButton onClick={scrollToBottom}>Contact Us</ContactButton>
       </LinksContainer>
     </NavContainer>
