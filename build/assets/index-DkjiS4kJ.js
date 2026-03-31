@@ -597,7 +597,7 @@ Error generating stack: `+o.message+`
      ============================================================ */
 
   :root {
-    color-scheme: light only;
+    color-scheme: only light !important;
     font-family: "Aileron-Regular", 'Inter Variable', 'poppins', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
     background-color: #F2F2F2 !important;
     --green: #65B47B;
@@ -610,7 +610,7 @@ Error generating stack: `+o.message+`
   html {
     font-size: 10px;
     background-color: #F2F2F2 !important;
-    color-scheme: light only !important;
+    color-scheme: only light !important;
     filter: none !important;
   }
 
@@ -624,10 +624,20 @@ Error generating stack: `+o.message+`
     background-color: #F2F2F2 !important;
   }
 
+  @media (prefers-color-scheme: light) {
+    html, body {
+      background-color: #F2F2F2 !important;
+      color: #070d0d !important;
+      color-scheme: only light !important;
+      filter: none !important;
+    }
+  }
+
   @media (prefers-color-scheme: dark) {
     html, body {
       background-color: #F2F2F2 !important;
       color: #070d0d !important;
+      color-scheme: only light !important;
       filter: none !important;
     }
   }
@@ -636,6 +646,10 @@ Error generating stack: `+o.message+`
     *, *::before, *::after {
       forced-color-adjust: none !important;
     }
+  }
+
+  * {
+    color-scheme: only light !important;
   }
 `,A0="/assets/img/DiaGreenLogo-2-b3J3yriU.png",Kx=g.section`
   width: 100%;
@@ -1507,7 +1521,7 @@ Error generating stack: `+o.message+`
      ============================================================ */
 
   :root {
-    color-scheme: light only;
+    color-scheme: only light !important;
     font-family: "Aileron-Regular", 'Inter Variable', 'poppins', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
     background-color: #F2F2F2 !important;
     --green: #65B47B;
@@ -1520,7 +1534,7 @@ Error generating stack: `+o.message+`
   html {
     font-size: 10px;
     background-color: #F2F2F2 !important;
-    color-scheme: light only !important;
+    color-scheme: only light !important;
     filter: none !important;
   }
 
@@ -1534,10 +1548,20 @@ Error generating stack: `+o.message+`
     background-color: #F2F2F2 !important;
   }
 
+  @media (prefers-color-scheme: light) {
+    html, body {
+      background-color: #F2F2F2 !important;
+      color: #070d0d !important;
+      color-scheme: only light !important;
+      filter: none !important;
+    }
+  }
+
   @media (prefers-color-scheme: dark) {
     html, body {
       background-color: #F2F2F2 !important;
       color: #070d0d !important;
+      color-scheme: only light !important;
       filter: none !important;
     }
   }
@@ -1546,6 +1570,10 @@ Error generating stack: `+o.message+`
     *, *::before, *::after {
       forced-color-adjust: none !important;
     }
+  }
+
+  * {
+    color-scheme: only light !important;
   }
 `,H3="/assets/img/BalloonCat-v3wmWc6F.svg",W3=g.div`
   height: 85vh;
@@ -1995,5 +2023,6 @@ Error generating stack: `+o.message+`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-contents: center;
+  justify-content: center;
+  background-color: #f2f2f2;
 `,KS=()=>u.jsxs(QS,{children:[u.jsx(M3,{}),u.jsx(n3,{}),u.jsxs(Wh,{children:[u.jsx(Ze,{path:"/",element:u.jsx(U3,{})}),u.jsx(Ze,{path:"/about",element:u.jsx(_S,{})}),u.jsx(Ze,{path:"/people",element:u.jsx(OS,{})}),u.jsx(Ze,{path:"/client-stories",element:u.jsx(US,{})}),u.jsx(Ze,{path:"/services",element:u.jsx(GS,{})})]})]}),qS=()=>{const[e,t]=R.useState(null),n=()=>{let r=window.innerWidth;t(r)};return R.useEffect(()=>{n();let r;const i=()=>{clearTimeout(r),r=setTimeout(()=>{n()},150)};return window.addEventListener("resize",i),()=>{clearTimeout(r),window.removeEventListener("resize",i)}},[]),u.jsx(u.Fragment,{children:e>1024?u.jsx(KS,{resize:n}):e?u.jsx(qw,{resize:n}):null})};ws.createRoot(document.getElementById("root")).render(u.jsx(et.StrictMode,{children:u.jsx(nv,{children:u.jsx(qS,{})})}));

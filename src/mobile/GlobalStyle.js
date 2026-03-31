@@ -110,7 +110,7 @@ const GlobalStyle = createGlobalStyle`
      ============================================================ */
 
   :root {
-    color-scheme: light only;
+    color-scheme: only light !important;
     font-family: "Aileron-Regular", 'Inter Variable', 'poppins', 'sans-serif', 'system-ui', 'Avenir', 'Helvetica', 'Arial';
     background-color: #F2F2F2 !important;
     --green: #65B47B;
@@ -123,7 +123,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 10px;
     background-color: #F2F2F2 !important;
-    color-scheme: light only !important;
+    color-scheme: only light !important;
     filter: none !important;
   }
 
@@ -137,10 +137,20 @@ const GlobalStyle = createGlobalStyle`
     background-color: #F2F2F2 !important;
   }
 
+  @media (prefers-color-scheme: light) {
+    html, body {
+      background-color: #F2F2F2 !important;
+      color: #070d0d !important;
+      color-scheme: only light !important;
+      filter: none !important;
+    }
+  }
+
   @media (prefers-color-scheme: dark) {
     html, body {
       background-color: #F2F2F2 !important;
       color: #070d0d !important;
+      color-scheme: only light !important;
       filter: none !important;
     }
   }
@@ -149,6 +159,10 @@ const GlobalStyle = createGlobalStyle`
     *, *::before, *::after {
       forced-color-adjust: none !important;
     }
+  }
+
+  * {
+    color-scheme: only light !important;
   }
 `;
 

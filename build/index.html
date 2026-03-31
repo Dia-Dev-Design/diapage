@@ -1,28 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="color-scheme: only light; background-color: #f2f2f2;">
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var html = document.documentElement;
+
+      // 1. Use proper CSSOM setProperty so Edge cannot strip the !important flag
+      html.style.setProperty('color-scheme', 'only light', 'important');
+      html.style.setProperty('background-color', '#f2f2f2', 'important');
+      html.style.setProperty('filter', 'none', 'important');
+
+      // 2. Override matchMedia so any JS asking "is dark mode on?" always gets "no"
+      var _matchMedia = window.matchMedia.bind(window);
+      window.matchMedia = function (query) {
+        if (/prefers-color-scheme:\s*dark/i.test(query)) {
+          return {
+            matches: false,
+            media: query,
+            onchange: null,
+            addListener: function () {},
+            removeListener: function () {},
+            addEventListener: function () {},
+            removeEventListener: function () {},
+            dispatchEvent: function () { return false; }
+          };
+        }
+        return _matchMedia(query);
+      };
+
+      // 3. Inject a high-priority stylesheet before anything else loads
+      var style = document.createElement('style');
+      style.textContent =
+        'html { color-scheme: only light !important; filter: none !important; background-color: #f2f2f2 !important; }' +
+        'body { background-color: #f2f2f2 !important; color: #070d0d !important; color-scheme: only light !important; filter: none !important; }' +
+        '@media (prefers-color-scheme: light) {' +
+        '  html, body { color-scheme: only light !important; filter: none !important; background-color: #f2f2f2 !important; color: #070d0d !important; }' +
+        '}' +
+        '@media (prefers-color-scheme: dark) {' +
+        '  html, body { color-scheme: only light !important; filter: none !important; background-color: #f2f2f2 !important; color: #070d0d !important; }' +
+        '}';
+      document.head.appendChild(style);
+
+      // 4. Re-enforce on html AND body any time Edge mutates their style or class
+      function enforce(el) {
+        if (el) {
+          el.style.setProperty('color-scheme', 'only light', 'important');
+          el.style.setProperty('background-color', '#f2f2f2', 'important');
+          el.style.setProperty('filter', 'none', 'important');
+        }
+      }
+
+      new MutationObserver(function (mutations) {
+        enforce(document.documentElement);
+        if (document.body) enforce(document.body);
+      }).observe(document.documentElement, { attributes: true, attributeFilter: ['style', 'class'], subtree: false });
+
+      // 5. Once body exists, lock it down too
+      document.addEventListener('DOMContentLoaded', function () {
+        enforce(document.body);
+        new MutationObserver(function () {
+          enforce(document.body);
+        }).observe(document.body, { attributes: true, attributeFilter: ['style', 'class'] });
+      });
+
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <meta name="color-scheme" content="light only">
-    <meta name="supported-color-schemes" content="light">
-    <meta name="theme-color" content="#F2F2F2">
-    <meta name="msapplication-navbutton-color" content="#F2F2F2">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="msapplication-TileColor" content="#F2F2F2">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="darkreader-lock">
+  <meta name="theme-color" content="#F2F2F2">
+  <meta name="msapplication-navbutton-color" content="#F2F2F2">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileColor" content="#F2F2F2">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/assets/img/DiaGreenLogo-No-Title-Clear-Background-XrZQ5fop.ico" />
-    <meta name="image" property="og:image"
-      content="https://res.cloudinary.com/dt8b5pu9l/image/upload/v1765329126/D%C3%ADa-Preview-Image_nfgq0i.png" />
-    <title>Día Dev & Design</title>
-  <script type="module" crossorigin src="/assets/index-CRkFtT3b.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/css/index-DdnZb-TS.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/DiaGreenLogo-No-Title-Clear-Background-XrZQ5fop.ico" />
+  <meta name="image" property="og:image"
+    content="https://res.cloudinary.com/dt8b5pu9l/image/upload/v1765329126/D%C3%ADa-Preview-Image_nfgq0i.png" />
+  <title>Día Dev & Design</title>
+  <script type="module" crossorigin src="/assets/index-DkjiS4kJ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/index-ROQTZpZ2.css">
 </head>
 
 <body>

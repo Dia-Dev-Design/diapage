@@ -1,22 +1,37 @@
-/* ============================================================
-   LIGHT MODE ENFORCEMENT - All layers, all threats
-   ============================================================ */
+@import url('/node_modules/@fontsource-variable/inter/wght.css');
+@import url("/node_modules/@fontsource/poppins/500.css");
+@import url("/node_modules/@fontsource/poppins/700.css");
 
-/* Layer 1: Declare light-only color scheme to the browser */
+
 :root {
-  color-scheme: light only;
+  color-scheme: only light !important;
 }
 
-/* Layer 2: Force light background and text on html/body at all times */
 html,
 body {
   background-color: #f2f2f2 !important;
   color: #070d0d !important;
-  color-scheme: light only !important;
+  color-scheme: only light !important;
 }
 
-/* Layer 3: Block dark mode media query from applying anything */
+/* Explicitly enforce light colors when the browser reports light mode —
+   catches Edge Desktop "Light" appearance overriding page colors via a
+   separate path from prefers-color-scheme: dark */
+@media (prefers-color-scheme: light) {
+  html,
+  body {
+    background-color: #f2f2f2 !important;
+    color: #070d0d !important;
+    color-scheme: only light !important;
+    filter: none !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: only light !important;
+  }
+
   html,
   body {
     background-color: #f2f2f2 !important;
@@ -24,15 +39,13 @@ body {
     filter: none !important;
   }
 
-  /* Nuclear option: prevent any inversion or filter applied by
-     dark-mode browser extensions (e.g. Dark Reader) */
   html {
     filter: none !important;
   }
 }
 
-/* Layer 4: Block Windows High Contrast / forced-colors mode */
 @media (forced-colors: active) {
+
   *,
   *::before,
   *::after {
@@ -40,18 +53,17 @@ body {
   }
 }
 
-/* Layer 5: Nuclear filter guard - if an extension inverts the
-   page, this cancels it out at the root level */
+* {
+  forced-color-adjust: none;
+  color-scheme: only light !important;
+}
+
 html {
   filter: none !important;
 }
 
-/* ============================================================ */
 
-@import url('/node_modules/@fontsource-variable/inter/wght.css');
 
-@import url("/node_modules/@fontsource/poppins/500.css");
-@import url("/node_modules/@fontsource/poppins/700.css");
 
 @font-face {
   font-family: "Aileron-Black";
@@ -148,4 +160,3 @@ html {
   src: local("Aileron-Ultra-Lite-Italic"),
     url("./fonts/aileron/Aileron-UltraLightItalic.otf") format("opentype");
 }
-
